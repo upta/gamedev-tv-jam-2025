@@ -1,5 +1,5 @@
-extends Node2D
+extends Control
 
 
 func _ready() -> void:
-	prints("loaded")
+	State.Scene.active_scene = "res://main_menu/main_menu.tscn"

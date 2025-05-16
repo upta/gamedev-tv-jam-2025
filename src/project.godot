@@ -8,16 +8,17 @@
 
 config_version=5
 
-[GDScript_Formatter]
-
-format_on_save=true
-
 [application]
 
 config/name="GameDevTV2025"
 run/main_scene="uid://72ch7i6ykgb5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GUIDE="*res://addons/guide/guide.gd"
+State="*res://state/state.gd"
 
 [display]
 
@@ -28,4 +29,4 @@ window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gdscript_formatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/gdscript_formatter/plugin.cfg", "res://addons/guide/plugin.cfg")

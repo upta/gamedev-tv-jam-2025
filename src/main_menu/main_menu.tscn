@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjgikrcsdd17s"]
+
+[ext_resource type="Script" uid="uid://cfw6u0q2bavb1" path="res://main_menu/main_menu.gd" id="1_oa53l"]
+[ext_resource type="Resource" uid="uid://dtf1jsn2e55rn" path="res://input/main_menu/main_menu_context.tres" id="2_3shxk"]
+[ext_resource type="Resource" uid="uid://rj4co353ejk5" path="res://input/main_menu/actions/start.tres" id="2_d3a7t"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_oa53l")
+input_context = ExtResource("2_3shxk")
+start_action = ExtResource("2_d3a7t")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 58.0
+offset_right = 134.0
+offset_bottom = 81.0
+text = "main menu
+left click or enter to continue"
