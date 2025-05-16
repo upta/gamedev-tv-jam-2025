@@ -21,6 +21,7 @@ func _physics_process(delta):
 	if is_jumping:
 		jump_timer += delta
 		var t = jump_timer / jump_duration
+
 		if t > 1.0:
 			t = 1.0
 			is_jumping = false
