@@ -29,4 +29,4 @@ window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SimpleFormatOnSave/plugin.cfg", "res://addons/guide/plugin.cfg")
+enabled=PackedStringArray("res://addons/guide/plugin.cfg", "res://addons/simple_gdscript_formatter/plugin.cfg")

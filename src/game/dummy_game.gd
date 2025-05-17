@@ -3,17 +3,17 @@ extends Control
 @export var input_context: GUIDEMappingContext
 @export var jump_action: GUIDEAction
 
-@onready var label: Label = $Label
-
 var jump_height: float = 100.0
 var jump_duration: float = 0.5
 var jump_timer: float = 0.0
 var is_jumping: bool = false
 var jump_origin_y: float = 0.0
 
+@onready var label: Label = $Label
+
 
 func _ready():
-	GUIDE.enable_mapping_context(input_context, true)
+	GUIDE.enable_mapping_context(input_context, true	)
 	jump_action.triggered.connect(_on_jump_triggered)
 
 
