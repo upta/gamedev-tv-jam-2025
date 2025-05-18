@@ -2,7 +2,8 @@ class_name MarketService extends Node
 
 
 func _enter_tree():
-	State.Market.add_coin(preload("res://market/coins/shit_coin.tres"))
+	for coin in ItemTypes.coins.values():
+		State.Market.add_coin(coin)
 
 
 func fluxuate_prices():
@@ -12,3 +13,20 @@ func fluxuate_prices():
 		var new_price := current * (1.0 + change_percent)
 
 		State.Market.update_price(coin_type, new_price)
+
+
+func sell_coins(coin_type: Enum.CoinType, quantity: int):
+	if !State.Inventory.coins.has(coin_type):
+		push_error("Invalid coin type")
+		return
+
+	if State.Inventory.coins[coin_type] < quantity:
+		push_error("Tried to sell %s but only had %s" % [quantity, State.Inventory.coins[coin_type]])
+		return
+
+	var price = State.Market.prices[coin_type].current_price
+
+	State.Inventory.power = State.Inventory.power + (price * quantity)
+
+	var new_coins = State.Inventory.coins[coin_type] - quantity
+	State.Inventory.update_coin(coin_type, new_coins)

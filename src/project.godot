@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 GUIDE="*res://addons/guide/guide.gd"
 Service="*res://app/service/service.gd"
 State="*res://app/state/state.gd"
+ItemTypes="*res://app/item_types/item_types.tscn"
 
 [display]
 
