@@ -18,7 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 GUIDE="*res://addons/guide/guide.gd"
-State="*res://state/state.gd"
+Service="*res://app/service/service.gd"
+State="*res://app/state/state.gd"
 
 [display]
 
