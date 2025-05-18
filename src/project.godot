@@ -27,6 +27,10 @@ window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
+[dotnet]
+
+project/assembly_name="GameDevTV2025"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/guide/plugin.cfg", "res://addons/simple_gdscript_formatter/plugin.cfg")
