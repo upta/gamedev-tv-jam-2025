@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://diyectysr3r8m"]
+
+[ext_resource type="Script" path="res://chipmonk.gd" id="1_dgrtg"]
+[ext_resource type="Texture2D" uid="uid://dyhuialdeki1s" path="res://chipmonk/back/cb1.png" id="2_tm4lk"]
+[ext_resource type="Texture2D" uid="uid://dc0dlmcimiux5" path="res://chipmonk/back/cb2.png" id="3_5voq6"]
+[ext_resource type="Texture2D" uid="uid://b86bqor1ww5uj" path="res://chipmonk/back/cb3.png" id="4_hufdn"]
+[ext_resource type="Texture2D" uid="uid://c76ggmy0glrb" path="res://chipmonk/protrait/cpor1.png" id="5_st2l7"]
+[ext_resource type="Texture2D" uid="uid://kjir2ymio07y" path="res://chipmonk/protrait/cpor2.png" id="6_q3akb"]
+[ext_resource type="Texture2D" uid="uid://ljh4jqfurs1r" path="res://chipmonk/protrait/cpor3.png" id="7_gkdgm"]
+[ext_resource type="Texture2D" uid="uid://c3ukovmxrdffu" path="res://chipmonk/profile/cpro1.png" id="8_5nw3q"]
+[ext_resource type="Texture2D" uid="uid://bannok2i0qo8e" path="res://chipmonk/profile/cpro2.png" id="9_uv6sl"]
+[ext_resource type="Texture2D" uid="uid://kn36qvwkl2pd" path="res://chipmonk/profile/cpro3.png" id="10_x4jt0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epsju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tm4lk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5voq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hufdn")
+}],
+"loop": true,
+"name": &"back",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_st2l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q3akb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gkdgm")
+}],
+"loop": true,
+"name": &"front",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5nw3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uv6sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x4jt0")
+}],
+"loop": true,
+"name": &"profile",
+"speed": 8.0
+}]
+
+[node name="Chipmonk" type="Node2D"]
+script = ExtResource("1_dgrtg")
+
+[node name="ChipmonkSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(493, 223)
+sprite_frames = SubResource("SpriteFrames_epsju")
+animation = &"back"
