@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqfd1a8bvojms"]
+
+[ext_resource type="Script" uid="uid://bbfflnbqq66yw" path="res://game/mining_area.gd" id="1_bdnut"]
+[ext_resource type="Resource" uid="uid://b21g17kle5gak" path="res://input/game/mining_context.tres" id="2_7pupr"]
+[ext_resource type="PackedScene" uid="uid://bsjevfbrnec8e" path="res://game/mining/miner_player.tscn" id="3_ujp4m"]
+[ext_resource type="PackedScene" uid="uid://c5vufw7g3ksiw" path="res://game/mining/solid_wall.tscn" id="4_8lbir"]
+[ext_resource type="Script" uid="uid://bynmhure2yh0v" path="res://game/mining/miner_player.gd" id="4_bte8m"]
+[ext_resource type="PackedScene" uid="uid://clmb3d6jg1rcg" path="res://game/mining/dirt.tscn" id="5_ujp4m"]
+
+[node name="MiningArea" type="Node2D"]
+script = ExtResource("1_bdnut")
+input_context = ExtResource("2_7pupr")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Black" type="ColorRect" parent="BackgroundLayer"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 1344.0
+offset_bottom = 768.0
+color = Color(0, 0, 0, 1)
+
+[node name="PlayAreaBG" type="ColorRect" parent="."]
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.26023, 0.594822, 0.407966, 1)
+
+[node name="MinerPlayer" parent="." instance=ExtResource("3_ujp4m")]
+script = ExtResource("4_bte8m")
+
+[node name="Camera2D" type="Camera2D" parent="MinerPlayer"]
+
+[node name="SolidWall" parent="." instance=ExtResource("4_8lbir")]
+position = Vector2(-680, -400)
+scale = Vector2(1, 20)
+
+[node name="SolidWall3" parent="." instance=ExtResource("4_8lbir")]
+position = Vector2(-696, -400)
+scale = Vector2(35, 1)
+
+[node name="SolidWall4" parent="." instance=ExtResource("4_8lbir")]
+position = Vector2(-696, 360)
+scale = Vector2(35, 1)
+
+[node name="SolidWall2" parent="." instance=ExtResource("4_8lbir")]
+position = Vector2(640, -400)
+scale = Vector2(1, 20)
+
+[node name="Dirt" parent="." instance=ExtResource("5_ujp4m")]
+position = Vector2(128, 0)
+
+[node name="Dirt2" parent="." instance=ExtResource("5_ujp4m")]
+position = Vector2(128, -40)
+
+[node name="Dirt3" parent="." instance=ExtResource("5_ujp4m")]
+position = Vector2(128, -80)
+
+[node name="Dirt4" parent="." instance=ExtResource("5_ujp4m")]
+position = Vector2(128, -120)
+
+[node name="Dirt5" parent="." instance=ExtResource("5_ujp4m")]
+position = Vector2(128, -160)
+
+[node name="Dirt6" parent="." instance=ExtResource("5_ujp4m")]
+position = Vector2(224, 0)
+
+[node name="Dirt7" parent="." instance=ExtResource("5_ujp4m")]
+position = Vector2(224, -40)

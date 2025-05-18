@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://clmb3d6jg1rcg"]
+
+[ext_resource type="Script" uid="uid://1lxuk3nhivxm" path="res://game/mining/mineable.gd" id="1_lm7yj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pupr"]
+size = Vector2(40, 40)
+
+[node name="Dirt" type="StaticBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_lm7yj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_7pupr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+y_sort_enabled = true
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.412183, 0.341539, 0.267041, 1)
+metadata/_edit_use_anchors_ = true
