@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdpqr7bh6ccjn"
-path="res://.godot/imported/chip_empty.png-a4b03f713b9fc5959d19b6d2c44911cb.ctex"
+path="res://.godot/imported/chip_empty.png-46160e8f5b248132229877cafdfd6270.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Memory/chip_empty.png"
-dest_files=["res://.godot/imported/chip_empty.png-a4b03f713b9fc5959d19b6d2c44911cb.ctex"]
+source_file="res://assets/resources/memory/chip_empty.png"
+dest_files=["res://.godot/imported/chip_empty.png-46160e8f5b248132229877cafdfd6270.ctex"]
 
 [params]
 
