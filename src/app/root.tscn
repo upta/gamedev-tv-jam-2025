@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://72ch7i6ykgb5"]
 
-[ext_resource type="Script" uid="uid://b81g22kiowxir" path="res://root.gd" id="1_pq8q7"]
+[ext_resource type="Script" uid="uid://b81g22kiowxir" path="res://app/root.gd" id="1_pq8q7"]
 [ext_resource type="PackedScene" uid="uid://c7b0m701iax8f" path="res://app/scene_manager.tscn" id="2_pyidc"]
 
 [node name="Root" type="Control"]

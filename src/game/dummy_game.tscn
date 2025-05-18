@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://57chnjmkrtwd" path="res://game/dummy_game.gd" id="1_t7hfm"]
 [ext_resource type="Resource" uid="uid://clqr6jrflk83j" path="res://input/game/game_context.tres" id="2_cq0tp"]
-[ext_resource type="Resource" uid="uid://bq3h4meaqtfhy" path="res://input/game/actions/jump.tres" id="3_18flh"]
+[ext_resource type="PackedScene" uid="uid://wp20c4t7t4e4" path="res://player/player.tscn" id="3_cq0tp"]
 
 [node name="DummyGame" type="Control"]
 layout_mode = 3
@@ -13,13 +13,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t7hfm")
 input_context = ExtResource("2_cq0tp")
-jump_action = ExtResource("3_18flh")
 
-[node name="Label" type="Label" parent="."]
+[node name="Player" parent="." instance=ExtResource("3_cq0tp")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 209.0
+offset_left = -267.0
+offset_top = -211.0
+offset_right = -227.0
+offset_bottom = -171.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = -237.0
+offset_right = 215.0
+offset_bottom = -197.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 23.0
+offset_right = 291.0
+offset_bottom = 63.0
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -216.0
 offset_top = 220.0
-offset_right = 364.0
-offset_bottom = 243.0
-text = "dummy game scene
-(space to jump)"
+offset_right = -176.0
+offset_bottom = 260.0
