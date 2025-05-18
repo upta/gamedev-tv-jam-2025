@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsjevfbrnec8e"]
+
+[ext_resource type="PackedScene" uid="uid://wp20c4t7t4e4" path="res://player/player.tscn" id="1_vfxb6"]
+
+[node name="MinerPlayer" instance=ExtResource("1_vfxb6")]
