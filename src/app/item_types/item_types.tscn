@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuc5666ypv6en"]
+
+[ext_resource type="Script" uid="uid://706qbiasuvtd" path="res://app/item_types/item_types.gd" id="1_4utt5"]
+[ext_resource type="Script" uid="uid://dpiraumxsl8u3" path="res://market/coins/coin_resource.gd" id="2_idy0w"]
+[ext_resource type="Resource" uid="uid://bv26wt3im6m0e" path="res://market/coins/shit_coin.tres" id="3_y8n3v"]
+
+[node name="ItemTypes" type="Node"]
+script = ExtResource("1_4utt5")
+coins = Dictionary[int, ExtResource("2_idy0w")]({
+0: ExtResource("3_y8n3v")
+})
