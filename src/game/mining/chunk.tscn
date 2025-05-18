@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn5s5y6x2w8t"]
+
+[ext_resource type="Script" uid="uid://c8jxao8xx62df" path="res://game/mining/chunk.gd" id="1_byydn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bte8m"]
+
+[node name="Chunk" type="Area2D"]
+script = ExtResource("1_byydn")
+
+[node name="Area" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bte8m")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
