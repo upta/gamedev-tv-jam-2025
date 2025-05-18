@@ -20,14 +20,55 @@ var ordinal_positions: Array[Vector2] = [
 @onready var chunk_size: int = 1 + (radius * 2)
 @onready var chunk_size_px: int = chunk_size * block_size_px
 
+@onready var chunk: PackedScene = preload("res://game/mining/chunk.tscn")
 @onready var area: CollisionShape2D = get_node("Area");
 
-@onready var chunk: PackedScene = preload("res://game/mining/chunk.tscn")
+@onready var dirt_block: PackedScene = preload("res://game/mining/dirt.tscn")
+@onready var wall_block: PackedScene = preload("res://game/mining/solid_wall.tscn")
 
 
 func _ready() -> void:
 	var shape = area.shape as RectangleShape2D
 	shape.size = Vector2.ONE * chunk_size_px;
+	_fill_chunk()
+
+
+func _fill_chunk() -> void:
+	for block_location in _get_all_block_grid_locations():
+		var block_type = _get_block_type(block_location)
+		if block_type == null:
+			continue
+
+		var block = block_type.instantiate() as Node2D
+		block.position = block_location * block_size_px
+		block.show()
+		add_child(block)
+
+
+func _get_block_type(at: Vector2) -> PackedScene:
+	var chunk_center = position / block_size_px
+	var block_center = chunk_center + at
+	var distance_from_center = block_center.distance_to(Vector2.ZERO)
+
+	# create center area
+	if distance_from_center <= 4:
+		return null
+
+	if randf() < 0.05:
+		return wall_block
+
+	if randf() < max(1 / distance_from_center, 0.001):
+		return null
+
+	return dirt_block
+
+
+func _get_all_block_grid_locations() -> Array[Vector2]:
+	var locations: Array[Vector2]
+	for x in range(-radius, radius + 1, 1):
+		for y in range(-radius, radius + 1, 1):
+			locations.append(Vector2(x, y))
+	return locations
 
 
 func _on_body_entered(body: Node2D) -> void:
