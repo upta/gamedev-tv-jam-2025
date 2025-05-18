@@ -11,6 +11,8 @@ enum Direction {
 	NORTHWEST,
 }
 
+enum CoinType { SHIT_COIN }
+
 
 static func direction_as_string(value: Direction) -> String:
 	match value:
