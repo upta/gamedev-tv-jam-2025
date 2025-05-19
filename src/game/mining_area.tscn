@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bsjevfbrnec8e" path="res://game/mining/miner_player.tscn" id="3_ujp4m"]
 [ext_resource type="Script" uid="uid://bynmhure2yh0v" path="res://game/mining/miner_player.gd" id="4_bte8m"]
 [ext_resource type="PackedScene" uid="uid://bn5s5y6x2w8t" path="res://game/mining/chunk.tscn" id="5_ujp4m"]
-[ext_resource type="Script" uid="uid://cgxnbav0c5wir" path="res://game/dirt.gd" id="6_bte8m"]
+[ext_resource type="Script" path="res://game/dirt.gd" id="6_bte8m"]
 [ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="6_x3fj0"]
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="8_aipip"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="9_wb13v"]
@@ -14,6 +14,7 @@
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
 input_context = ExtResource("2_7pupr")
+total_mining_time = 10.0
 
 [node name="Chunk" parent="." instance=ExtResource("5_ujp4m")]
 block_size_px = 40
@@ -82,3 +83,25 @@ offset_right = 622.0
 offset_bottom = -289.0
 text = "100"
 script = ExtResource("6_bte8m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_right = 1283.0
+offset_bottom = 719.0
+
+[node name="TimeLeftLabel" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 9.0
+offset_right = 1088.0
+offset_bottom = 59.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+text = "Time left:"
+text_overrun_behavior = 1
