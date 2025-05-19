@@ -9,7 +9,7 @@ func _enter_tree():
 func fluxuate_prices():
 	for coin_type in State.Market.prices.keys():
 		var current := State.Market.prices[coin_type].current_price
-		var change_percent := randf_range(-0.1, 0.1)
+		var change_percent := randf_range(-0.25, 0.25)
 		var new_price := current * (1.0 + change_percent)
 
 		State.Market.update_price(coin_type, new_price)

@@ -39,7 +39,7 @@ class PriceHistory:
 
 	func update(price: float):
 		current_price = price
-		history.push_front(price)
+		history.push_back(price)
 
 	func _to_string() -> String:
 		return "%s\n  Current Price: %.2f\n  History: %s" % [
