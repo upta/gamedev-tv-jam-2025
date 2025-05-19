@@ -18,4 +18,4 @@ base_mining_rate = 0.5
 
 [node name="Chunk" parent="." instance=ExtResource("5_ujp4m")]
 block_size_px = 40
-radius = 5
+radius = 10
