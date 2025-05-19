@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5vufw7g3ksiw"]
+[gd_scene load_steps=3 format=3 uid="uid://c5vufw7g3ksiw"]
+
+[ext_resource type="Texture2D" uid="uid://bdpqr7bh6ccjn" path="res://assets/resources/memory/chip_empty.png" id="1_g557a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pupr"]
 size = Vector2(40, 40)
@@ -16,3 +18,8 @@ offset_right = 20.0
 offset_bottom = 20.0
 color = Color(0.629972, 0.274766, 0.473434, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.24715, 1.74715)
+scale = Vector2(0.742277, 0.757902)
+texture = ExtResource("1_g557a")
