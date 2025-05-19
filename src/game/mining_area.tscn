@@ -12,6 +12,7 @@ input_context = ExtResource("2_7pupr")
 
 [node name="MinerPlayer" parent="." instance=ExtResource("3_ujp4m")]
 script = ExtResource("4_bte8m")
+base_mining_rate = 0.5
 
 [node name="Camera2D" type="Camera2D" parent="MinerPlayer"]
 
