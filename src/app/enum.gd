@@ -43,16 +43,16 @@ static func vector_to_direction(vec: Vector2) -> Direction:
 	if angle < -7 * PI / 8 or angle >= 7 * PI / 8:
 		return Direction.WEST
 	elif angle < -5 * PI / 8:
-		return Direction.SOUTHWEST
+		return Direction.NORTHWEST
 	elif angle < -3 * PI / 8:
-		return Direction.SOUTH
+		return Direction.NORTH
 	elif angle < -PI / 8:
-		return Direction.SOUTHEAST
+		return Direction.NORTHEAST
 	elif angle < PI / 8:
 		return Direction.EAST
 	elif angle < 3 * PI / 8:
-		return Direction.NORTHEAST
+		return Direction.SOUTHEAST
 	elif angle < 5 * PI / 8:
-		return Direction.NORTH
+		return Direction.SOUTH
 	else:
-		return Direction.NORTHWEST
+		return Direction.SOUTHWEST
