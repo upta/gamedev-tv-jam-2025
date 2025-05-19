@@ -6,7 +6,8 @@ signal power_changed(power: float)
 var coins: Dictionary[Enum.CoinType, int] = {}
 
 var power := 0.0:
-	get: return power
+	get:
+		return power
 	set(value):
 		power = value
 		power_changed.emit(power)
