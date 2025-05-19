@@ -6,14 +6,16 @@ extends Player
 
 
 func _process(delta: float) -> void:
-	var collision = get_last_slide_collision()
-	if collision:
+	var collision_count = get_slide_collision_count()
+	for index in range(collision_count):
+		var collision = get_slide_collision(index)
 		_handle_collision(collision.get_collider())
 
 
 func _handle_collision(collider: Object):
 	if collider is Mineable:
-		_try_mine(collider)
+		if facing_direction == Enum.vector_to_direction(collider.global_position - global_position):
+			_try_mine(collider)
 
 
 func _try_mine(mineable: Mineable):
