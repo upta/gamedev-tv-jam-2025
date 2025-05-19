@@ -7,9 +7,20 @@ extends Control
 @onready var quantity: HSlider = %Quantity
 @onready var quantity_label: Label = %QuantityLabel
 @onready var sell_button: Button = %SellButton
+@onready var graph: Graph2D = %Graph
 
 
 func _ready() -> void:
+	# just to get some test data in there
+	Service.Market.fluxuate_prices()
+	Service.Market.fluxuate_prices()
+	Service.Market.fluxuate_prices()
+	Service.Market.fluxuate_prices()
+	Service.Market.fluxuate_prices()
+
+	# hacky way to hide the mouse coordinate position, since it doesn't actually expose a way
+	graph.get_node("PlotArea/Coordinate").visible = false
+	
 	# Clears the temp test data we need for editor view
 	item_list.clear()
 
@@ -33,9 +44,11 @@ func _ready() -> void:
 
 func _on_item_selected(index: int):
 	var coin: CoinResource = item_list.get_item_metadata(index)
+	var price_history = State.Market.prices[coin.type]
+
 	coin_name.text = coin.name
 	icon.texture = coin.icon
-	price.text = "$%.2f" % State.Market.prices[coin.type].current_price
+	price.text = "$%.2f" % price_history.current_price
 
 	# set max value to whats in inventory
 	var amount_owned = State.Inventory.coins.get(coin.type, 0)
@@ -43,6 +56,21 @@ func _on_item_selected(index: int):
 	quantity.max_value = amount_owned
 	quantity.value = amount_owned
 	_on_quantity_value_changed(quantity.value)
+
+	graph.remove_all()
+
+	var plot_item := graph.add_plot_item(" ", Color.WEB_GREEN)
+	var max_value := 0.0
+
+	for i in price_history.history.size():
+		var item: float = price_history.history[i]
+
+		plot_item.add_point(Vector2(i, item))
+		max_value = maxf(max_value, item)
+
+	graph.y_max = max_value * 1.5
+
+	prints(max_value, graph.y_max)
 
 
 func _on_quantity_value_changed(value: float):
