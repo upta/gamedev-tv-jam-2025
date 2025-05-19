@@ -4,7 +4,7 @@ extends Area2D
 @export var block_size_px: int = 20
 @export var radius: int = 3
 
-var has_spawened = false;
+var has_spawned = false;
 
 var ordinal_positions: Array[Vector2] = [
 	Vector2.LEFT,
@@ -21,7 +21,7 @@ var ordinal_positions: Array[Vector2] = [
 @onready var chunk_size_px: int = chunk_size * block_size_px
 
 @onready var chunk: PackedScene = preload("res://game/mining/chunk.tscn")
-@onready var area: CollisionShape2D = get_node("Area");
+@onready var area: CollisionShape2D = $Area;
 
 @onready var dirt_block: PackedScene = preload("res://game/mining/dirt.tscn")
 @onready var wall_block: PackedScene = preload("res://game/mining/solid_wall.tscn")
@@ -72,8 +72,8 @@ func _get_all_block_grid_locations() -> Array[Vector2]:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if not has_spawened and body is Player:
-		has_spawened = true
+	if not has_spawned and body is Player:
+		has_spawned = true
 		_spawn_sibling_chunks()
 
 
