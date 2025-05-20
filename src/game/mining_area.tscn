@@ -1,11 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqfd1a8bvojms"]
+[gd_scene load_steps=14 format=3 uid="uid://cqfd1a8bvojms"]
 
 [ext_resource type="Script" uid="uid://bbfflnbqq66yw" path="res://game/mining_area.gd" id="1_bdnut"]
 [ext_resource type="Resource" uid="uid://b21g17kle5gak" path="res://input/game/mining_context.tres" id="2_7pupr"]
+[ext_resource type="PackedScene" uid="uid://bbbwjt5ay0u58" path="res://game/mining/chunk_master.tscn" id="3_aipip"]
 [ext_resource type="PackedScene" uid="uid://bsjevfbrnec8e" path="res://game/mining/miner_player.tscn" id="3_ujp4m"]
 [ext_resource type="Script" uid="uid://bynmhure2yh0v" path="res://game/mining/miner_player.gd" id="4_bte8m"]
+[ext_resource type="PackedScene" uid="uid://clmb3d6jg1rcg" path="res://game/mining/blocks/dirt.tscn" id="4_tvd5v"]
+[ext_resource type="PackedScene" uid="uid://c5vufw7g3ksiw" path="res://game/mining/blocks/solid_wall.tscn" id="5_in7h5"]
 [ext_resource type="PackedScene" uid="uid://bn5s5y6x2w8t" path="res://game/mining/chunk.tscn" id="5_ujp4m"]
-[ext_resource type="Script" path="res://game/dirt.gd" id="6_bte8m"]
+[ext_resource type="Script" uid="uid://cgxnbav0c5wir" path="res://game/dirt.gd" id="6_bte8m"]
 [ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="6_x3fj0"]
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="8_aipip"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="9_wb13v"]
@@ -16,9 +19,17 @@ script = ExtResource("1_bdnut")
 input_context = ExtResource("2_7pupr")
 total_mining_time = 10.0
 
-[node name="Chunk" parent="." instance=ExtResource("5_ujp4m")]
-block_size_px = 40
-radius = 10
+[node name="ChunkMaster" parent="." instance=ExtResource("3_aipip")]
+block_types = Dictionary[int, PackedScene]({
+1: ExtResource("4_tvd5v"),
+2: ExtResource("5_in7h5")
+})
+block_size_px = 40.0
+chunk_radius = 10
+
+[node name="Chunk" parent="." node_paths=PackedStringArray("chunk_master") instance=ExtResource("5_ujp4m")]
+chunk = ExtResource("5_ujp4m")
+chunk_master = NodePath("../ChunkMaster")
 
 [node name="MinerPlayer" parent="." instance=ExtResource("3_ujp4m")]
 script = ExtResource("4_bte8m")

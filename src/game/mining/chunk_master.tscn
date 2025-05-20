@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbbwjt5ay0u58"]
+
+[ext_resource type="Script" uid="uid://cj5jjd6psqcis" path="res://game/mining/chunk_master.gd" id="1_teapn"]
+
+[node name="ChunkMaster" type="Node"]
+script = ExtResource("1_teapn")

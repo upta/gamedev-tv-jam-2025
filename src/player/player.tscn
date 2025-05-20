@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bv343vk7b8p0q" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Resource" uid="uid://bci3audsvtd2e" path="res://input/game/actions/move.tres" id="2_g1dw6"]
-[ext_resource type="Texture2D" uid="uid://wpiv0tnc2mhs" path="res://assets/characters/chipmunk/profile_left/cpro1.png" id="3_yw30f"]
+[ext_resource type="Texture2D" uid="uid://wpiv0tnc2mhs" path="res://assets/characters/chipmunk/profile_right/cpro1.png" id="3_yw30f"]
 [ext_resource type="Texture2D" uid="uid://c2xbj5upf8bmx" path="res://assets/characters/chipmunk/back/cb1.png" id="4_rgyib"]
 [ext_resource type="Texture2D" uid="uid://cdv8dmm86lhak" path="res://assets/characters/chipmunk/portrait/cpor1.png" id="5_hg6s5"]
 [ext_resource type="Texture2D" uid="uid://b6agx8dmsdlf5" path="res://assets/characters/chipmunk/profile_right/cpro2.png" id="7_8t03j"]

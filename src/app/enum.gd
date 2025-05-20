@@ -13,6 +13,12 @@ enum Direction {
 
 enum CoinType { SHIT_COIN }
 
+enum BlockType {
+	EMPTY,
+	DIRT_BLOCK,
+	WALL,
+}
+
 
 static func direction_as_string(value: Direction) -> String:
 	match value:
