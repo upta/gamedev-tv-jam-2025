@@ -16,6 +16,10 @@ func fluxuate_prices():
 
 
 func sell_coins(coin_type: Enum.CoinType, quantity: int):
+	if quantity <= 0:
+		push_error("Tried to sell %s" % [quantity])
+		return
+
 	if !State.Inventory.coins.has(coin_type):
 		push_error("Invalid coin type")
 		return
