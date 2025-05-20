@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=3 uid="uid://bvognlbearkww"]
+
+[ext_resource type="Script" path="res://memory_node.gd" id="1_yu4rf"]
+[ext_resource type="Texture2D" uid="uid://dr4wxnie0vs35" path="res://Memory/chip_blank.png" id="2_bi7jw"]
+[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://Memory/chip_blue.png" id="3_nsxk5"]
+[ext_resource type="Texture2D" uid="uid://bdpqr7bh6ccjn" path="res://Memory/chip_empty.png" id="4_8ijel"]
+[ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://Memory/chip_green.png" id="5_53kc4"]
+[ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://Memory/chip_red.png" id="6_fcx8b"]
+[ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://Memory/chip_yellow.png" id="7_jtvtf"]
+[ext_resource type="Script" path="res://memory_sprite.gd" id="8_ncpf6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yi31t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bi7jw")
+}],
+"loop": true,
+"name": &"chip_blank",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nsxk5")
+}],
+"loop": true,
+"name": &"chip_blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_8ijel")
+}],
+"loop": true,
+"name": &"chip_empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_53kc4")
+}],
+"loop": true,
+"name": &"chip_green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nsxk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_53kc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fcx8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jtvtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fcx8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nsxk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jtvtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_53kc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nsxk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fcx8b")
+}],
+"loop": true,
+"name": &"chip_randomize",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fcx8b")
+}],
+"loop": true,
+"name": &"chip_red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_jtvtf")
+}],
+"loop": true,
+"name": &"chip_yellow",
+"speed": 5.0
+}]
+
+[node name="MemoryNode" type="Node2D"]
+script = ExtResource("1_yu4rf")
+
+[node name="MemorySprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(421, 190)
+sprite_frames = SubResource("SpriteFrames_yi31t")
+animation = &"chip_blank"
+frame_progress = 0.0895495
+script = ExtResource("8_ncpf6")
