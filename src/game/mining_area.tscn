@@ -24,7 +24,7 @@ block_types = Dictionary[int, PackedScene]({
 2: ExtResource("5_in7h5")
 })
 block_size_px = 40.0
-chunk_radius = 2
+chunk_radius = 10
 
 [node name="Chunk" parent="." node_paths=PackedStringArray("chunk_master") instance=ExtResource("5_ujp4m")]
 chunk = ExtResource("5_ujp4m")

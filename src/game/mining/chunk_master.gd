@@ -34,6 +34,13 @@ func _generate_center(distance_from_center: float) -> Enum.BlockType:
 	return _generate_default(distance_from_center)
 
 
+func _generate_wall_heavy(distance_from_center: float) -> Enum.BlockType:
+	if randf() < 0.33:
+		return Enum.BlockType.WALL
+
+	return _generate_default(distance_from_center)
+
+
 func _generate_default(distance_from_center: float) -> Enum.BlockType:
 	if randf() < 0.05:
 		return Enum.BlockType.WALL
@@ -48,6 +55,9 @@ func _generate_default(distance_from_center: float) -> Enum.BlockType:
 func _get_block_generator(chunk_block_center: float) -> Callable:
 	if chunk_block_center < 1:
 		return _generate_center
+
+	if randf() < 0.03 * log(chunk_block_center):
+		return _generate_wall_heavy
 
 	return _generate_default
 
