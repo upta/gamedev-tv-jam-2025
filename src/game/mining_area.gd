@@ -1,9 +1,9 @@
 extends Node2D
 
 @export var input_context: GUIDEMappingContext
-@export var total_mining_time: float = 60
+@export var total_mining_time: float = 60.0
 
-@onready var time_elapsed: float = 0
+@onready var time_elapsed: float = 0.0
 @onready var time_left: float = total_mining_time
 
 

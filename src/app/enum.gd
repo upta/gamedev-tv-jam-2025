@@ -19,8 +19,9 @@ enum CoinType {
 
 enum BlockType {
 	EMPTY,
-	DIRT_BLOCK,
+	DIRT,
 	WALL,
+	BLUE_CHIP,
 }
 
 
