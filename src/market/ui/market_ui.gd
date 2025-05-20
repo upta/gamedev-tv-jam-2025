@@ -5,6 +5,7 @@ extends Control
 @onready var icon: TextureRect = %Icon
 @onready var price: Label = %Price
 @onready var quantity: HSlider = %Quantity
+@onready var quantity_container: HBoxContainer = %QuantityContainer
 @onready var quantity_label: Label = %QuantityLabel
 @onready var sell_button: Button = %SellButton
 @onready var graph: Graph2D = %Graph
@@ -57,6 +58,10 @@ func _on_item_selected(index: int):
 
 	# set max value to whats in inventory
 	var amount_owned = State.Inventory.coins.get(coin.type, 0)
+
+	# Hide the sell display if they don't own any coin
+	quantity_container.visible = amount_owned > 0
+	sell_button.visible = amount_owned > 0
 
 	quantity.max_value = amount_owned
 	quantity.value = amount_owned
