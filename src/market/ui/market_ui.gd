@@ -25,6 +25,7 @@ func _ready() -> void:
 	item_list.clear()
 
 	var coins: Array[CoinResource] = ItemTypes.coins.values()
+
 	for i in coins.size():
 		var coin = coins[i]
 		item_list.add_item(coin.name, coin.icon)
@@ -32,8 +33,10 @@ func _ready() -> void:
 
 	item_list.item_selected.connect(_on_item_selected)
 
-	#add a coin for testing
+	#add some coin for testing
 	Service.Inventory.add_coins(Enum.CoinType.SHIT_COIN, 11)
+	Service.Inventory.add_coins(Enum.CoinType.DOS_COIN, 22)
+	Service.Inventory.add_coins(Enum.CoinType.A_COIN, 33)
 
 	quantity.value_changed.connect(_on_quantity_value_changed)
 
@@ -72,7 +75,7 @@ func _on_item_selected(index: int):
 
 	graph.y_max = max_value * 1.5
 
-	prints(max_value, graph.y_max)
+	#prints(max_value, graph.y_max)
 
 
 func _on_quantity_value_changed(value: float):

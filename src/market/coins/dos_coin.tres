@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CoinResource" load_steps=3 format=3 uid="uid://cjqn22wk7i2x1"]
+
+[ext_resource type="Script" uid="uid://dpiraumxsl8u3" path="res://market/coins/coin_resource.gd" id="2_o2e4g"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f205t"]
+load_path = "res://.godot/imported/chip_empty.png-46160e8f5b248132229877cafdfd6270.ctex"
+
+[resource]
+script = ExtResource("2_o2e4g")
+base_price = 2.0
+icon = SubResource("CompressedTexture2D_f205t")
+name = "Doscoin"
+type = 1
+metadata/_custom_type_script = "uid://dpiraumxsl8u3"
