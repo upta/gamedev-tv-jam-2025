@@ -11,7 +11,11 @@ enum Direction {
 	NORTHWEST,
 }
 
-enum CoinType { SHIT_COIN }
+enum CoinType {
+	SHIT_COIN,
+	DOS_COIN,
+	A_COIN,
+}
 
 enum BlockType {
 	EMPTY,
