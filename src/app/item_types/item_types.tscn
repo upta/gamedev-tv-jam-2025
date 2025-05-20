@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuc5666ypv6en"]
+[gd_scene load_steps=8 format=3 uid="uid://cuc5666ypv6en"]
 
 [ext_resource type="Script" uid="uid://706qbiasuvtd" path="res://app/item_types/item_types.gd" id="1_4utt5"]
 [ext_resource type="Script" uid="uid://dpiraumxsl8u3" path="res://market/coins/coin_resource.gd" id="2_idy0w"]
 [ext_resource type="Resource" uid="uid://bv26wt3im6m0e" path="res://market/coins/shit_coin.tres" id="3_y8n3v"]
 [ext_resource type="Resource" uid="uid://cjqn22wk7i2x1" path="res://market/coins/dos_coin.tres" id="4_y8n3v"]
 [ext_resource type="Resource" uid="uid://b6e3bipbybp53" path="res://market/coins/a_coin.tres" id="5_7isse"]
+[ext_resource type="Script" uid="uid://d0vocvf6us5ft" path="res://game/resources/mining_resource.gd" id="6_ernd5"]
+[ext_resource type="Resource" uid="uid://dw66prwy4wlku" path="res://game/resources/blue_chip.tres" id="7_dyokw"]
 
 [node name="ItemTypes" type="Node"]
 script = ExtResource("1_4utt5")
@@ -12,4 +14,7 @@ coins = Dictionary[int, ExtResource("2_idy0w")]({
 0: ExtResource("3_y8n3v"),
 1: ExtResource("4_y8n3v"),
 2: ExtResource("5_7isse")
+})
+mining_resources = Dictionary[int, ExtResource("6_ernd5")]({
+0: ExtResource("7_dyokw")
 })

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://clmb3d6jg1rcg"]
 
 [ext_resource type="Script" uid="uid://cm4qmc74gk4wj" path="res://game/mining/blocks/dirt.gd" id="1_lm7yj"]
-[ext_resource type="Texture2D" uid="uid://dr4wxnie0vs35" path="res://assets/resources/memory/chip_blank.png" id="2_6onye"]
+[ext_resource type="Texture2D" uid="uid://c58r0p0siafvt" path="res://assets/resources/Chips/chips_white.png" id="2_ufpdo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pupr"]
 size = Vector2(40, 40)
@@ -14,16 +14,7 @@ durability = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7pupr")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-y_sort_enabled = true
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-color = Color(0.412183, 0.341539, 0.267041, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Dirt" type="Sprite2D" parent="."]
-position = Vector2(-1, 2)
-scale = Vector2(0.735575, 0.755138)
-texture = ExtResource("2_6onye")
+[node name="DirtSprite" type="Sprite2D" parent="."]
+position = Vector2(-0.134601, -0.0411035)
+scale = Vector2(0.691706, 0.720035)
+texture = ExtResource("2_ufpdo")

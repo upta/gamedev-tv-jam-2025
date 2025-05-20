@@ -5,6 +5,9 @@ class_name ChunkMaster extends Node
 @export var chunk_radius: int = 3
 
 
+static func percent(val: float) -> float: return val / 100.0
+
+
 func _get_block_range() -> Array:
 	return range(-chunk_radius, chunk_radius + 1, 1)
 
@@ -24,6 +27,9 @@ func _get_new_block(type: Enum.BlockType) -> Node2D:
 	if block_type != null:
 		return block_type.instantiate() as Node2D
 
+	if not Enum.BlockType.EMPTY:
+		push_warning("ChunkMaster is missing requested BlockType %s" % type)
+
 	return null
 
 
@@ -35,20 +41,23 @@ func _generate_center(distance_from_center: float) -> Enum.BlockType:
 
 
 func _generate_wall_heavy(distance_from_center: float) -> Enum.BlockType:
-	if randf() < 0.33:
+	if randf() < percent(30):
 		return Enum.BlockType.WALL
 
 	return _generate_default(distance_from_center)
 
 
 func _generate_default(distance_from_center: float) -> Enum.BlockType:
-	if randf() < 0.05:
+	if randf() < min(percent(20), percent(3) * log(distance_from_center)):
+		return Enum.BlockType.BLUE_CHIP
+
+	if randf() < percent(5):
 		return Enum.BlockType.WALL
 
-	if randf() < max(1 / distance_from_center, 0.001):
+	if randf() < max(1 / distance_from_center, percent(1)):
 		return Enum.BlockType.EMPTY
 
-	return Enum.BlockType.DIRT_BLOCK
+	return Enum.BlockType.DIRT
 
 
 ## chunk block center is expected to be based on the block grid, not pixels
@@ -56,7 +65,7 @@ func _get_block_generator(chunk_block_center: float) -> Callable:
 	if chunk_block_center < 1:
 		return _generate_center
 
-	if randf() < 0.03 * log(chunk_block_center):
+	if randf() < 3 / 100 * log(chunk_block_center):
 		return _generate_wall_heavy
 
 	return _generate_default
