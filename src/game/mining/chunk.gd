@@ -18,7 +18,7 @@ var ordinal_positions: Array[Vector2] = [
 ]
 
 @onready var chunk_size: int = 1 + (chunk_master.chunk_radius * 2)
-@onready var chunk_size_px: int = chunk_size * chunk_master.block_size_px
+@onready var chunk_size_px: float = chunk_size * chunk_master.block_size_px
 @onready var area: CollisionShape2D = $Area;
 
 
@@ -29,24 +29,8 @@ func _ready() -> void:
 
 
 func _fill_chunk() -> void:
-	var block_generator = chunk_master.get_block_generator(position)
-
-	for block_location in _get_all_block_grid_locations():
-		var block = block_generator.call(block_location)
-		if block == null:
-			continue
-
-		block.position = block_location * chunk_master.block_size_px
-		block.show()
-		add_child(block)
-
-
-func _get_all_block_grid_locations() -> Array[Vector2]:
-	var locations: Array[Vector2]
-	for x in range(-chunk_master.chunk_radius, chunk_master.chunk_radius + 1, 1):
-		for y in range(-chunk_master.chunk_radius, chunk_master.chunk_radius + 1, 1):
-			locations.append(Vector2(x, y))
-	return locations
+	for block in chunk_master.generate_blocks(position):
+		add_child.call_deferred(block)
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -67,7 +51,7 @@ func _create_sibling(at: Vector2) -> void:
 	sibling.chunk = chunk
 	sibling.chunk_master = chunk_master
 	sibling.position = at
-	add_sibling(sibling)
+	add_sibling.call_deferred(sibling)
 
 
 func _has_sibling_chunk(at: Vector2, physics: PhysicsDirectSpaceState2D) -> bool:

@@ -17,7 +17,6 @@
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
 input_context = ExtResource("2_7pupr")
-total_mining_time = 10.0
 
 [node name="ChunkMaster" parent="." instance=ExtResource("3_aipip")]
 block_types = Dictionary[int, PackedScene]({
@@ -25,7 +24,7 @@ block_types = Dictionary[int, PackedScene]({
 2: ExtResource("5_in7h5")
 })
 block_size_px = 40.0
-chunk_radius = 10
+chunk_radius = 2
 
 [node name="Chunk" parent="." node_paths=PackedStringArray("chunk_master") instance=ExtResource("5_ujp4m")]
 chunk = ExtResource("5_ujp4m")
