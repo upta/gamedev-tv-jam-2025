@@ -9,6 +9,7 @@ func on_mined():
 	collision_shape.disabled = true
 	chip_sprite.hide()
 	chip_empty_sprite.show()
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.BLUE_CHIP, 1)
 
 
 func on_damaged():

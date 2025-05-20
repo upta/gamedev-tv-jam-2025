@@ -8,12 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://clmb3d6jg1rcg" path="res://game/mining/blocks/dirt.tscn" id="4_tvd5v"]
 [ext_resource type="PackedScene" uid="uid://c5vufw7g3ksiw" path="res://game/mining/blocks/solid_wall.tscn" id="5_in7h5"]
 [ext_resource type="PackedScene" uid="uid://bn5s5y6x2w8t" path="res://game/mining/chunk.tscn" id="5_ujp4m"]
-[ext_resource type="Script" uid="uid://cgxnbav0c5wir" path="res://game/dirt.gd" id="6_bte8m"]
 [ext_resource type="PackedScene" uid="uid://b58mymyph0k1" path="res://game/mining/blocks/chip.tscn" id="6_in7h5"]
 [ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="6_x3fj0"]
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="8_aipip"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="9_wb13v"]
 [ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="10_tvd5v"]
+
+[sub_resource type="GDScript" id="GDScript_tvd5v"]
+script/source = "extends Label
+"
 
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
@@ -85,8 +88,8 @@ stretch_mode = 5
 
 [node name="ChipBlue Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-text = "100"
-script = ExtResource("6_bte8m")
+text = "0"
+script = SubResource("GDScript_tvd5v")
 
 [node name="ChipGreen Icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -97,7 +100,7 @@ stretch_mode = 5
 [node name="ChipGreen Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "100"
-script = ExtResource("6_bte8m")
+script = SubResource("GDScript_tvd5v")
 
 [node name="ChipRed Icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -108,7 +111,7 @@ stretch_mode = 5
 [node name="ChipRed Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "100"
-script = ExtResource("6_bte8m")
+script = SubResource("GDScript_tvd5v")
 
 [node name="ChipYellow Icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -119,4 +122,4 @@ stretch_mode = 5
 [node name="ChipYellow Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "100"
-script = ExtResource("6_bte8m")
+script = SubResource("GDScript_tvd5v")

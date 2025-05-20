@@ -2,8 +2,14 @@ class_name InventoryState extends Node
 
 signal coin_changed(coin_type: Enum.CoinType, quantity: int)
 signal power_changed(power: float)
+signal mining_resource_changed(resource_type: Enum.MiningResourceType, quantity: int)
+signal staged_mining_resource_changed(resource_type: Enum.MiningResourceType, quantity: int)
 
 var coins: Dictionary[Enum.CoinType, int] = {}
+# resources represent global inventory resources
+var mining_resources: Dictionary[Enum.MiningResourceType, int] = {}
+# staged resources represent the resources actively being collected in the mining game
+var staged_mining_resources: Dictionary[Enum.MiningResourceType, int] = {}
 
 var power := 0.0:
 	get:
@@ -24,6 +30,16 @@ func _to_string() -> String:
 	for coin_type in coins.keys():
 		out += indent.call("• %s: %d\n" % [ItemTypes.coins[coin_type].name, coins[coin_type]], "   ")
 
+	out += " - Mining Resources:\n"
+
+	for mining_resource_type in mining_resources.keys():
+		out += indent.call("• %s: %d\n" % [ItemTypes.mining_resources[mining_resource_type].name, mining_resources[mining_resource_type]], "   ")
+
+	out += " - Staged Mining Resources:\n"
+
+	for mining_resource_type in staged_mining_resources.keys():
+		out += indent.call("• %s: %d\n" % [ItemTypes.mining_resources[mining_resource_type].name, staged_mining_resources[mining_resource_type]], "   ")
+
 	return out
 
 
@@ -35,3 +51,27 @@ func add_coin(coin_type: Enum.CoinType, quantity: int):
 func update_coin(coin_type: Enum.CoinType, quantity: int):
 	coins[coin_type] = quantity
 	coin_changed.emit(coin_type, quantity)
+
+
+func add_mining_resource(resource_type: Enum.MiningResourceType, quantity: int):
+	var current = mining_resources.get_or_add(resource_type, 0)
+	update_mining_resource(resource_type, current + quantity)
+
+
+func update_mining_resource(resource_type: Enum.MiningResourceType, quantity: int):
+	mining_resources[resource_type] = quantity
+	mining_resource_changed.emit(resource_type, quantity)
+
+
+func add_staged_mining_resource(resource_type: Enum.MiningResourceType, quantity: int):
+	var current = staged_mining_resources.get_or_add(resource_type, 0)
+	update_staged_mining_resource(resource_type, current + quantity)
+
+
+func update_staged_mining_resource(resource_type: Enum.MiningResourceType, quantity: int):
+	staged_mining_resources[resource_type] = quantity
+	staged_mining_resource_changed.emit(resource_type, quantity)
+
+
+func get_all_staged_mining_resources() -> Dictionary[Enum.MiningResourceType, int]:
+	return staged_mining_resources.duplicate()

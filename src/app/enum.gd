@@ -17,6 +17,8 @@ enum CoinType {
 	A_COIN,
 }
 
+enum MiningResourceType { BLUE_CHIP }
+
 enum BlockType {
 	EMPTY,
 	DIRT,
