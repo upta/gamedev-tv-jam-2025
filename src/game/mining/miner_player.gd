@@ -21,7 +21,6 @@ func _handle_collision(collider: Object):
 
 
 func _try_mine(mineable: Mineable):
-	var now = Time.get_unix_time_from_system()
 	var can_mine = last_mined_delta >= base_mining_rate
 
 	if can_mine:
