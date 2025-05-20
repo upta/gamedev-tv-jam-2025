@@ -92,6 +92,6 @@ func _on_sell_button_pressed():
 	var index = selected[0]
 
 	var coin: CoinResource = item_list.get_item_metadata(index)
-	Service.Market.sell_coins(coin.type, quantity.value)
+	Service.Market.sell_coins(coin.type, floori(quantity.value))
 
 	_on_item_selected(index)
