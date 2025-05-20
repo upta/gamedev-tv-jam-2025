@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxrwvyn8vmlkv"
-path="res://.godot/imported/cpro3.png-ce4b2929b2a4a0f391a8a1e0d332b9ec.ctex"
+uid="uid://duqjl6nmalcou"
+path="res://.godot/imported/trail_vertical_left.png-546f0f87f1176a50edb9f97b98cab489.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/chipmunk/profile_left/cpro3.png"
-dest_files=["res://.godot/imported/cpro3.png-ce4b2929b2a4a0f391a8a1e0d332b9ec.ctex"]
+source_file="res://assets/resources/Trails/trail_vertical_left.png"
+dest_files=["res://.godot/imported/trail_vertical_left.png-546f0f87f1176a50edb9f97b98cab489.ctex"]
 
 [params]
 

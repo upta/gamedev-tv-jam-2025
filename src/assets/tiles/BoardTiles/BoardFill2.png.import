@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxrwvyn8vmlkv"
-path="res://.godot/imported/cpro3.png-ce4b2929b2a4a0f391a8a1e0d332b9ec.ctex"
+uid="uid://cf0g0rbs8o7ur"
+path="res://.godot/imported/BoardFill2.png-b0e28e24e33d4fc916f1e0be29c4d52e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/chipmunk/profile_left/cpro3.png"
-dest_files=["res://.godot/imported/cpro3.png-ce4b2929b2a4a0f391a8a1e0d332b9ec.ctex"]
+source_file="res://assets/tiles/BoardTiles/BoardFill2.png"
+dest_files=["res://.godot/imported/BoardFill2.png-b0e28e24e33d4fc916f1e0be29c4d52e.ctex"]
 
 [params]
 

@@ -1,22 +1,25 @@
-[gd_scene load_steps=14 format=3 uid="uid://wp20c4t7t4e4"]
+[gd_scene load_steps=17 format=3 uid="uid://wp20c4t7t4e4"]
 
 [ext_resource type="Script" uid="uid://bv343vk7b8p0q" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Resource" uid="uid://bci3audsvtd2e" path="res://input/game/actions/move.tres" id="2_g1dw6"]
-[ext_resource type="Texture2D" uid="uid://wpiv0tnc2mhs" path="res://assets/characters/chipmunk/profile_right/cpro1.png" id="3_yw30f"]
 [ext_resource type="Texture2D" uid="uid://c2xbj5upf8bmx" path="res://assets/characters/chipmunk/back/cb1.png" id="4_rgyib"]
 [ext_resource type="Texture2D" uid="uid://cdv8dmm86lhak" path="res://assets/characters/chipmunk/portrait/cpor1.png" id="5_hg6s5"]
-[ext_resource type="Texture2D" uid="uid://b6agx8dmsdlf5" path="res://assets/characters/chipmunk/profile_right/cpro2.png" id="7_8t03j"]
-[ext_resource type="Texture2D" uid="uid://2eaqa15a3pqy" path="res://assets/characters/chipmunk/profile_right/cpro3.png" id="8_2ieo8"]
+[ext_resource type="Texture2D" uid="uid://rvryva5ovra7" path="res://assets/characters/chipmunk/profile_right/cpro1.png" id="6_kb6p2"]
+[ext_resource type="Texture2D" uid="uid://2ofmbyy0k5kt" path="res://assets/characters/chipmunk/profile_left/cpro1.png" id="6_wodsf"]
 [ext_resource type="Texture2D" uid="uid://dakdbaqf4m0fi" path="res://assets/characters/chipmunk/back/cb2.png" id="9_ebec5"]
 [ext_resource type="Texture2D" uid="uid://dgamfwb78ss0s" path="res://assets/characters/chipmunk/back/cb3.png" id="10_yllr7"]
 [ext_resource type="Texture2D" uid="uid://dhjfvmxeb2ovw" path="res://assets/characters/chipmunk/portrait/cpor2.png" id="11_kb6p2"]
 [ext_resource type="Texture2D" uid="uid://b5g5khv8hd0rj" path="res://assets/characters/chipmunk/portrait/cpor3.png" id="12_wodsf"]
+[ext_resource type="Texture2D" uid="uid://cib54ckt8lsrj" path="res://assets/characters/chipmunk/profile_left/cpro2.png" id="13_32hag"]
+[ext_resource type="Texture2D" uid="uid://ci4gu431n7pbf" path="res://assets/characters/chipmunk/profile_right/cpro2.png" id="13_tqiix"]
+[ext_resource type="Texture2D" uid="uid://6c3r3lf6fp56" path="res://assets/characters/chipmunk/profile_right/cpro3.png" id="14_e7oew"]
+[ext_resource type="Texture2D" uid="uid://dxrwvyn8vmlkv" path="res://assets/characters/chipmunk/profile_left/cpro3.png" id="14_tqiix"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bjvpn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_yw30f")
+"texture": ExtResource("6_kb6p2")
 }],
 "loop": false,
 "name": &"idle_east",
@@ -40,7 +43,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_yw30f")
+"texture": ExtResource("6_wodsf")
 }],
 "loop": false,
 "name": &"idle_west",
@@ -48,16 +51,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_yw30f")
+"texture": ExtResource("6_kb6p2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_8t03j")
+"texture": ExtResource("13_tqiix")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_yw30f")
+"texture": ExtResource("6_kb6p2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_2ieo8")
+"texture": ExtResource("14_e7oew")
 }],
 "loop": true,
 "name": &"walk_east",
@@ -99,16 +102,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_yw30f")
+"texture": ExtResource("6_wodsf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_8t03j")
+"texture": ExtResource("13_32hag")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_yw30f")
+"texture": ExtResource("6_wodsf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_2ieo8")
+"texture": ExtResource("14_tqiix")
 }],
 "loop": true,
 "name": &"walk_west",
@@ -124,7 +127,7 @@ move_action = ExtResource("2_g1dw6")
 
 [node name="SpriteAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bjvpn")
-animation = &"idle_west"
+animation = &"walk_west"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_s7qer")

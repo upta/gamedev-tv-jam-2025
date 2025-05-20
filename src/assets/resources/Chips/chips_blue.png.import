@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxrwvyn8vmlkv"
-path="res://.godot/imported/cpro3.png-ce4b2929b2a4a0f391a8a1e0d332b9ec.ctex"
+uid="uid://bp1trfxuhl4vn"
+path="res://.godot/imported/chips_blue.png-c2875ad2b640e587b24f7f34115603f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/chipmunk/profile_left/cpro3.png"
-dest_files=["res://.godot/imported/cpro3.png-ce4b2929b2a4a0f391a8a1e0d332b9ec.ctex"]
+source_file="res://assets/resources/Chips/chips_blue.png"
+dest_files=["res://.godot/imported/chips_blue.png-c2875ad2b640e587b24f7f34115603f2.ctex"]
 
 [params]
 

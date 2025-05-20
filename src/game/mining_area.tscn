@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://c5vufw7g3ksiw" path="res://game/mining/blocks/solid_wall.tscn" id="5_in7h5"]
 [ext_resource type="PackedScene" uid="uid://bn5s5y6x2w8t" path="res://game/mining/chunk.tscn" id="5_ujp4m"]
 [ext_resource type="Script" uid="uid://cgxnbav0c5wir" path="res://game/dirt.gd" id="6_bte8m"]
-[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="6_x3fj0"]
-[ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="8_aipip"]
-[ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="9_wb13v"]
-[ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="10_tvd5v"]
+[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/Memory/chip_blue.png" id="6_x3fj0"]
+[ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/Memory/chip_green.png" id="8_aipip"]
+[ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/Memory/chip_red.png" id="9_wb13v"]
+[ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/Memory/chip_yellow.png" id="10_tvd5v"]
 
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
@@ -36,64 +36,6 @@ base_mining_rate = 0.5
 
 [node name="Camera2D" type="Camera2D" parent="MinerPlayer"]
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 558.0
-offset_top = -349.0
-offset_right = 628.0
-offset_bottom = -225.0
-
-[node name="ChipBlue" type="Sprite2D" parent="."]
-position = Vector2(577, -328)
-scale = Vector2(0.53125, 0.53125)
-texture = ExtResource("6_x3fj0")
-
-[node name="Dirt Label" type="Label" parent="."]
-offset_left = 594.0
-offset_top = -341.0
-offset_right = 622.0
-offset_bottom = -318.0
-text = "100"
-script = ExtResource("6_bte8m")
-
-[node name="ChipGreen" type="Sprite2D" parent="."]
-position = Vector2(577, -300)
-scale = Vector2(0.523438, 0.523438)
-texture = ExtResource("8_aipip")
-
-[node name="Dirt Label2" type="Label" parent="."]
-offset_left = 594.0
-offset_top = -285.0
-offset_right = 622.0
-offset_bottom = -262.0
-text = "100"
-script = ExtResource("6_bte8m")
-
-[node name="ChipRed" type="Sprite2D" parent="."]
-position = Vector2(577, -272)
-scale = Vector2(0.53125, 0.53125)
-texture = ExtResource("9_wb13v")
-
-[node name="Dirt Label4" type="Label" parent="."]
-offset_left = 594.0
-offset_top = -258.0
-offset_right = 622.0
-offset_bottom = -235.0
-text = "100"
-script = ExtResource("6_bte8m")
-
-[node name="ChipYellow" type="Sprite2D" parent="."]
-position = Vector2(577, -244)
-scale = Vector2(0.53125, 0.53125)
-texture = ExtResource("10_tvd5v")
-
-[node name="Dirt Label3" type="Label" parent="."]
-offset_left = 594.0
-offset_top = -312.0
-offset_right = 622.0
-offset_bottom = -289.0
-text = "100"
-script = ExtResource("6_bte8m")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
@@ -115,3 +57,64 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 30
 text = "Time left:"
 text_overrun_behavior = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 1215.0
+offset_top = 8.0
+offset_right = 1270.0
+offset_bottom = 112.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelContainer/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="ChipBlue Icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("6_x3fj0")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ChipBlue Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "100"
+script = ExtResource("6_bte8m")
+
+[node name="ChipGreen Icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("8_aipip")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ChipGreen Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "100"
+script = ExtResource("6_bte8m")
+
+[node name="ChipRed Icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("9_wb13v")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ChipRed Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "100"
+script = ExtResource("6_bte8m")
+
+[node name="ChipYellow Icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_tvd5v")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ChipYellow Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "100"
+script = ExtResource("6_bte8m")

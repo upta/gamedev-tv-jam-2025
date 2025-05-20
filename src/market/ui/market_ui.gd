@@ -33,13 +33,15 @@ func _ready() -> void:
 	item_list.item_selected.connect(_on_item_selected)
 
 	#add a coin for testing
-	#Service.Inventory.add_coins(Enum.CoinType.SHIT_COIN, 2)
+	Service.Inventory.add_coins(Enum.CoinType.SHIT_COIN, 11)
 
 	quantity.value_changed.connect(_on_quantity_value_changed)
 
 	# Defaulting first item so that temp test data doesn't show
 	_on_item_selected(0)
 	item_list.select(0)
+
+	sell_button.pressed.connect(_on_sell_button_pressed)
 
 
 func _on_item_selected(index: int):
@@ -75,3 +77,18 @@ func _on_item_selected(index: int):
 
 func _on_quantity_value_changed(value: float):
 	quantity_label.text = "%d" % value
+
+
+func _on_sell_button_pressed():
+	# Find the selected item in the list and grab it's value
+	var selected = item_list.get_selected_items()
+	if selected.size() == 0:
+		return
+
+	# There should only ever be 1 selected item
+	var index = selected[0]
+
+	var coin: CoinResource = item_list.get_item_metadata(index)
+	Service.Market.sell_coins(coin.type, quantity.value)
+
+	_on_item_selected(index)

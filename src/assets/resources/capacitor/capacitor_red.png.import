@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxrwvyn8vmlkv"
-path="res://.godot/imported/cpro3.png-ce4b2929b2a4a0f391a8a1e0d332b9ec.ctex"
+uid="uid://yewnk8vtksw5"
+path="res://.godot/imported/capacitor_red.png-71b68d653a31b6eecfccb2ba2a42f805.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/chipmunk/profile_left/cpro3.png"
-dest_files=["res://.godot/imported/cpro3.png-ce4b2929b2a4a0f391a8a1e0d332b9ec.ctex"]
+source_file="res://assets/resources/capacitor/capacitor_red.png"
+dest_files=["res://.godot/imported/capacitor_red.png-71b68d653a31b6eecfccb2ba2a42f805.ctex"]
 
 [params]
 
