@@ -39,3 +39,17 @@ func sell_coins(coin_type: Enum.CoinType, quantity: int):
 
 	var new_coins = State.Inventory.coins[coin_type] - quantity
 	State.Inventory.update_coin(coin_type, new_coins)
+	
+	# Adjust price downward after selling coins
+	# Use a non-linear formula: reduction_factor = base_factor * sqrt(quantity)
+	var base_factor := 0.01  # 1% reduction per coin as base
+	var reduction_factor := base_factor * sqrt(quantity)
+	
+	# Calculate new price with the reduction
+	var new_price := price * (1.0 - reduction_factor)
+	
+	# Ensure the price doesn't drop below 0.01
+	new_price = maxf(new_price, 0.01)
+	
+	# Update the price, which also emits the price_changed signal
+	State.Market.update_price(coin_type, new_price)
