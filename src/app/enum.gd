@@ -74,3 +74,16 @@ static func vector_to_direction(vec: Vector2) -> Direction:
 		return Direction.SOUTH
 	else:
 		return Direction.SOUTHWEST
+
+
+static func vector_to_orthogonal_direction(vec: Vector2) -> Direction:
+	var angle = vec.normalized().angle()
+
+	if angle < -3 * PI / 4 or angle >= 3 * PI / 4:
+		return Direction.WEST
+	elif angle < -PI / 4:
+		return Direction.NORTH
+	elif angle < PI / 4:
+		return Direction.EAST
+	else:
+		return Direction.SOUTH

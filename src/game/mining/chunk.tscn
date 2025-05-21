@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bte8m"]
 
 [node name="Chunk" type="Area2D"]
+y_sort_enabled = true
 script = ExtResource("1_byydn")
 
 [node name="Area" type="CollisionShape2D" parent="."]
