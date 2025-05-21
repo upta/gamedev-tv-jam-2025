@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://bswrdjbvkktlh"]
+
+[ext_resource type="Theme" uid="uid://diokc81yjll62" path="res://assets/themes/buttons.tres" id="1_1eea6"]
+[ext_resource type="Script" uid="uid://cu0ashaghsvna" path="res://sandbox/sandboxmenu.gd" id="1_ttfmu"]
+[ext_resource type="Texture2D" uid="uid://bolmjais56upi" path="res://assets/resources/Menus/ComputerBackground/comp1.png" id="2_fhh7c"]
+[ext_resource type="Texture2D" uid="uid://cxaipg82672qj" path="res://assets/resources/Menus/ComputerBackground/comp2.png" id="3_tg3h4"]
+[ext_resource type="Texture2D" uid="uid://cfijv4grasirl" path="res://assets/resources/Menus/ComputerBackground/comp3.png" id="4_ec1dw"]
+[ext_resource type="Texture2D" uid="uid://df4kwleufonoh" path="res://assets/resources/Menus/ComputerBackground/comp4.png" id="5_d0jmh"]
+[ext_resource type="Texture2D" uid="uid://cn4fe3vojwcqi" path="res://assets/resources/Menus/ComputerBackground/comp5.png" id="6_hal6a"]
+[ext_resource type="Texture2D" uid="uid://b3l6iyko017ki" path="res://assets/resources/Menus/ComputerBackground/comp6.png" id="7_fywhp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6mm7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fhh7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tg3h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ec1dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d0jmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hal6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fywhp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Sandboxmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ttfmu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(516, 513)
+sprite_frames = SubResource("SpriteFrames_i6mm7")
+frame_progress = 0.389259
+
+[node name="butNew" type="Button" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 170.0
+offset_bottom = 44.0
+theme = ExtResource("1_1eea6")
+text = "New Game"
+
+[node name="butSel" type="Button" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 196.0
+offset_bottom = 44.0
+theme = ExtResource("1_1eea6")
+text = "lvl select"
+
+[node name="butOpt" type="Button" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 170.0
+offset_bottom = 48.0
+theme = ExtResource("1_1eea6")
+text = "Options"
+
+[node name="butQuit" type="Button" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 196.0
+offset_bottom = 48.0
+theme = ExtResource("1_1eea6")
+text = "Quit"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 236.0
+offset_bottom = 142.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
