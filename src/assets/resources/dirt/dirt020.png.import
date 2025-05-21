@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oxn54a2qwvdp"
-path="res://.godot/imported/chips_yellow.png-21bc4087ddc7e06f81573132b61819cc.ctex"
+uid="uid://rt4i1h3xcgcr"
+path="res://.godot/imported/dirt020.png-cc2b03e230043d31dcb43cc2df244471.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/resources/chips/chips_yellow.png"
-dest_files=["res://.godot/imported/chips_yellow.png-21bc4087ddc7e06f81573132b61819cc.ctex"]
+source_file="res://assets/resources/dirt/dirt020.png"
+dest_files=["res://.godot/imported/dirt020.png-cc2b03e230043d31dcb43cc2df244471.ctex"]
 
 [params]
 
