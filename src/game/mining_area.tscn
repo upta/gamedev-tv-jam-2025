@@ -47,4 +47,10 @@ chip_labels = {
 
 [node name="StartCountdown" parent="." instance=ExtResource("11_aipip")]
 
-[node name="EndMining" parent="." instance=ExtResource("12_wb13v")]
+[node name="EndMining" parent="." node_paths=PackedStringArray("chip_labels") instance=ExtResource("12_wb13v")]
+chip_labels = {
+0: NodePath("PanelContainer/MarginContainer/GridContainer/ChipBlue Label"),
+1: NodePath("PanelContainer/MarginContainer/GridContainer/ChipGreen Label"),
+2: NodePath("PanelContainer/MarginContainer/GridContainer/ChipRed Label"),
+3: NodePath("PanelContainer/MarginContainer/GridContainer/ChipYellow Label")
+}
