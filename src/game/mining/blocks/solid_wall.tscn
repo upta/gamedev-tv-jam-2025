@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5vufw7g3ksiw"]
+[gd_scene load_steps=4 format=3 uid="uid://c5vufw7g3ksiw"]
 
+[ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/BoardTiles/BoardFill1.png" id="1_hpp6q"]
 [ext_resource type="Texture2D" uid="uid://bnv4x8f7bpcbq" path="res://assets/resources/capacitor/capacitor_white.png" id="1_hvxt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pupr"]
@@ -10,6 +11,11 @@ y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7pupr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-0.117599, -0.117599)
+scale = Vector2(0.628675, 0.628675)
+texture = ExtResource("1_hpp6q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 1)
