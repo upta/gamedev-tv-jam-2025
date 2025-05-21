@@ -13,8 +13,13 @@ func _on_back_pressed() -> void:
 	State.Scene.active_scene = "res://main_menu/main_menu.tscn"
 
 
+<<<<<<< HEAD
 func _on_home_base_pressed() -> void:
 	State.Scene.active_scene = "res://home_base/home_base.tscn"
+=======
+func _on_button_pressed() -> void:
+	State.Scene.active_scene = "res://sandbox/ThemeSandbox.tscn"
+>>>>>>> c6f64e9 (Added theme resources global theme, support for menu button options button button checkbox button label vscroll bar hscroll bar hslider vslider)
 
 
 func _on_button_pressed() -> void:
