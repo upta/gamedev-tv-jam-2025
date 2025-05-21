@@ -1,9 +1,9 @@
 extends CanvasItem
 
+var active_scene: Node
+
 @onready var container: Node = %Container
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
-
-var active_scene: Node
 
 
 func _ready() -> void:
@@ -15,6 +15,7 @@ func _scene_changed(scene_path: String):
 
 
 func _load_scene(scene_path: String):
+	%Overlay.show()
 	if active_scene != null:
 		animation_player.play("overlay")
 		await animation_player.animation_finished
@@ -30,3 +31,5 @@ func _load_scene(scene_path: String):
 
 	animation_player.play_backwards("overlay")
 	await animation_player.animation_finished
+
+	%Overlay.hide()

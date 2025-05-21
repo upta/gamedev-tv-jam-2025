@@ -27,7 +27,7 @@ func _get_new_block(type: Enum.BlockType) -> Node2D:
 	if block_type != null:
 		return block_type.instantiate() as Node2D
 
-	if not Enum.BlockType.EMPTY:
+	if type != Enum.BlockType.EMPTY:
 		push_warning("ChunkMaster is missing requested BlockType %s" % type)
 
 	return null
@@ -65,7 +65,7 @@ func _get_block_generator(chunk_block_center: float) -> Callable:
 	if chunk_block_center < 1:
 		return _generate_center
 
-	if randf() < 3 / 100 * log(chunk_block_center):
+	if randf() < percent(3) * log(chunk_block_center):
 		return _generate_wall_heavy
 
 	return _generate_default
