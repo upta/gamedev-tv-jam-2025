@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqfd1a8bvojms"]
+[gd_scene load_steps=11 format=3 uid="uid://cqfd1a8bvojms"]
 
 [ext_resource type="Script" uid="uid://bbfflnbqq66yw" path="res://game/mining_area.gd" id="1_bdnut"]
 [ext_resource type="Resource" uid="uid://b21g17kle5gak" path="res://input/game/mining_context.tres" id="2_7pupr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c5vufw7g3ksiw" path="res://game/mining/blocks/solid_wall.tscn" id="5_in7h5"]
 [ext_resource type="PackedScene" uid="uid://bn5s5y6x2w8t" path="res://game/mining/chunk.tscn" id="5_ujp4m"]
 [ext_resource type="PackedScene" uid="uid://b58mymyph0k1" path="res://game/mining/blocks/chip.tscn" id="6_in7h5"]
+[ext_resource type="PackedScene" uid="uid://clx3xveo5i3ah" path="res://game/mining/blocks/empty.tscn" id="7_x3fj0"]
 [ext_resource type="PackedScene" uid="uid://b01msrd728kv1" path="res://game/mining/mining_ui.tscn" id="10_x3fj0"]
 
 [node name="MiningArea" type="Node2D"]
@@ -16,6 +17,7 @@ input_context = ExtResource("2_7pupr")
 
 [node name="ChunkMaster" parent="." instance=ExtResource("3_aipip")]
 block_types = Dictionary[int, PackedScene]({
+0: ExtResource("7_x3fj0"),
 1: ExtResource("4_tvd5v"),
 2: ExtResource("5_in7h5"),
 3: ExtResource("6_in7h5")

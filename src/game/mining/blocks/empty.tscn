@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://clx3xveo5i3ah"]
+
+[ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/BoardTiles/BoardFill1.png" id="3_8u3th"]
+
+[node name="Empty" type="Node2D"]
+y_sort_enabled = true
+
+[node name="BGSprite" type="Sprite2D" parent="."]
+position = Vector2(-0.117599, -0.117599)
+scale = Vector2(0.628675, 0.628675)
+texture = ExtResource("3_8u3th")
