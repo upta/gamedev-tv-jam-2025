@@ -1,5 +1,6 @@
 extends Control
 
+@onready var back_button: Button = %BackButton
 @onready var item_list: ItemList = %ItemList
 @onready var coin_name: Label = %CoinName
 @onready var icon: TextureRect = %Icon
@@ -12,6 +13,11 @@ extends Control
 
 
 func _ready() -> void:
+	back_button.pressed.connect(_on_back_button_pressed)
+	sell_button.pressed.connect(_on_sell_button_pressed)
+	quantity.value_changed.connect(_on_quantity_value_changed)
+	item_list.item_selected.connect(_on_item_selected)
+
 	# just to get some test data in there
 	Service.Market.fluxuate_prices()
 	Service.Market.fluxuate_prices()
@@ -32,20 +38,21 @@ func _ready() -> void:
 		item_list.add_item(coin.name, coin.icon)
 		item_list.set_item_metadata(i, coin)
 
-	item_list.item_selected.connect(_on_item_selected)
+
 
 	#add some coin for testing
 	Service.Inventory.add_coins(Enum.CoinType.SHIT_COIN, 11)
 	Service.Inventory.add_coins(Enum.CoinType.DOS_COIN, 22)
 	Service.Inventory.add_coins(Enum.CoinType.A_COIN, 33)
 
-	quantity.value_changed.connect(_on_quantity_value_changed)
 
 	# Defaulting first item so that temp test data doesn't show
 	_on_item_selected(0)
 	item_list.select(0)
 
-	sell_button.pressed.connect(_on_sell_button_pressed)
+
+func _on_back_button_pressed():
+	State.Scene.active_scene = "res://home_base/home_base.tscn"
 
 
 func _on_item_selected(index: int):
