@@ -10,4 +10,4 @@ func _ready() -> void:
 
 
 func _on_start_action_triggered():
-	State.Scene.active_scene = "res://game/dummy_game.tscn"
+	State.Scene.active_scene = "res://game/mining_area.tscn"

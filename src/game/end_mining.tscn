@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://jr1ablwhcnxh"]
+
+[ext_resource type="Script" uid="uid://xev43a1md78r" path="res://game/end_mining.gd" id="1_wrppg"]
+
+[node name="EndMining" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+visible = false
+script = ExtResource("1_wrppg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.392157)
+
+[node name="TimeUp" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.5
+offset_top = 32.0
+offset_right = 200.5
+offset_bottom = 169.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Time Up"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.5
+offset_top = -128.0
+offset_right = 39.5
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Continue"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
