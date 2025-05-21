@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://iox78ee3or7r"]
+
+[ext_resource type="Script" uid="uid://dsmkdnfffivld" path="res://main_menu/level_select/level_select.gd" id="1_7cium"]
+[ext_resource type="Theme" uid="uid://diokc81yjll62" path="res://assets/themes/buttons.tres" id="1_vwc8s"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7cium")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="dummy" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_vwc8s")
+text = "Dummy Level"
+
+[node name="mining" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_vwc8s")
+text = "Mining Area"
+
+[node name="back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_vwc8s")
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/dummy" to="." method="_on_dummy_pressed"]
+[connection signal="pressed" from="VBoxContainer/mining" to="." method="_on_mining_pressed"]
+[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
