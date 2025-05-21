@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqfd1a8bvojms"]
+[gd_scene load_steps=12 format=3 uid="uid://cqfd1a8bvojms"]
 
 [ext_resource type="Script" uid="uid://bbfflnbqq66yw" path="res://game/mining_area.gd" id="1_bdnut"]
 [ext_resource type="Resource" uid="uid://b21g17kle5gak" path="res://input/game/mining_context.tres" id="2_7pupr"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b58mymyph0k1" path="res://game/mining/blocks/chip.tscn" id="6_in7h5"]
 [ext_resource type="PackedScene" uid="uid://clx3xveo5i3ah" path="res://game/mining/blocks/empty.tscn" id="7_x3fj0"]
 [ext_resource type="PackedScene" uid="uid://b01msrd728kv1" path="res://game/mining/mining_ui.tscn" id="10_x3fj0"]
+[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/VG_Rave.ogg" id="11_aipip"]
 
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
@@ -41,3 +42,9 @@ chip_labels = {
 2: NodePath("PanelContainer/MarginContainer/GridContainer/ChipRed Label"),
 3: NodePath("PanelContainer/MarginContainer/GridContainer/ChipYellow Label")
 }
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_aipip")
+volume_db = -6.0
+autoplay = true
+parameters/looping = true
