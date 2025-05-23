@@ -12,5 +12,5 @@ func add_staged_mining_resources(resource_type: Enum.MiningResourceType, quantit
 func bank_staged_mining_resources():
 	var staged = State.Inventory.get_all_staged_mining_resources()
 	for resource in staged:
-		State.Inventory.add_mining_resource(resource.key, resource.value)
-		State.Inventory.update_staged_mining_resource(resource.key, 0)
+		State.Inventory.add_mining_resource(resource, staged[resource])
+		State.Inventory.update_staged_mining_resource(resource, 0)

@@ -1,20 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://cuc5666ypv6en"]
+[gd_scene load_steps=15 format=3 uid="uid://cuc5666ypv6en"]
 
 [ext_resource type="Script" uid="uid://706qbiasuvtd" path="res://app/item_types/item_types.gd" id="1_4utt5"]
 [ext_resource type="Script" uid="uid://dpiraumxsl8u3" path="res://market/coins/coin_resource.gd" id="2_idy0w"]
-[ext_resource type="Resource" uid="uid://bv26wt3im6m0e" path="res://market/coins/shit_coin.tres" id="3_y8n3v"]
-[ext_resource type="Resource" uid="uid://cjqn22wk7i2x1" path="res://market/coins/dos_coin.tres" id="4_y8n3v"]
+[ext_resource type="Resource" uid="uid://bjqfvgn5pq4k3" path="res://market/coins/bee_coin.tres" id="4_w6830"]
 [ext_resource type="Resource" uid="uid://b6e3bipbybp53" path="res://market/coins/a_coin.tres" id="5_7isse"]
+[ext_resource type="Resource" uid="uid://ch0vk4b6srdgp" path="res://market/coins/sea_coin.tres" id="5_nhnim"]
 [ext_resource type="Script" uid="uid://d0vocvf6us5ft" path="res://game/resources/mining_resource.gd" id="6_ernd5"]
 [ext_resource type="Resource" uid="uid://dw66prwy4wlku" path="res://game/resources/blue_chip.tres" id="7_dyokw"]
+[ext_resource type="Resource" path="res://game/resources/green_chip.tres" id="8_3urno"]
+[ext_resource type="Resource" path="res://game/resources/red_chip.tres" id="9_ikluo"]
+[ext_resource type="Resource" path="res://game/resources/yellow_chip.tres" id="10_fj6gy"]
+[ext_resource type="Script" uid="uid://b6jprnqs18iyp" path="res://mint/recipes/recipe_resource.gd" id="11_cswrp"]
+[ext_resource type="Resource" path="res://mint/recipes/a_coin_recipe.tres" id="12_0npk2"]
+[ext_resource type="Resource" path="res://mint/recipes/bee_coin_recipe.tres" id="13_wlrfm"]
+[ext_resource type="Resource" path="res://mint/recipes/sea_coin_recipe.tres" id="14_g3cpc"]
 
 [node name="ItemTypes" type="Node"]
 script = ExtResource("1_4utt5")
 coins = Dictionary[int, ExtResource("2_idy0w")]({
-0: ExtResource("3_y8n3v"),
-1: ExtResource("4_y8n3v"),
-2: ExtResource("5_7isse")
+0: ExtResource("5_7isse"),
+1: ExtResource("4_w6830"),
+2: ExtResource("5_nhnim")
 })
 mining_resources = Dictionary[int, ExtResource("6_ernd5")]({
-0: ExtResource("7_dyokw")
+0: ExtResource("7_dyokw"),
+1: ExtResource("8_3urno"),
+2: ExtResource("9_ikluo"),
+3: ExtResource("10_fj6gy")
+})
+recipes = Dictionary[int, ExtResource("11_cswrp")]({
+0: ExtResource("12_0npk2"),
+1: ExtResource("13_wlrfm"),
+2: ExtResource("14_g3cpc")
 })

@@ -12,9 +12,9 @@ enum Direction {
 }
 
 enum CoinType {
-	SHIT_COIN,
-	DOS_COIN,
 	A_COIN,
+	BEE_COIN,
+	SEA_COIN,
 }
 
 enum MiningResourceType {

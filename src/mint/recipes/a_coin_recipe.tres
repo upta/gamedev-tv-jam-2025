@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=5 format=3 uid="uid://dsdekw3qbxk6c"]
+
+[ext_resource type="Script" uid="uid://b6jprnqs18iyp" path="res://mint/recipes/recipe_resource.gd" id="1_g4s7b"]
+[ext_resource type="Resource" uid="uid://b6e3bipbybp53" path="res://market/coins/a_coin.tres" id="2_bnlhd"]
+[ext_resource type="Resource" uid="uid://dw66prwy4wlku" path="res://game/resources/blue_chip.tres" id="3_rkrpa"]
+[ext_resource type="Resource" uid="uid://drcjtavyj7whw" path="res://game/resources/green_chip.tres" id="4_5fgwg"]
+
+[resource]
+script = ExtResource("1_g4s7b")
+coin = ExtResource("2_bnlhd")
+resources = {
+ExtResource("3_rkrpa"): 5,
+ExtResource("4_5fgwg"): 3
+}

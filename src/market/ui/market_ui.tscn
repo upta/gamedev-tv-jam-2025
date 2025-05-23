@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwhpp4en8b531"]
 
 [ext_resource type="Script" uid="uid://11ll2276kib1" path="res://market/ui/market_ui.gd" id="1_027u0"]
-[ext_resource type="Texture2D" uid="uid://c2d3a7k2l4ivn" path="res://assets/coins/bitcoin.png" id="1_lvauu"]
+[ext_resource type="Texture2D" uid="uid://c0fgn8xjmo52m" path="res://assets/coins/acoin.png" id="1_lvauu"]
 [ext_resource type="Script" uid="uid://7so3pi4p4adh" path="res://addons/graph_2d/graph_2d.gd" id="3_gmg4o"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f205t"]
@@ -16,17 +16,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_027u0")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ItemList" type="ItemList" parent="HBoxContainer"]
+[node name="Left" type="VBoxContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="CanvasLayer/HBoxContainer/Left"]
 unique_name_in_owner = true
 layout_mode = 2
+text = "Home"
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/HBoxContainer/Left"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
 allow_reselect = true
 auto_width = true
 item_count = 1
@@ -34,22 +44,22 @@ fixed_icon_size = Vector2i(32, 32)
 item_0/text = "Temp"
 item_0/icon = ExtResource("1_lvauu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="Right" type="VBoxContainer" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CoinName" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="CoinName" type="Label" parent="CanvasLayer/HBoxContainer/Right"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Coin Name"
 
-[node name="Icon" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/HBoxContainer/Right"]
 unique_name_in_owner = true
 layout_mode = 2
 texture = SubResource("CompressedTexture2D_f205t")
 stretch_mode = 4
 
-[node name="Graph" type="Control" parent="HBoxContainer/VBoxContainer"]
+[node name="Graph" type="Control" parent="CanvasLayer/HBoxContainer/Right"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -61,29 +71,29 @@ show_y_ticks = false
 background_color = Color(0, 0, 0, 0)
 metadata/_custom_type_script = "uid://7so3pi4p4adh"
 
-[node name="Price" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="Price" type="Label" parent="CanvasLayer/HBoxContainer/Right"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "100"
 
-[node name="QuantityContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="QuantityContainer" type="HBoxContainer" parent="CanvasLayer/HBoxContainer/Right"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Quantity" type="HSlider" parent="HBoxContainer/VBoxContainer/QuantityContainer"]
+[node name="Quantity" type="HSlider" parent="CanvasLayer/HBoxContainer/Right/QuantityContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 max_value = 10.0
 
-[node name="QuantityLabel" type="Label" parent="HBoxContainer/VBoxContainer/QuantityContainer"]
+[node name="QuantityLabel" type="Label" parent="CanvasLayer/HBoxContainer/Right/QuantityContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "42"
 
-[node name="SellButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="SellButton" type="Button" parent="CanvasLayer/HBoxContainer/Right"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Sell"

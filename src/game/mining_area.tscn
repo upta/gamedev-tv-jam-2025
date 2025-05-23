@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cqfd1a8bvojms"]
+[gd_scene load_steps=14 format=3 uid="uid://cqfd1a8bvojms"]
 
 [ext_resource type="Script" uid="uid://bbfflnbqq66yw" path="res://game/mining_area.gd" id="1_bdnut"]
 [ext_resource type="Resource" uid="uid://b21g17kle5gak" path="res://input/game/mining_context.tres" id="2_7pupr"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://clx3xveo5i3ah" path="res://game/mining/blocks/empty.tscn" id="7_x3fj0"]
 [ext_resource type="PackedScene" uid="uid://b01msrd728kv1" path="res://game/mining/mining_ui.tscn" id="10_x3fj0"]
 [ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/VG_Rave.ogg" id="11_aipip"]
+[ext_resource type="PackedScene" uid="uid://cnxuqu35cj1mi" path="res://game/start_countdown.tscn" id="11_tvd5v"]
+[ext_resource type="PackedScene" uid="uid://d1q8xcp42pnas" path="res://game/end_mining.tscn" id="12_wb13v"]
 
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
@@ -36,6 +38,16 @@ base_mining_rate = 0.5
 [node name="Camera2D" type="Camera2D" parent="MinerPlayer"]
 
 [node name="MiningUI" parent="." node_paths=PackedStringArray("chip_labels") instance=ExtResource("10_x3fj0")]
+chip_labels = {
+0: NodePath("PanelContainer/MarginContainer/GridContainer/ChipBlue Label"),
+1: NodePath("PanelContainer/MarginContainer/GridContainer/ChipGreen Label"),
+2: NodePath("PanelContainer/MarginContainer/GridContainer/ChipRed Label"),
+3: NodePath("PanelContainer/MarginContainer/GridContainer/ChipYellow Label")
+}
+
+[node name="StartCountdown" parent="." instance=ExtResource("11_tvd5v")]
+
+[node name="EndMining" parent="." node_paths=PackedStringArray("chip_labels") instance=ExtResource("12_wb13v")]
 chip_labels = {
 0: NodePath("PanelContainer/MarginContainer/GridContainer/ChipBlue Label"),
 1: NodePath("PanelContainer/MarginContainer/GridContainer/ChipGreen Label"),
