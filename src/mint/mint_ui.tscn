@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cnhnjkwj5m8c0"]
 
-[ext_resource type="Script" path="res://mint/mint_ui.gd" id="1_puk6k"]
+[ext_resource type="Script" uid="uid://brasm1hdlc0o" path="res://mint/mint_ui.gd" id="1_puk6k"]
 
 [node name="MintUi" type="Control"]
 layout_mode = 3
