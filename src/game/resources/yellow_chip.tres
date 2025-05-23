@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="MiningResource" load_steps=2 format=3 uid="uid://0x6y3yw4sskj"]
+[gd_resource type="Resource" script_class="MiningResource" load_steps=3 format=3 uid="uid://0x6y3yw4sskj"]
 
+[ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="1_3rsef"]
 [ext_resource type="Script" uid="uid://d0vocvf6us5ft" path="res://game/resources/mining_resource.gd" id="1_edyt8"]
 
 [resource]
 script = ExtResource("1_edyt8")
 name = "Yellow Chip"
+icon = ExtResource("1_3rsef")
 type = 3
 metadata/_custom_type_script = "uid://d0vocvf6us5ft"

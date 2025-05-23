@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwhpp4en8b531"]
 
 [ext_resource type="Script" uid="uid://11ll2276kib1" path="res://market/ui/market_ui.gd" id="1_027u0"]
-[ext_resource type="Texture2D" uid="uid://c0fgn8xjmo52m" path="res://assets/coins/acoin.png" id="1_lvauu"]
+[ext_resource type="PackedScene" uid="uid://0xkwl3f1g4qt" path="res://mint/ui/coin_list.tscn" id="2_f205t"]
 [ext_resource type="Script" uid="uid://7so3pi4p4adh" path="res://addons/graph_2d/graph_2d.gd" id="3_gmg4o"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f205t"]
@@ -33,16 +33,10 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Home"
 
-[node name="ItemList" type="ItemList" parent="CanvasLayer/HBoxContainer/Left"]
+[node name="CoinList" parent="CanvasLayer/HBoxContainer/Left" instance=ExtResource("2_f205t")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-allow_reselect = true
-auto_width = true
-item_count = 1
-fixed_icon_size = Vector2i(32, 32)
-item_0/text = "Temp"
-item_0/icon = ExtResource("1_lvauu")
 
 [node name="Right" type="VBoxContainer" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="MiningResource" load_steps=2 format=3 uid="uid://dw66prwy4wlku"]
+[gd_resource type="Resource" script_class="MiningResource" load_steps=3 format=3 uid="uid://dw66prwy4wlku"]
 
 [ext_resource type="Script" uid="uid://d0vocvf6us5ft" path="res://game/resources/mining_resource.gd" id="1_1ykbx"]
+[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="1_ucegt"]
 
 [resource]
 script = ExtResource("1_1ykbx")
 name = "Blue Chip"
+icon = ExtResource("1_ucegt")
 type = 0
 metadata/_custom_type_script = "uid://d0vocvf6us5ft"
