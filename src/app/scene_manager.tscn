@@ -40,6 +40,7 @@ _data = {
 }
 
 [node name="SceneManager" type="MarginContainer"]
+process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -49,6 +50,7 @@ script = ExtResource("1_db4dl")
 
 [node name="Container" type="Node2D" parent="."]
 unique_name_in_owner = true
+process_mode = 1
 
 [node name="Overlay" type="ColorRect" parent="."]
 unique_name_in_owner = true
