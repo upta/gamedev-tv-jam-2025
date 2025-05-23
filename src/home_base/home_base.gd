@@ -22,7 +22,7 @@ func _on_shop_pressed():
 
 
 func _on_mint_pressed():
-	return
+	State.Scene.active_scene = "res://mint/mint_ui.tscn"
 
 
 func _on_mining_pressed():
