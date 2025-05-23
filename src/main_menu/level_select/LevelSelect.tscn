@@ -32,6 +32,12 @@ layout_mode = 2
 theme = ExtResource("1_vwc8s")
 text = "Back"
 
+[node name="home_base" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_vwc8s")
+text = "Home Base"
+
 [connection signal="pressed" from="VBoxContainer/dummy" to="." method="_on_dummy_pressed"]
 [connection signal="pressed" from="VBoxContainer/mining" to="." method="_on_mining_pressed"]
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/home_base" to="." method="_on_home_base_pressed"]

@@ -7,7 +7,7 @@ extends CanvasLayer
 
 
 func _on_button_pressed() -> void:
-	State.Scene.active_scene = "res://main_menu/main_menu.tscn"
+	State.Scene.active_scene = "res://home_base/home_base.tscn"
 	get_tree().paused = false
 
 
