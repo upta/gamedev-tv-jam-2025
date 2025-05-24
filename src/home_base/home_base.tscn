@@ -1,11 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=5 format=3 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
+[ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/BoardTiles/BoardFill1.png" id="2_q3lbv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f317w"]
+texture = ExtResource("2_q3lbv")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+
+[sub_resource type="TileSet" id="TileSet_oregg"]
+tile_size = Vector2i(64, 64)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.0594168, 0.436444, 0.465399, 1)
+sources/0 = SubResource("TileSetAtlasSource_f317w")
 
 [node name="HomeBase" type="Node2D"]
 script = ExtResource("1_md8vl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -35,3 +51,6 @@ text = "Mint"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Mining"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_oregg")
