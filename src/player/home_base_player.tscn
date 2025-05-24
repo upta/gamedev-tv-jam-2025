@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://ca0gqgaf1dci2"]
+
+[ext_resource type="PackedScene" uid="uid://wp20c4t7t4e4" path="res://player/player.tscn" id="1_pyu0f"]
+[ext_resource type="Script" uid="uid://6vj6v1la4dvt" path="res://player/home_base_player.gd" id="2_owj8m"]
+[ext_resource type="PackedScene" uid="uid://d1jvudml7fra5" path="res://interaction/interactable.tscn" id="2_ul1gd"]
+[ext_resource type="Texture2D" uid="uid://cbqm6qiuev0s6" path="res://assets/resources/Coins/acoin.png" id="4_bssys"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_owj8m"]
+radius = 17.0294
+
+[node name="HomeBasePlayer" instance=ExtResource("1_pyu0f")]
+script = ExtResource("2_owj8m")
+
+[node name="Interactable" parent="." index="2" instance=ExtResource("2_ul1gd")]
+unique_name_in_owner = true
+action = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" index="0"]
+shape = SubResource("CircleShape2D_owj8m")
+debug_color = Color(0.868238, 0.179031, 0.746719, 0.42)
+
+[node name="InteractionHint" type="PanelContainer" parent="." index="3"]
+offset_left = -10.0
+offset_top = 13.0
+offset_right = 10.0
+offset_bottom = 36.0
+theme_type_variation = &"ThinPanelContainer"
+
+[node name="Label" type="Label" parent="InteractionHint" index="0"]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HeldCoin" type="Sprite2D" parent="." index="4"]
+unique_name_in_owner = true
+position = Vector2(0, -43)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_bssys")

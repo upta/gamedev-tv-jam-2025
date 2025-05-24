@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="CoinResource" load_steps=3 format=3 uid="uid://ch0vk4b6srdgp"]
 
-[ext_resource type="Texture2D" uid="uid://c0fgn8xjmo52m" path="res://assets/coins/acoin.png" id="1_gxoti"]
+[ext_resource type="Texture2D" uid="uid://0cc0a4hv3c8v" path="res://assets/resources/Coins/seacoin.png" id="1_kf28o"]
 [ext_resource type="Script" uid="uid://dpiraumxsl8u3" path="res://market/coins/coin_resource.gd" id="2_ggxo2"]
 
 [resource]
 script = ExtResource("2_ggxo2")
 base_price = 3.0
-icon = ExtResource("1_gxoti")
+icon = ExtResource("1_kf28o")
 name = "Seacoin"
 type = 2
 metadata/_custom_type_script = "uid://dpiraumxsl8u3"

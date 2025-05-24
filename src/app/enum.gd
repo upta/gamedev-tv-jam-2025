@@ -12,6 +12,8 @@ enum Direction {
 }
 
 enum CoinType {
+	# Why can't we just have nullable enums though?
+	NONE = -1,
 	A_COIN,
 	BEE_COIN,
 	SEA_COIN,

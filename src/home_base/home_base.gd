@@ -1,16 +1,34 @@
 extends Node2D
 
+@export var input_context: GUIDEMappingContext
+
 @onready var market: Button = %Market
 @onready var shop: Button = %Shop
 @onready var mint: Button = %Mint
 @onready var mining: Button = %Mining
 
+@onready var exit: Area2D = %Exit
+
 
 func _ready() -> void:
+	GUIDE.enable_mapping_context(input_context, true)
+
 	market.pressed.connect(_on_market_pressed)
 	shop.pressed.connect(_on_shop_pressed)
 	mint.pressed.connect(_on_mint_pressed)
-	mining.pressed.connect(_on_mining_pressed)
+
+	exit.body_entered.connect(_on_exit_body_entered)
+
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.BLUE_CHIP, 20)
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.GREEN_CHIP, 20)
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.RED_CHIP, 20)
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.YELLOW_CHIP, 20)
+
+	Service.Inventory.bank_staged_mining_resources()
+
+
+func _on_exit_body_entered(_body: Node2D):
+	State.Scene.active_scene = "res://game/mining_area.tscn"
 
 
 func _on_market_pressed():
@@ -23,7 +41,3 @@ func _on_shop_pressed():
 
 func _on_mint_pressed():
 	State.Scene.active_scene = "res://mint/ui/mint_ui.tscn"
-
-
-func _on_mining_pressed():
-	State.Scene.active_scene = "res://game/mining_area.tscn"

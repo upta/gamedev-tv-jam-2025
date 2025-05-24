@@ -21,7 +21,7 @@ func get_recipe_for_coin_resource(coin: CoinResource) -> RecipeResource:
 
 # Calculate the maximum number of coins that can be crafted based on available resources
 func calculate_max_craftable_quantity(recipe: RecipeResource) -> int:
-	var max_craftable = 999999  # Start with a high number
+	var max_craftable = 999999 # Start with a high number
 
 	for resource in recipe.resources:
 		var required_per_craft = recipe.resources[resource]
@@ -40,10 +40,21 @@ func calculate_max_craftable_quantity(recipe: RecipeResource) -> int:
 	return max_craftable
 
 
+# Check if a specific coin type can be crafted based on available resources
+# Returns true if at least one coin can be crafted
+func can_craft(coin_type: Enum.CoinType) -> bool:
+	var recipe = get_recipe_for_coin(coin_type)
+	if not recipe:
+		push_error("Cannot check craftability: recipe not found for coin type")
+		return false
+
+	return calculate_max_craftable_quantity(recipe) > 0
+
+
 # Attempt to mint a specific quantity of coins
 # Returns true if successful, false if not enough resources
-func mint_coin(coin: CoinResource, amount: int) -> bool:
-	var recipe = get_recipe_for_coin_resource(coin)
+func mint_coin(coin_type: Enum.CoinType, amount: int) -> bool:
+	var recipe = get_recipe_for_coin(coin_type)
 	if not recipe:
 		push_error("Cannot mint: recipe not found for coin type")
 		return false
@@ -65,7 +76,7 @@ func mint_coin(coin: CoinResource, amount: int) -> bool:
 			var current_amount = State.Inventory.mining_resources.get(resource.type, 0)
 			State.Inventory.update_mining_resource(resource.type, current_amount - required_amount)
 
-		Service.Inventory.add_coins(coin.type, amount)
+		Service.Inventory.add_coins(coin_type, amount)
 		return true
 
 	push_error("Cannot mint coin: Not enough resources")
