@@ -16,13 +16,12 @@ func _ready() -> void:
 	market.pressed.connect(_on_market_pressed)
 	shop.pressed.connect(_on_shop_pressed)
 	mint.pressed.connect(_on_mint_pressed)
-	mining.pressed.connect(_on_mining_pressed)
 
 	exit.body_entered.connect(_on_exit_body_entered)
 
 
-func _on_exit_body_entered(body: Node2D):
-	prints("Exited", body)
+func _on_exit_body_entered(_body: Node2D):
+	State.Scene.active_scene = "res://game/mining_area.tscn"
 
 
 func _on_market_pressed():
@@ -35,7 +34,3 @@ func _on_shop_pressed():
 
 func _on_mint_pressed():
 	State.Scene.active_scene = "res://mint/ui/mint_ui.tscn"
-
-
-func _on_mining_pressed():
-	State.Scene.active_scene = "res://game/mining_area.tscn"

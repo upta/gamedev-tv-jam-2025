@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb20ib4m7dplu"]
+
+[ext_resource type="Script" uid="uid://ch8emwm5xqggc" path="res://mint/minter.gd" id="1_a0j28"]
+[ext_resource type="Texture2D" uid="uid://c0fgn8xjmo52m" path="res://assets/coins/acoin.png" id="2_myvtn"]
+[ext_resource type="PackedScene" uid="uid://cqdnvmgnv2mwj" path="res://mint/minter_resource.tscn" id="3_5jx4k"]
+[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="3_p511d"]
+
+[node name="Minter" type="Node2D"]
+script = ExtResource("1_a0j28")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 512.0
+offset_bottom = 64.0
+color = Color(0.780392, 0.701961, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 32)
+texture = ExtResource("2_myvtn")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 176.0
+offset_top = 16.0
+offset_right = 384.0
+offset_bottom = 48.0
+color = Color(0.154876, 0.154876, 0.154876, 1)
+
+[node name="Ingredients" type="HBoxContainer" parent="ColorRect2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" parent="ColorRect2/Ingredients" instance=ExtResource("3_5jx4k")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect2/Ingredients"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect2/Ingredients/HBoxContainer2"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3_p511d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="X" type="Label" parent="ColorRect2/Ingredients/HBoxContainer2"]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "X"
+
+[node name="Quantity" type="Label" parent="ColorRect2/Ingredients/HBoxContainer2"]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect2/Ingredients"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect2/Ingredients/HBoxContainer3"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3_p511d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="X" type="Label" parent="ColorRect2/Ingredients/HBoxContainer3"]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "X"
+
+[node name="Quantity" type="Label" parent="ColorRect2/Ingredients/HBoxContainer3"]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ColorRect2/Ingredients"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect2/Ingredients/HBoxContainer4"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3_p511d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="X" type="Label" parent="ColorRect2/Ingredients/HBoxContainer4"]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "X"
+
+[node name="Quantity" type="Label" parent="ColorRect2/Ingredients/HBoxContainer4"]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1

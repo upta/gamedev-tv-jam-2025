@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqdnvmgnv2mwj"]
+
+[ext_resource type="Script" uid="uid://d0jre4mgfb1uq" path="res://mint/minter_resource.gd" id="1_rlxgi"]
+[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="1_tq00u"]
+
+[node name="MinterResource" type="HBoxContainer"]
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+script = ExtResource("1_rlxgi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("1_tq00u")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="X" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "X"
+
+[node name="Quantity" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"SmallLabel"
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1
