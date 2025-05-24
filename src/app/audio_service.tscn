@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpak1wh70kqjc"]
+
+[ext_resource type="Script" uid="uid://dbf1v8l7d5xq2" path="res://app/audio_service.gd" id="1_86uqd"]
+[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/VG_Rave.ogg" id="2_s2hrq"]
+
+[node name="AudioService" type="Node"]
+script = ExtResource("1_86uqd")
+
+[node name="GameMusicHome" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -15.0
+
+[node name="GameMusicMining" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_s2hrq")
+volume_db = -15.0
+
+[node name="GameStartSFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -12.0
+
+[node name="ButtonMouseOver" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -15.0
+
+[node name="ButtonSelectMenu" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -8.0
+
+[node name="ButtonSelectDecision" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -8.0
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -15.0
+
+[node name="Victory2" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
+
+[connection signal="finished" from="GameMusicHome" to="." method="_on_game_music_finished"]
+[connection signal="finished" from="GameMusicMining" to="." method="_on_game_music_finished"]
+[connection signal="finished" from="ButtonSelectDecision" to="." method="_on_button_select_decision_finished"]
