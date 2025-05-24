@@ -4,12 +4,22 @@ signal coin_changed(coin_type: Enum.CoinType, quantity: int)
 signal power_changed(power: float)
 signal mining_resource_changed(resource_type: Enum.MiningResourceType, quantity: int)
 signal staged_mining_resource_changed(resource_type: Enum.MiningResourceType, quantity: int)
+signal held_coin_type_changed(old: Enum.CoinType, new: Enum.CoinType)
 
 var coins: Dictionary[Enum.CoinType, int] = {}
 # resources represent global inventory resources
 var mining_resources: Dictionary[Enum.MiningResourceType, int] = {}
 # staged resources represent the resources actively being collected in the mining game
 var staged_mining_resources: Dictionary[Enum.MiningResourceType, int] = {}
+
+var _held_coin_type: Enum.CoinType = Enum.CoinType.NONE
+var held_coin_type: Enum.CoinType:
+	get:
+		return _held_coin_type
+	set(value):
+		var old = _held_coin_type
+		_held_coin_type = value
+		held_coin_type_changed.emit(old, _held_coin_type)
 
 var power := 0.0:
 	get:

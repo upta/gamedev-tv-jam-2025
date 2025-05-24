@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1jvudml7fra5"]
+
+[ext_resource type="Script" uid="uid://jnh5rjdjdg7r" path="res://interaction/interaction.gd" id="1_5km56"]
+[ext_resource type="Resource" uid="uid://dbppuvcdy4l45" path="res://input/game/actions/interact.tres" id="2_pthh1"]
+
+[node name="Interactable" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_5km56")
+action = ExtResource("2_pthh1")
+metadata/_custom_type_script = "uid://jnh5rjdjdg7r"
