@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c24mj7ef04pn4" path="res://assets/resources/boom/boom3.png" id="7_46o65"]
 [ext_resource type="Texture2D" uid="uid://dlxfvflmhjjdf" path="res://assets/resources/boom/boom4.png" id="8_vc4ar"]
 [ext_resource type="Texture2D" uid="uid://dhldkugv3ctw2" path="res://assets/resources/boom/boom5.png" id="9_038oe"]
-[ext_resource type="AudioStream" uid="uid://bjumegjy1taog" path="res://assets/sfx/boom.wav" id="10_fxyi6"]
+[ext_resource type="AudioStream" uid="uid://bjumegjy1taog" path="res://assets/sfx/Boom.wav" id="10_fxyi6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_13lu3"]
 animations = [{
@@ -65,5 +65,6 @@ frame_progress = 1.0
 
 [node name="BoomSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_fxyi6")
+bus = &"Sound Effects"
 
 [node name="ExplosionContainer" type="Node2D" parent="."]
