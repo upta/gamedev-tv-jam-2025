@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://0xkwl3f1g4qt"]
+
+[ext_resource type="Texture2D" uid="uid://c0fgn8xjmo52m" path="res://assets/coins/acoin.png" id="1_5tf65"]
+[ext_resource type="Script" uid="uid://bdna5ny2pnsmc" path="res://mint/ui/coin_list.gd" id="2_sybl2"]
+
+[node name="CoinList" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_sybl2")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+allow_reselect = true
+auto_width = true
+item_count = 1
+fixed_icon_size = Vector2i(32, 32)
+item_0/text = "Temp"
+item_0/icon = ExtResource("1_5tf65")
