@@ -31,7 +31,7 @@ func _ready() -> void:
 
 
 func _on_start_action_triggered():
-	pass#State.Scene.active_scene = "res://main_menu/level_select/LevelSelect.tscn"
+	pass#State.Scene.active_scene = "res://main_menu/level_select/level_select.tscn"
 
 
 func _on_but_new_pressed() -> void:
@@ -43,7 +43,7 @@ func _on_but_opt_pressed() -> void:
 
 
 func _on_but_sel_pressed() -> void:
-	State.Scene.active_scene = "res://main_menu/level_select/LevelSelect.tscn"
+	State.Scene.active_scene = "res://main_menu/level_select/level_select.tscn"
 
 
 func _on_but_opt_toggled(toggled_on: bool) -> void:

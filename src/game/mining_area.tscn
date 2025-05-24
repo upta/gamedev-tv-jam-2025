@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b0xa86vjrxpke" path="res://game/mining/blocks/red_chip.tscn" id="9_82gt4"]
 [ext_resource type="PackedScene" uid="uid://egxwgiobe2o1" path="res://game/mining/blocks/yellow_chip.tscn" id="10_hatsj"]
 [ext_resource type="PackedScene" uid="uid://b01msrd728kv1" path="res://game/mining/mining_ui.tscn" id="10_x3fj0"]
-[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/VG_Rave.ogg" id="11_aipip"]
+[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="11_aipip"]
 [ext_resource type="PackedScene" uid="uid://cnxuqu35cj1mi" path="res://game/start_countdown.tscn" id="11_tvd5v"]
 [ext_resource type="PackedScene" uid="uid://d1q8xcp42pnas" path="res://game/end_mining.tscn" id="12_wb13v"]
 [ext_resource type="Resource" uid="uid://b1m2s22saotf4" path="res://input/game/actions/bomb.tres" id="13_82gt4"]
@@ -48,7 +48,6 @@ bomb = ExtResource("14_hatsj")
 [node name="Camera2D" type="Camera2D" parent="MinerPlayer"]
 
 [node name="MiningUI" parent="." node_paths=PackedStringArray("chip_labels") instance=ExtResource("10_x3fj0")]
-visible = false
 chip_labels = {
 0: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipBlue Label"),
 1: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipGreen Label"),

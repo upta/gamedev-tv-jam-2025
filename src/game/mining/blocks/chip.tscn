@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dr4wxnie0vs35" path="res://assets/resources/memory/chip_blank.png" id="2_ltqol"]
 [ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="3_i6igg"]
 [ext_resource type="Texture2D" uid="uid://bdpqr7bh6ccjn" path="res://assets/resources/memory/chip_empty.png" id="4_7s8l3"]
-[ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/BoardTiles/BoardFill1.png" id="5_7s8l3"]
+[ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/board_tiles/board_fill1.png" id="5_7s8l3"]
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="5_nmn0f"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="6_k7ctb"]
 [ext_resource type="AudioStream" uid="uid://d2s730bh4dmq8" path="res://assets/sfx/wobble.wav" id="6_lwv0h"]

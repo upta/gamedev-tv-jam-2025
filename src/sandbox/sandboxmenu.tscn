@@ -2,12 +2,12 @@
 
 [ext_resource type="Theme" uid="uid://diokc81yjll62" path="res://assets/themes/buttons.tres" id="1_1eea6"]
 [ext_resource type="Script" uid="uid://cu0ashaghsvna" path="res://sandbox/sandboxmenu.gd" id="1_ttfmu"]
-[ext_resource type="Texture2D" uid="uid://bolmjais56upi" path="res://assets/resources/Menus/ComputerBackground/comp1.png" id="2_fhh7c"]
-[ext_resource type="Texture2D" uid="uid://cxaipg82672qj" path="res://assets/resources/Menus/ComputerBackground/comp2.png" id="3_tg3h4"]
-[ext_resource type="Texture2D" uid="uid://cfijv4grasirl" path="res://assets/resources/Menus/ComputerBackground/comp3.png" id="4_ec1dw"]
-[ext_resource type="Texture2D" uid="uid://df4kwleufonoh" path="res://assets/resources/Menus/ComputerBackground/comp4.png" id="5_d0jmh"]
-[ext_resource type="Texture2D" uid="uid://cn4fe3vojwcqi" path="res://assets/resources/Menus/ComputerBackground/comp5.png" id="6_hal6a"]
-[ext_resource type="Texture2D" uid="uid://b3l6iyko017ki" path="res://assets/resources/Menus/ComputerBackground/comp6.png" id="7_fywhp"]
+[ext_resource type="Texture2D" uid="uid://bolmjais56upi" path="res://assets/resources/menus/computer_background/comp1.png" id="2_fhh7c"]
+[ext_resource type="Texture2D" uid="uid://cxaipg82672qj" path="res://assets/resources/menus/computer_background/comp2.png" id="3_tg3h4"]
+[ext_resource type="Texture2D" uid="uid://cfijv4grasirl" path="res://assets/resources/menus/computer_background/comp3.png" id="4_ec1dw"]
+[ext_resource type="Texture2D" uid="uid://df4kwleufonoh" path="res://assets/resources/menus/computer_background/comp4.png" id="5_d0jmh"]
+[ext_resource type="Texture2D" uid="uid://cn4fe3vojwcqi" path="res://assets/resources/menus/computer_background/comp5.png" id="6_hal6a"]
+[ext_resource type="Texture2D" uid="uid://b3l6iyko017ki" path="res://assets/resources/menus/computer_background/comp6.png" id="7_fywhp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i6mm7"]
 animations = [{
