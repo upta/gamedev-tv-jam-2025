@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://df4kwleufonoh" path="res://assets/resources/menus/computer_background/comp4.png" id="7_g1omr"]
 [ext_resource type="Texture2D" uid="uid://cn4fe3vojwcqi" path="res://assets/resources/menus/computer_background/comp5.png" id="8_kwfav"]
 [ext_resource type="Texture2D" uid="uid://b3l6iyko017ki" path="res://assets/resources/menus/computer_background/comp6.png" id="9_n70vs"]
-[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/VG_Rave.ogg" id="10_og6xe"]
+[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="10_og6xe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tr6y3"]
 animations = [{
@@ -83,6 +83,7 @@ text = "New"
 stream = ExtResource("10_og6xe")
 volume_db = -6.0
 autoplay = true
+bus = &"Music"
 parameters/looping = true
 
 [connection signal="pressed" from="butSel" to="." method="_on_but_sel_pressed"]
