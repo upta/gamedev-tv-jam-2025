@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhfxjkmid0bas"
-path="res://.godot/imported/computer-tile-set.png-988438a9d0f67b87b93f5d8568adce1c.ctex"
+uid="uid://cn0w1u1vvnsma"
+path="res://.godot/imported/gameboard_background_64_squares.png-ab70c1d04f823eb0d77acf0b14972e05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/resources/menus/computer-tile-set.png"
-dest_files=["res://.godot/imported/computer-tile-set.png-988438a9d0f67b87b93f5d8568adce1c.ctex"]
+source_file="res://assets/backgrounds/gameboard_background_64_squares.png"
+dest_files=["res://.godot/imported/gameboard_background_64_squares.png-ab70c1d04f823eb0d77acf0b14972e05.ctex"]
 
 [params]
 
