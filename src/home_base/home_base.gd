@@ -19,6 +19,13 @@ func _ready() -> void:
 
 	exit.body_entered.connect(_on_exit_body_entered)
 
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.BLUE_CHIP, 20)
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.GREEN_CHIP, 20)
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.RED_CHIP, 20)
+	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.YELLOW_CHIP, 20)
+
+	Service.Inventory.bank_staged_mining_resources()
+
 
 func _on_exit_body_entered(_body: Node2D):
 	State.Scene.active_scene = "res://game/mining_area.tscn"

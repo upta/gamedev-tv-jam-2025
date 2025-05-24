@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=25 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
@@ -10,8 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bajsay7tgqtmo" path="res://assets/tiles/BoardTiles/BoardFill6.png" id="7_0g1cd"]
 [ext_resource type="Texture2D" uid="uid://bxv5finlh0bdk" path="res://assets/tiles/BoardTiles/BoardFill7.png" id="8_ui117"]
 [ext_resource type="Texture2D" uid="uid://22eiy5utpb5e" path="res://assets/tiles/BoardTiles/BoardFill8.png" id="9_orf3j"]
-[ext_resource type="PackedScene" uid="uid://wp20c4t7t4e4" path="res://input/player.tscn" id="10_gpvvs"]
 [ext_resource type="Texture2D" uid="uid://ls2dlm0fpnrv" path="res://assets/tiles/placeholder tile.png" id="11_n2u6b"]
+[ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
+[ext_resource type="PackedScene" uid="uid://ca0gqgaf1dci2" path="res://player/home_base_player.tscn" id="13_ui117"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f317w"]
 texture = ExtResource("2_q3lbv")
@@ -214,12 +215,32 @@ position = Vector2(64, 32)
 shape = SubResource("RectangleShape2D_n2u6b")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("10_gpvvs")]
-position = Vector2(605, 353)
-collision_mask = 3
+[node name="AcoinMinter" parent="." instance=ExtResource("13_0g1cd")]
+offset_left = 128.0
+offset_top = 480.0
+offset_right = 728.0
+offset_bottom = 552.0
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="BeecoinMinter" parent="." instance=ExtResource("13_0g1cd")]
+offset_left = 128.0
+offset_top = 608.0
+offset_right = 728.0
+offset_bottom = 680.0
+coin_type = 1
+
+[node name="SeacoinMinter" parent="." instance=ExtResource("13_0g1cd")]
+offset_left = 128.0
+offset_top = 736.0
+offset_right = 728.0
+offset_bottom = 808.0
+coin_type = 2
+
+[node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
+position = Vector2(256, 128)
+
+[node name="Camera2D" type="Camera2D" parent="HomeBasePlayer"]
 limit_left = 0
 limit_top = 0
-limit_right = 1408
-limit_bottom = 832
+limit_right = 1472
+limit_bottom = 896
+metadata/_edit_lock_ = true

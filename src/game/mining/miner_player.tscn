@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsjevfbrnec8e"]
 
-[ext_resource type="PackedScene" uid="uid://wp20c4t7t4e4" path="res://input/player.tscn" id="1_vfxb6"]
+[ext_resource type="PackedScene" uid="uid://wp20c4t7t4e4" path="res://player/player.tscn" id="1_vfxb6"]
 [ext_resource type="Script" uid="uid://bynmhure2yh0v" path="res://game/mining/miner_player.gd" id="2_6pa6v"]
 [ext_resource type="AudioStream" uid="uid://d1e0fbkqx2osi" path="res://assets/sfx/Hit.wav" id="3_7qbho"]
 

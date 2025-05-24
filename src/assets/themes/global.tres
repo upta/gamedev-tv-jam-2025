@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=82 format=4 uid="uid://dytoj03c16d40"]
+[gd_resource type="Theme" load_steps=84 format=4 uid="uid://dytoj03c16d40"]
 
 [ext_resource type="FontFile" uid="uid://edd365i3ynvg" path="res://assets/themes/DIGITALDREAM.ttf" id="1_4s5xv"]
 [ext_resource type="Texture2D" uid="uid://nob02pixsfk8" path="res://assets/resources/Menus/disabledbutton.png" id="2_ppnu3"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://k7vunyycimqd" path="res://assets/resources/Menus/hoverbutton.png" id="11_oq706"]
 [ext_resource type="Texture2D" uid="uid://7fsuuq8rr1f4" path="res://assets/resources/Menus/downarrow.png" id="12_oq706"]
 [ext_resource type="Texture2D" uid="uid://23apnfgi140y" path="res://assets/resources/Menus/slider/vertswitch.png" id="12_v0242"]
+[ext_resource type="StyleBox" uid="uid://crbc5qocbqvxb" path="res://assets/themes/panel_style_box_texture.tres" id="13_nvmaf"]
 [ext_resource type="Texture2D" uid="uid://b52hg2k3ikvwr" path="res://assets/resources/Menus/slider/vertswitchdisabled.png" id="13_oq706"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_usyh4"]
@@ -2024,18 +2025,22 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jqjxm"]
-content_margin_left = 18.0
-content_margin_top = 18.0
-content_margin_right = 18.0
-content_margin_bottom = 18.0
-texture = ExtResource("11_oq706")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nvmaf"]
+load_path = "res://.godot/imported/hoverbutton.png-35dcc6962e78aeb7ea2b4c048ba4139c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cd2bt"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+texture = SubResource("CompressedTexture2D_nvmaf")
+texture_margin_left = 5.86122
+texture_margin_top = 5.4547
+texture_margin_right = 5.81758
+texture_margin_bottom = 5.69473
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
+region_rect = Rect2(5.80818, 6.94225, 115.721, 50.5012)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2y6cj"]
 content_margin_left = 5.0
@@ -2279,9 +2284,12 @@ OptionButton/styles/normal = SubResource("StyleBoxTexture_0xbso")
 OptionButton/styles/normal_mirrored = SubResource("StyleBoxTexture_ll05y")
 OptionButton/styles/pressed = SubResource("StyleBoxTexture_83o4x")
 OptionButton/styles/pressed_mirrored = SubResource("StyleBoxTexture_tx63n")
-Panel/styles/panel = SubResource("StyleBoxTexture_jqjxm")
+Panel/styles/panel = ExtResource("13_nvmaf")
+PanelContainer/styles/panel = ExtResource("13_nvmaf")
 SmallLabel/base_type = &"Label"
 SmallLabel/font_sizes/font_size = 10
+ThinPanelContainer/base_type = &"PanelContainer"
+ThinPanelContainer/styles/panel = SubResource("StyleBoxTexture_cd2bt")
 VScrollBar/icons/decrement = SubResource("ImageTexture_ll05y")
 VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_ll05y")
 VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_ll05y")

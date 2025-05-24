@@ -122,10 +122,12 @@ animations = [{
 radius = 16.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_rkbax")
 move_action = ExtResource("2_g1dw6")
 
 [node name="SpriteAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6)
 scale = Vector2(0.820313, 0.820313)
 sprite_frames = SubResource("SpriteFrames_bjvpn")
 animation = &"walk_west"
