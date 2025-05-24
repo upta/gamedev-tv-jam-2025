@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfx01dud2km8a"]
+
+[ext_resource type="Script" uid="uid://fkf17dl5dalf" path="res://home_base/market_prices.gd" id="1_1whle"]
+[ext_resource type="PackedScene" uid="uid://csdernwasn461" path="res://home_base/market_price_line_item.tscn" id="1_5ptld"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1whle"]
+size = Vector2(320, 150)
+
+[node name="MarketPrices" type="PanelContainer"]
+offset_right = 320.0
+offset_bottom = 153.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_1whle")
+market_price_line_item_scene = ExtResource("1_5ptld")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(161, 76)
+shape = SubResource("RectangleShape2D_1whle")
+
+[node name="Container" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MarketPriceLineItem" parent="Container" instance=ExtResource("1_5ptld")]
+layout_mode = 2
