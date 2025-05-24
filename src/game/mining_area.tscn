@@ -22,6 +22,7 @@
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
 input_context = ExtResource("2_7pupr")
+total_mining_time = 5.0
 
 [node name="ChunkMaster" parent="." instance=ExtResource("3_aipip")]
 block_types = Dictionary[int, PackedScene]({
@@ -48,6 +49,7 @@ bomb = ExtResource("14_hatsj")
 [node name="Camera2D" type="Camera2D" parent="MinerPlayer"]
 
 [node name="MiningUI" parent="." node_paths=PackedStringArray("chip_labels") instance=ExtResource("10_x3fj0")]
+visible = false
 chip_labels = {
 0: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipBlue Label"),
 1: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipGreen Label"),
@@ -69,7 +71,9 @@ chip_labels = {
 stream = ExtResource("11_aipip")
 volume_db = -6.0
 autoplay = true
+bus = &"Music"
 parameters/looping = true
 
 [connection signal="drop_item" from="MinerPlayer" to="." method="_on_miner_player_drop_item"]
 [connection signal="update_bomb_action_time" from="MinerPlayer" to="." method="_on_miner_player_update_bomb_action_time"]
+[connection signal="on_countdown_finished" from="StartCountdown" to="." method="_on_start_countdown_on_countdown_finished"]
