@@ -7,6 +7,8 @@ extends Node2D
 @onready var mint: Button = %Mint
 @onready var mining: Button = %Mining
 
+@onready var exit: Area2D = %Exit
+
 
 func _ready() -> void:
 	GUIDE.enable_mapping_context(input_context, true)
@@ -15,6 +17,12 @@ func _ready() -> void:
 	shop.pressed.connect(_on_shop_pressed)
 	mint.pressed.connect(_on_mint_pressed)
 	mining.pressed.connect(_on_mining_pressed)
+
+	exit.body_entered.connect(_on_exit_body_entered)
+
+
+func _on_exit_body_entered(body: Node2D):
+	prints("Exited", body)
 
 
 func _on_market_pressed():

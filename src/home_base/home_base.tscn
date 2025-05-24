@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=24 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://clqr6jrflk83j" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
@@ -141,7 +141,7 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_oregg"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.660874, 6.05485e-05, 0.536484, 1)
@@ -154,6 +154,9 @@ sources/5 = SubResource("TileSetAtlasSource_ngbo3")
 sources/6 = SubResource("TileSetAtlasSource_sspq3")
 sources/7 = SubResource("TileSetAtlasSource_xvcyn")
 sources/8 = SubResource("TileSetAtlasSource_0g1cd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2u6b"]
+size = Vector2(128, 64)
 
 [node name="HomeBase" type="Node2D"]
 script = ExtResource("1_md8vl")
@@ -197,5 +200,20 @@ tile_set = SubResource("TileSet_oregg")
 
 [node name="Player" parent="." instance=ExtResource("10_gpvvs")]
 position = Vector2(605, 353)
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Exit" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(128, -64)
+
+[node name="ColorRect" type="ColorRect" parent="Exit"]
+custom_minimum_size = Vector2(128, 64)
+offset_right = 128.0
+offset_bottom = 64.0
+color = Color(0.385249, 0.292233, 0.0269555, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(64, 32)
+shape = SubResource("RectangleShape2D_n2u6b")
