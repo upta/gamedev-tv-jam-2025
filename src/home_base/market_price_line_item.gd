@@ -17,6 +17,8 @@ func activate(coin: CoinResource):
 	var is_up := true
 
 	if history_size > 1:
-		is_up = price_history.current_price > price_history.history[history_size - 2]
+		# Calculate the index of the previous price in the history
+		var previous_index = history_size - 2
+		is_up = price_history.current_price > price_history.history[previous_index]
 
 	direction.flip_v = !is_up
