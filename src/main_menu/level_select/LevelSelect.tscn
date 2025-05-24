@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://iox78ee3or7r"]
 
 [ext_resource type="Script" uid="uid://dsmkdnfffivld" path="res://main_menu/level_select/level_select.gd" id="1_7cium"]
-[ext_resource type="Theme" uid="uid://diokc81yjll62" path="res://assets/themes/buttons.tres" id="1_vwc8s"]
+[ext_resource type="Theme" uid="uid://dytoj03c16d40" path="res://assets/themes/global.tres" id="2_7cium"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -19,17 +19,22 @@ offset_bottom = 40.0
 
 [node name="dummy" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_vwc8s")
+theme = ExtResource("2_7cium")
 text = "Dummy Level"
 
 [node name="mining" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_vwc8s")
+theme = ExtResource("2_7cium")
 text = "Mining Area"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_7cium")
+text = "Theme Sandbox"
 
 [node name="back" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_vwc8s")
+theme = ExtResource("2_7cium")
 text = "Back"
 
 [node name="home_base" type="Button" parent="VBoxContainer"]
@@ -39,5 +44,6 @@ text = "Home Base"
 
 [connection signal="pressed" from="VBoxContainer/dummy" to="." method="_on_dummy_pressed"]
 [connection signal="pressed" from="VBoxContainer/mining" to="." method="_on_mining_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="VBoxContainer/home_base" to="." method="_on_home_base_pressed"]

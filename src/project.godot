@@ -36,3 +36,8 @@ project/assembly_name="GameDevTV2025"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/graph_2d/plugin.cfg", "res://addons/guide/plugin.cfg", "res://addons/simple_gdscript_formatter/plugin.cfg")
+
+[gui]
+
+theme/custom="uid://dytoj03c16d40"
+theme/custom_font="uid://edd365i3ynvg"
