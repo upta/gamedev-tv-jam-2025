@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://by0qi6nefenrm"]
+
+[ext_resource type="PackedScene" uid="uid://b58mymyph0k1" path="res://game/mining/blocks/chip.tscn" id="1_x3hd8"]
+
+[node name="GreenChip" instance=ExtResource("1_x3hd8")]
+chip_type = 1
+durability = 3

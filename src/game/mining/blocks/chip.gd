@@ -1,15 +1,28 @@
 extends Mineable
 
+@export var chip_type: Enum.MiningResourceType = Enum.MiningResourceType.BLUE_CHIP
+
 @onready var chip_sprite: AnimatedSprite2D = $ChipSprite
 @onready var chip_empty_sprite: Sprite2D = $ChipEmptySprite
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var mined_sfx: AudioStreamPlayer2D = $MinedSFX
 
 
+func _ready() -> void:
+	if chip_type == Enum.MiningResourceType.GREEN_CHIP:
+		chip_sprite.play("green")
+	elif chip_type == Enum.MiningResourceType.RED_CHIP:
+		chip_sprite.play("red")
+	elif chip_type == Enum.MiningResourceType.YELLOW_CHIP:
+		chip_sprite.play("yellow")
+	else:
+		chip_sprite.play("blue")
+
+
 func on_mined():
 	collision_shape.disabled = true
 	chip_empty_sprite.show()
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.BLUE_CHIP, 1)
+	Service.Inventory.add_staged_mining_resources(chip_type, 1)
 	mined_sfx.play()
 
 	chip_sprite.self_modulate.a = 0.75
