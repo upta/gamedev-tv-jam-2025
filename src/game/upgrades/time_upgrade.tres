@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource("1_jhn1g")
-cost_base = 0
-cost_growth = 0.0
-time_increment = 0
-base_time = 0
+cost_base = 100
+cost_growth = 0.2
+time_increment = 5
+base_time = 60
 name = "Mining Time"
 type = 3
 metadata/_custom_type_script = "uid://b3eoi302pmfhw"
