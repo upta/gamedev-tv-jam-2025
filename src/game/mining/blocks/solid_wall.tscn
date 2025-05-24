@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5vufw7g3ksiw"]
 
-[ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/BoardTiles/BoardFill1.png" id="1_hpp6q"]
+[ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/board_tiles/board_fill1.png" id="1_hpp6q"]
 [ext_resource type="Texture2D" uid="uid://bnv4x8f7bpcbq" path="res://assets/resources/capacitor/capacitor_white.png" id="1_hvxt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pupr"]

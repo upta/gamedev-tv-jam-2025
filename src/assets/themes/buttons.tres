@@ -1,10 +1,10 @@
 [gd_resource type="Theme" load_steps=11 format=3 uid="uid://diokc81yjll62"]
 
-[ext_resource type="FontFile" uid="uid://edd365i3ynvg" path="res://assets/themes/DIGITALDREAM.ttf" id="1_skoh8"]
-[ext_resource type="Texture2D" uid="uid://nob02pixsfk8" path="res://assets/resources/Menus/disabledbutton.png" id="2_cpj71"]
-[ext_resource type="Texture2D" uid="uid://cjn34sevd15he" path="res://assets/resources/Menus/normalbutton.png" id="2_kr3sn"]
-[ext_resource type="Texture2D" uid="uid://bxx4fo4pb08bh" path="res://assets/resources/Menus/pressedbutton.png" id="3_cpj71"]
-[ext_resource type="Texture2D" uid="uid://k7vunyycimqd" path="res://assets/resources/Menus/hoverbutton.png" id="3_gv08c"]
+[ext_resource type="FontFile" uid="uid://edd365i3ynvg" path="res://assets/themes/digitaldream.ttf" id="1_skoh8"]
+[ext_resource type="Texture2D" uid="uid://nob02pixsfk8" path="res://assets/resources/menus/disabledbutton.png" id="2_cpj71"]
+[ext_resource type="Texture2D" uid="uid://cjn34sevd15he" path="res://assets/resources/menus/normalbutton.png" id="2_kr3sn"]
+[ext_resource type="Texture2D" uid="uid://bxx4fo4pb08bh" path="res://assets/resources/menus/pressedbutton.png" id="3_cpj71"]
+[ext_resource type="Texture2D" uid="uid://k7vunyycimqd" path="res://assets/resources/menus/hoverbutton.png" id="3_gv08c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nmmk2"]
 texture = ExtResource("2_cpj71")
