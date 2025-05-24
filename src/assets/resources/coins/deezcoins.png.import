@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctyqmndaa8cg2"
-path="res://.godot/imported/deezcoins.png-3d7b9483973482f2a198ff4382168b23.ctex"
+path="res://.godot/imported/deezcoins.png-133106de1471d6990f2bf7687d143c05.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/coins/deezcoins.png"
-dest_files=["res://.godot/imported/deezcoins.png-3d7b9483973482f2a198ff4382168b23.ctex"]
+dest_files=["res://.godot/imported/deezcoins.png-133106de1471d6990f2bf7687d143c05.ctex"]
 
 [params]
 

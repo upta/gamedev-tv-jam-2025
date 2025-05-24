@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bskw26wynoqqa"
-path="res://.godot/imported/on.png-532e904837116d130ee920c66e403776.ctex"
+path="res://.godot/imported/on.png-c9444f8e37b7fe39be51f87537bdcce7.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/checkbox/on.png"
-dest_files=["res://.godot/imported/on.png-532e904837116d130ee920c66e403776.ctex"]
+dest_files=["res://.godot/imported/on.png-c9444f8e37b7fe39be51f87537bdcce7.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k7vunyycimqd"
-path="res://.godot/imported/hoverbutton.png-35dcc6962e78aeb7ea2b4c048ba4139c.ctex"
+path="res://.godot/imported/hoverbutton.png-b594ebc3fe2ba2984c94652910022c94.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/hoverbutton.png"
-dest_files=["res://.godot/imported/hoverbutton.png-35dcc6962e78aeb7ea2b4c048ba4139c.ctex"]
+dest_files=["res://.godot/imported/hoverbutton.png-b594ebc3fe2ba2984c94652910022c94.ctex"]
 
 [params]
 

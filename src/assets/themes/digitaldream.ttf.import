@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://edd365i3ynvg"
-path="res://.godot/imported/DIGITALDREAM.ttf-a4953056641cf805e6efc44e8057c86e.fontdata"
+path="res://.godot/imported/digitaldream.ttf-ada62d6e57b3336f7c70815cb86696dc.fontdata"
 
 [deps]
 
 source_file="res://assets/themes/digitaldream.ttf"
-dest_files=["res://.godot/imported/DIGITALDREAM.ttf-a4953056641cf805e6efc44e8057c86e.fontdata"]
+dest_files=["res://.godot/imported/digitaldream.ttf-ada62d6e57b3336f7c70815cb86696dc.fontdata"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djspqe2j8jgn7"
-path="res://.godot/imported/slideroff.png-e6d29c30535cadec81b3c692c25ee0b7.ctex"
+path="res://.godot/imported/slideroff.png-7639b81dd0121f3d392eac20fd80f61e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/slider/slideroff.png"
-dest_files=["res://.godot/imported/slideroff.png-e6d29c30535cadec81b3c692c25ee0b7.ctex"]
+dest_files=["res://.godot/imported/slideroff.png-7639b81dd0121f3d392eac20fd80f61e.ctex"]
 
 [params]
 

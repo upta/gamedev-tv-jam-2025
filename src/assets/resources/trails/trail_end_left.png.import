@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tlvpl4tqwjj0"
-path="res://.godot/imported/trail_end_left.png-1a155a45bb6413ce94c4480fe327ff1a.ctex"
+path="res://.godot/imported/trail_end_left.png-17ec30f2b98a0227dd8e5ff73f207380.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/trails/trail_end_left.png"
-dest_files=["res://.godot/imported/trail_end_left.png-1a155a45bb6413ce94c4480fe327ff1a.ctex"]
+dest_files=["res://.godot/imported/trail_end_left.png-17ec30f2b98a0227dd8e5ff73f207380.ctex"]
 
 [params]
 

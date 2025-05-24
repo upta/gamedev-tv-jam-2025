@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjn34sevd15he"
-path="res://.godot/imported/normalbutton.png-e32f87ac607059ba1d5f886207d213e7.ctex"
+path="res://.godot/imported/normalbutton.png-9afe81b7c33b7c0d448b036c5f9968fb.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/normalbutton.png"
-dest_files=["res://.godot/imported/normalbutton.png-e32f87ac607059ba1d5f886207d213e7.ctex"]
+dest_files=["res://.godot/imported/normalbutton.png-9afe81b7c33b7c0d448b036c5f9968fb.ctex"]
 
 [params]
 

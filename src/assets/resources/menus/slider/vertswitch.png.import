@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://23apnfgi140y"
-path="res://.godot/imported/vertswitch.png-9461348eef42da031fe26eb5c87da1ee.ctex"
+path="res://.godot/imported/vertswitch.png-50610b46c1bbc7050632142054a5e4a6.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/slider/vertswitch.png"
-dest_files=["res://.godot/imported/vertswitch.png-9461348eef42da031fe26eb5c87da1ee.ctex"]
+dest_files=["res://.godot/imported/vertswitch.png-50610b46c1bbc7050632142054a5e4a6.ctex"]
 
 [params]
 

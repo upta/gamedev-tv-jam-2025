@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhfxjkmid0bas"
-path="res://.godot/imported/computer_tile_set.png-b38cb731e9fdf9db9a2f0bdfac3d4b41.ctex"
+path="res://.godot/imported/computer_tile_set.png-2c23195f47c6351e07596f2a4358edbc.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/computer_tile_set.png"
-dest_files=["res://.godot/imported/computer_tile_set.png-b38cb731e9fdf9db9a2f0bdfac3d4b41.ctex"]
+dest_files=["res://.godot/imported/computer_tile_set.png-2c23195f47c6351e07596f2a4358edbc.ctex"]
 
 [params]
 

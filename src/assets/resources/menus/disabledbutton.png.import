@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nob02pixsfk8"
-path="res://.godot/imported/disabledbutton.png-7b2b6e37afad636226499fcd9c4acdb4.ctex"
+path="res://.godot/imported/disabledbutton.png-1c7df968cb0de6ef5b1905a18527a195.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/disabledbutton.png"
-dest_files=["res://.godot/imported/disabledbutton.png-7b2b6e37afad636226499fcd9c4acdb4.ctex"]
+dest_files=["res://.godot/imported/disabledbutton.png-1c7df968cb0de6ef5b1905a18527a195.ctex"]
 
 [params]
 

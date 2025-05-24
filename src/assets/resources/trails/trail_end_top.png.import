@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn8fbm2v6b58l"
-path="res://.godot/imported/trail_end_top.png-3b05b3eeab09f9dbcbdfa33d3aef12a1.ctex"
+path="res://.godot/imported/trail_end_top.png-b72b2d5caec0d0d9eaaaef6bd593c65e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/trails/trail_end_top.png"
-dest_files=["res://.godot/imported/trail_end_top.png-3b05b3eeab09f9dbcbdfa33d3aef12a1.ctex"]
+dest_files=["res://.godot/imported/trail_end_top.png-b72b2d5caec0d0d9eaaaef6bd593c65e.ctex"]
 
 [params]
 

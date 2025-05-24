@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg2wybimjhxe6"
-path="res://.godot/imported/topfill2.png-296832033885290611a9302ae9b5ca88.ctex"
+path="res://.godot/imported/topfill2.png-0a582200daa150ee15084cdf2f438e88.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/tiles/board_top/topfill2.png"
-dest_files=["res://.godot/imported/topfill2.png-296832033885290611a9302ae9b5ca88.ctex"]
+dest_files=["res://.godot/imported/topfill2.png-0a582200daa150ee15084cdf2f438e88.ctex"]
 
 [params]
 

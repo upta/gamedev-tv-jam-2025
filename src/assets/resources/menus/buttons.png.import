@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oiseyamokqeq"
-path="res://.godot/imported/buttons.png-da3f65f3927bc455ccece08c1d5ea1f6.ctex"
+path="res://.godot/imported/buttons.png-0484cbf5031f6c11fcd0b183f0063f63.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/buttons.png"
-dest_files=["res://.godot/imported/buttons.png-da3f65f3927bc455ccece08c1d5ea1f6.ctex"]
+dest_files=["res://.godot/imported/buttons.png-0484cbf5031f6c11fcd0b183f0063f63.ctex"]
 
 [params]
 

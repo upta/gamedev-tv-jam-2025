@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkrti73v4lx11"
-path="res://.godot/imported/beecoin.png-6406eddd5ad876e30c4e785ef512dc30.ctex"
+path="res://.godot/imported/beecoin.png-dfa47d37562a35404d0ab7b4d28b28af.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/coins/beecoin.png"
-dest_files=["res://.godot/imported/beecoin.png-6406eddd5ad876e30c4e785ef512dc30.ctex"]
+dest_files=["res://.godot/imported/beecoin.png-dfa47d37562a35404d0ab7b4d28b28af.ctex"]
 
 [params]
 

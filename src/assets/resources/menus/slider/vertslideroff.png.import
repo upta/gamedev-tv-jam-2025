@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cafsdvuwo5gq1"
-path="res://.godot/imported/vertslideroff.png-b0498684c378fe0cc9d7a353799be20f.ctex"
+path="res://.godot/imported/vertslideroff.png-35859a4c8b1914ed2af33b71298d886b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/slider/vertslideroff.png"
-dest_files=["res://.godot/imported/vertslideroff.png-b0498684c378fe0cc9d7a353799be20f.ctex"]
+dest_files=["res://.godot/imported/vertslideroff.png-35859a4c8b1914ed2af33b71298d886b.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k3kwyn07my8t"
-path="res://.godot/imported/minter.png-eb46189c7aa915ed7267bce6aa5de0d1.ctex"
+path="res://.godot/imported/minter.png-33a1c392997da746a45e6984168ad09c.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/minter/minter.png"
-dest_files=["res://.godot/imported/minter.png-eb46189c7aa915ed7267bce6aa5de0d1.ctex"]
+dest_files=["res://.godot/imported/minter.png-33a1c392997da746a45e6984168ad09c.ctex"]
 
 [params]
 

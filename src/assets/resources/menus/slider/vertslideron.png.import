@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhlo6ocralpxp"
-path="res://.godot/imported/vertslideron.png-52a7ea32eada670c302a6fefa02e453a.ctex"
+path="res://.godot/imported/vertslideron.png-d0091267c5f598861066a9c60b9b5e8e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/resources/menus/slider/vertslideron.png"
-dest_files=["res://.godot/imported/vertslideron.png-52a7ea32eada670c302a6fefa02e453a.ctex"]
+dest_files=["res://.godot/imported/vertslideron.png-d0091267c5f598861066a9c60b9b5e8e.ctex"]
 
 [params]
 
