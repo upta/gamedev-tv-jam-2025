@@ -49,10 +49,10 @@ bomb = ExtResource("14_hatsj")
 
 [node name="MiningUI" parent="." node_paths=PackedStringArray("chip_labels") instance=ExtResource("10_x3fj0")]
 chip_labels = {
-0: NodePath("PanelContainer/MarginContainer/GridContainer/ChipBlue Label"),
-1: NodePath("PanelContainer/MarginContainer/GridContainer/ChipGreen Label"),
-2: NodePath("PanelContainer/MarginContainer/GridContainer/ChipRed Label"),
-3: NodePath("PanelContainer/MarginContainer/GridContainer/ChipYellow Label")
+0: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipBlue Label"),
+1: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipGreen Label"),
+2: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipRed Label"),
+3: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipYellow Label")
 }
 
 [node name="StartCountdown" parent="." instance=ExtResource("11_tvd5v")]
@@ -72,3 +72,4 @@ autoplay = true
 parameters/looping = true
 
 [connection signal="drop_item" from="MinerPlayer" to="." method="_on_miner_player_drop_item"]
+[connection signal="update_bomb_action_time" from="MinerPlayer" to="." method="_on_miner_player_update_bomb_action_time"]

@@ -3,6 +3,7 @@ extends Player
 @onready var sfx_drop: AudioStreamPlayer2D = $SFX/Drop
 
 signal drop_item(item: Node2D)
+signal update_bomb_action_time(time: float)
 
 @export var base_mining_rate: float = 1.0
 @export var base_bomb_rate: float = 5.0
@@ -15,8 +16,19 @@ var can_mine: bool:
 var can_bomb: bool:
 	get: return last_bomb_delta >= base_bomb_rate
 
-@onready var last_mined_delta: float = 0.0
-@onready var last_bomb_delta: float = 0.0
+var bomb_action_time: float:
+	get: return base_bomb_rate - last_bomb_delta
+
+var last_mined_delta: float = 0.0:
+	get: return last_mined_delta
+	set(value):
+		last_mined_delta = value
+
+var last_bomb_delta: float = 0.0:
+	get: return last_bomb_delta
+	set(value):
+		last_bomb_delta = value
+		update_bomb_action_time.emit(bomb_action_time)
 
 @onready var sfx_hit: AudioStreamPlayer2D = $SFX/Hit
 @onready var sfx_nope: AudioStreamPlayer2D = $SFX/Nope

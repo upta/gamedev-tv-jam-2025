@@ -1,4 +1,4 @@
-[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://crbc5qocbqvxb"]
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dc03h7pic31q3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w3ciw"]
 load_path = "res://.godot/imported/hoverbutton.png-35dcc6962e78aeb7ea2b4c048ba4139c.ctex"
