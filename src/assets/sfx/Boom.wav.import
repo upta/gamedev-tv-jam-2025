@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dwdphhnar1c60"
-path="res://.godot/imported/phaser.wav-a5775931de4d361b049327fc36cf8e6f.sample"
+uid="uid://bjumegjy1taog"
+path="res://.godot/imported/boom.wav-b7dc2436738b092118bc6a9ac139ed1b.sample"
 
 [deps]
 
-source_file="res://assets/sfx/phaser.wav"
-dest_files=["res://.godot/imported/phaser.wav-a5775931de4d361b049327fc36cf8e6f.sample"]
+source_file="res://assets/sfx/boom.wav"
+dest_files=["res://.godot/imported/boom.wav-b7dc2436738b092118bc6a9ac139ed1b.sample"]
 
 [params]
 

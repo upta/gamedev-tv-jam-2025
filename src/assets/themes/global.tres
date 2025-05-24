@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://k7vunyycimqd" path="res://assets/resources/Menus/hoverbutton.png" id="11_oq706"]
 [ext_resource type="Texture2D" uid="uid://7fsuuq8rr1f4" path="res://assets/resources/Menus/downarrow.png" id="12_oq706"]
 [ext_resource type="Texture2D" uid="uid://23apnfgi140y" path="res://assets/resources/Menus/slider/vertswitch.png" id="12_v0242"]
-[ext_resource type="StyleBox" uid="uid://crbc5qocbqvxb" path="res://assets/themes/panel_style_box_texture.tres" id="13_nvmaf"]
+[ext_resource type="StyleBox" uid="uid://dc03h7pic31q3" path="res://assets/themes/panel_style_box_texture.tres" id="13_nvmaf"]
 [ext_resource type="Texture2D" uid="uid://b52hg2k3ikvwr" path="res://assets/resources/Menus/slider/vertswitchdisabled.png" id="13_oq706"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_usyh4"]

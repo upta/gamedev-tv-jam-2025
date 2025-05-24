@@ -80,6 +80,10 @@ func _get_block_generator(chunk_block_center: float) -> Callable:
 	return _generate_default
 
 
+func get_nearest_global_grid_position(from: Vector2) -> Vector2:
+	return from.snappedf(block_size_px)
+
+
 func generate_blocks(chunk_position: Vector2) -> Array[Node2D]:
 	var chunk_block_center = chunk_position / block_size_px
 	var block_generator = _get_block_generator(chunk_block_center.distance_to(Vector2.ZERO))

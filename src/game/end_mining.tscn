@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="3_nj2gt"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="4_cqwx5"]
 [ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="5_2vukn"]
-[ext_resource type="AudioStream" uid="uid://dwdphhnar1c60" path="res://assets/sfx/Phaser.wav" id="6_nj2gt"]
+[ext_resource type="AudioStream" uid="uid://dwdphhnar1c60" path="res://assets/sfx/phaser.wav" id="6_nj2gt"]
 
 [node name="EndMining" type="CanvasLayer" node_paths=PackedStringArray("chip_labels")]
 process_mode = 3

@@ -27,3 +27,12 @@ func _end_mining() -> void:
 	done = true
 	$EndMining.on_time_up.call_deferred()
 	$MiningUI.visible = false
+
+
+func _on_miner_player_drop_item(item: Node2D) -> void:
+	item.global_position = $ChunkMaster.get_nearest_global_grid_position(item.global_position)
+	add_child(item)
+
+
+func _on_miner_player_update_bomb_action_time(time: float) -> void:
+	$MiningUI.set_bomb_action_time(time)
