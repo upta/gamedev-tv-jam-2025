@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqfd1a8bvojms"]
+[gd_scene load_steps=19 format=3 uid="uid://cqfd1a8bvojms"]
 
 [ext_resource type="Script" uid="uid://bbfflnbqq66yw" path="res://game/mining_area.gd" id="1_bdnut"]
 [ext_resource type="Resource" uid="uid://b21g17kle5gak" path="res://input/game/mining_context.tres" id="2_7pupr"]
@@ -16,6 +16,8 @@
 [ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/VG_Rave.ogg" id="11_aipip"]
 [ext_resource type="PackedScene" uid="uid://cnxuqu35cj1mi" path="res://game/start_countdown.tscn" id="11_tvd5v"]
 [ext_resource type="PackedScene" uid="uid://d1q8xcp42pnas" path="res://game/end_mining.tscn" id="12_wb13v"]
+[ext_resource type="Resource" uid="uid://b1m2s22saotf4" path="res://input/game/actions/bomb.tres" id="13_82gt4"]
+[ext_resource type="PackedScene" uid="uid://d0tlmjbftirap" path="res://game/mining/tools/bomb.tscn" id="14_hatsj"]
 
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
@@ -40,6 +42,8 @@ chunk_master = NodePath("../ChunkMaster")
 
 [node name="MinerPlayer" parent="." instance=ExtResource("3_ujp4m")]
 base_mining_rate = 0.5
+bomb_action = ExtResource("13_82gt4")
+bomb = ExtResource("14_hatsj")
 
 [node name="Camera2D" type="Camera2D" parent="MinerPlayer"]
 
@@ -66,3 +70,5 @@ stream = ExtResource("11_aipip")
 volume_db = -6.0
 autoplay = true
 parameters/looping = true
+
+[connection signal="drop_item" from="MinerPlayer" to="." method="_on_miner_player_drop_item"]

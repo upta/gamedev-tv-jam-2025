@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://d0tlmjbftirap"]
+
+[ext_resource type="Script" uid="uid://c0i2jkwmeudlh" path="res://game/mining/tools/bomb.gd" id="1_3115a"]
+[ext_resource type="Texture2D" uid="uid://c2durvuuibadr" path="res://assets/resources/boom/boomdisabled.png" id="2_0jfok"]
+[ext_resource type="Texture2D" uid="uid://c2c7tqyix7n8t" path="res://assets/resources/boom/capactitor.png" id="3_pcje3"]
+[ext_resource type="Texture2D" uid="uid://c6runtmx1soam" path="res://assets/resources/boom/boom0.png" id="4_iiw8h"]
+[ext_resource type="Texture2D" uid="uid://s5ed51uo2eie" path="res://assets/resources/boom/boom1.png" id="5_fxyi6"]
+[ext_resource type="Texture2D" uid="uid://b0y3lvsyudp3w" path="res://assets/resources/boom/boom2.png" id="6_70eo4"]
+[ext_resource type="Texture2D" uid="uid://c24mj7ef04pn4" path="res://assets/resources/boom/boom3.png" id="7_46o65"]
+[ext_resource type="Texture2D" uid="uid://dlxfvflmhjjdf" path="res://assets/resources/boom/boom4.png" id="8_vc4ar"]
+[ext_resource type="Texture2D" uid="uid://dhldkugv3ctw2" path="res://assets/resources/boom/boom5.png" id="9_038oe"]
+[ext_resource type="AudioStream" uid="uid://bjumegjy1taog" path="res://assets/sfx/Boom.wav" id="10_fxyi6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13lu3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0jfok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pcje3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("4_iiw8h")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_fxyi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_70eo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_46o65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vc4ar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_038oe")
+}],
+"loop": false,
+"name": &"exploding",
+"speed": 15.0
+}]
+
+[node name="Bomb" type="Node2D"]
+script = ExtResource("1_3115a")
+block_size_px = 40.0
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_13lu3")
+animation = &"exploding"
+autoplay = "default"
+frame = 5
+frame_progress = 1.0
+
+[node name="BoomSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_fxyi6")
+
+[node name="ExplosionContainer" type="Node" parent="."]
