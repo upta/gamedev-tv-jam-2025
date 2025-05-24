@@ -26,4 +26,4 @@ func return_coin():
 
 
 func has_held_coin() -> bool:
-	return State.Inventory.held_coin_type != -1
+	return State.Inventory.held_coin_type != Enum.CoinType.NONE
