@@ -49,6 +49,9 @@ func _on_mint_pressed():
 	State.Scene.active_scene = "res://mint/ui/mint_ui.tscn"
 
 
+## Sets the camera limits based on the boundary tilemap.
+## Subtracts 2 from the bounds size to account for the border tiles themselves,
+## as we only want the camera to show the area inside the border, not the border itself.
 func _set_camera_limit():
 	var bounds = boundary.get_used_rect()
 	var tile_size = boundary.tile_set.tile_size
