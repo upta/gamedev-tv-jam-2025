@@ -15,3 +15,7 @@ func _on_back_pressed() -> void:
 
 func _on_home_base_pressed() -> void:
 	State.Scene.active_scene = "res://home_base/home_base.tscn"
+
+
+func _on_button_pressed() -> void:
+	State.Scene.active_scene = "res://sandbox/ThemeSandbox.tscn"
