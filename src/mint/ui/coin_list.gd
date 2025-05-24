@@ -17,7 +17,7 @@ var selected_coin: CoinResource:
 
 		return item_list.get_item_metadata(index)
 	set(value):
-		for i in range(0, item_list.item_count - 1):
+		for i in range(0, item_list.item_count):
 			var coin: CoinResource = item_list.get_item_metadata(i)
 
 			if coin == value:
