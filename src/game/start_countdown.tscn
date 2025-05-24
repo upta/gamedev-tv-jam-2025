@@ -35,6 +35,8 @@ vertical_alignment = 1
 
 [node name="LowBeep" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("2_n04wc")
+bus = &"Sound Effects"
 
 [node name="HighBeep" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("3_7rwqi")
+bus = &"Sound Effects"

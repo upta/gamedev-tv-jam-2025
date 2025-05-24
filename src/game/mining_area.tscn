@@ -65,4 +65,5 @@ chip_labels = {
 stream = ExtResource("11_aipip")
 volume_db = -6.0
 autoplay = true
+bus = &"Music"
 parameters/looping = true
