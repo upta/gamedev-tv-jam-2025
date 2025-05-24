@@ -29,6 +29,9 @@ enum BlockType {
 	DIRT,
 	WALL,
 	BLUE_CHIP,
+	GREEN_CHIP,
+	RED_CHIP,
+	YELLOW_CHIP,
 }
 
 
