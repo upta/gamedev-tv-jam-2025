@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=9 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="7_2f1hc"]
 [ext_resource type="Texture2D" uid="uid://c0fgn8xjmo52m" path="res://assets/coins/acoin.png" id="7_n6jcb"]
 [ext_resource type="Texture2D" uid="uid://cv8harke0n2cn" path="res://assets/resources/upgrades/power1.png" id="8_8e0gs"]
+[ext_resource type="PackedScene" uid="uid://cfx01dud2km8a" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
 [ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://bdeymf2o7kll2" path="res://home_base/seller.tscn" id="13_orf3j"]
 [ext_resource type="PackedScene" uid="uid://ca0gqgaf1dci2" path="res://player/home_base_player.tscn" id="13_ui117"]
@@ -100,6 +101,10 @@ coin_type = 2
 [node name="Seller" parent="." instance=ExtResource("13_orf3j")]
 position = Vector2(1240, 640)
 
+[node name="MarketPrices" parent="." instance=ExtResource("7_2f1hc")]
+offset_left = 480.0
+offset_right = 800.0
+
 [node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
 position = Vector2(256, 128)
 
@@ -114,50 +119,6 @@ metadata/_edit_lock_ = true
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_2f1hc")
 volume_db = -6.0
-autoplay = true
 bus = &"Music"
+autoplay = true
 parameters/looping = true
-
-[node name="PanelContainer" type="PanelContainer" parent="."]
-offset_left = 384.0
-offset_right = 604.0
-offset_bottom = 76.0
-scale = Vector2(2.9107, 2.88654)
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_type_variation = &"ThinPanelContainer"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="Icon" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("7_n6jcb")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 6
-theme_override_constants/margin_bottom = 6
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-text = "Acoin"
-
-[node name="Price" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-text = "11.11"
-
-[node name="Direction" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("8_8e0gs")
-expand_mode = 3
-stretch_mode = 5
