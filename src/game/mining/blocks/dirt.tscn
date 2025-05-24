@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://clmb3d6jg1rcg"]
 
 [ext_resource type="Script" uid="uid://cm4qmc74gk4wj" path="res://game/mining/blocks/dirt.gd" id="1_lm7yj"]
-[ext_resource type="Texture2D" uid="uid://c58r0p0siafvt" path="res://assets/resources/Chips/chips_white.png" id="2_ufpdo"]
+[ext_resource type="Texture2D" uid="uid://c58r0p0siafvt" path="res://assets/resources/chips/chips_white.png" id="2_ufpdo"]
 [ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/BoardTiles/BoardFill1.png" id="3_ggn0x"]
 [ext_resource type="AudioStream" uid="uid://cva7bu6dm5rwu" path="res://assets/sfx/Smash.wav" id="4_5j6in"]
 
