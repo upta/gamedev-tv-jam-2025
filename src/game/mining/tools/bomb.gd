@@ -1,9 +1,10 @@
 extends Node2D
 
 @export var explosion_time: float = 2.0
-@export var explosion_radius: float = 3.0
+@export var explosion_radius: int = 3
 @export var block_size_px: float = 10.0
 @export var explosion_power: float = 2.0
+@export var explosion: PackedScene
 
 var exploding := false
 var wait_for_free := false
@@ -28,7 +29,6 @@ func _explode():
 	_make_explosion_area()
 	$BoomSFX.play()
 	await $BoomSFX.finished
-	queue_free()
 
 
 func _make_explosion_area():
@@ -36,6 +36,10 @@ func _make_explosion_area():
 
 	for point in _calc_explosion_points():
 		_mine_block_at_point(point + global_position, physics)
+
+		var new_explosion: Node2D = explosion.instantiate()
+		new_explosion.position = point
+		$ExplosionContainer.add_child(new_explosion)
 
 	wait_for_free = true
 
@@ -55,12 +59,17 @@ func _mine_block_at_point(at: Vector2, physics: PhysicsDirectSpaceState2D):
 func _calc_explosion_points():
 	var points := [Vector2.ZERO]
 
-	for x in range(1, explosion_radius):
-		for y in range(1, explosion_radius):
+	for x in range(0, explosion_radius + 1):
+		for y in range(1, explosion_radius + 1):
 			var point = Vector2(x, y)
 			if point.distance_to(Vector2.ZERO) > explosion_radius:
 				break
 			point *= block_size_px
-			points.append_array([point, point * Vector2.UP, point * Vector2.LEFT, point * Vector2.UP * Vector2.LEFT])
+			points.append_array([
+				point,
+				point.rotated(PI / 2),
+				point.rotated(PI),
+				point.rotated(-PI / 2),
+				])
 
 	return points

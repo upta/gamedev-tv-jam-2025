@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0tlmjbftirap"]
+[gd_scene load_steps=13 format=3 uid="uid://d0tlmjbftirap"]
 
 [ext_resource type="Script" uid="uid://c0i2jkwmeudlh" path="res://game/mining/tools/bomb.gd" id="1_3115a"]
 [ext_resource type="Texture2D" uid="uid://c2durvuuibadr" path="res://assets/resources/boom/boomdisabled.png" id="2_0jfok"]
+[ext_resource type="PackedScene" uid="uid://d1t4as1daqeip" path="res://game/mining/tools/explosion.tscn" id="2_70eo4"]
 [ext_resource type="Texture2D" uid="uid://c2c7tqyix7n8t" path="res://assets/resources/boom/capactitor.png" id="3_pcje3"]
 [ext_resource type="Texture2D" uid="uid://c6runtmx1soam" path="res://assets/resources/boom/boom0.png" id="4_iiw8h"]
 [ext_resource type="Texture2D" uid="uid://s5ed51uo2eie" path="res://assets/resources/boom/boom1.png" id="5_fxyi6"]
@@ -50,7 +51,9 @@ animations = [{
 
 [node name="Bomb" type="Node2D"]
 script = ExtResource("1_3115a")
+explosion_radius = 2
 block_size_px = 40.0
+explosion = ExtResource("2_70eo4")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
@@ -63,4 +66,4 @@ frame_progress = 1.0
 [node name="BoomSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_fxyi6")
 
-[node name="ExplosionContainer" type="Node" parent="."]
+[node name="ExplosionContainer" type="Node2D" parent="."]
