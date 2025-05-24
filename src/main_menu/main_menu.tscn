@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cjgikrcsdd17s"]
+[gd_scene load_steps=12 format=3 uid="uid://cjgikrcsdd17s"]
 
 [ext_resource type="Script" uid="uid://cfw6u0q2bavb1" path="res://main_menu/main_menu.gd" id="1_oa53l"]
 [ext_resource type="Resource" uid="uid://dtf1jsn2e55rn" path="res://input/main_menu/main_menu_context.tres" id="2_3shxk"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://df4kwleufonoh" path="res://assets/resources/Menus/ComputerBackground/comp4.png" id="7_g1omr"]
 [ext_resource type="Texture2D" uid="uid://cn4fe3vojwcqi" path="res://assets/resources/Menus/ComputerBackground/comp5.png" id="8_kwfav"]
 [ext_resource type="Texture2D" uid="uid://b3l6iyko017ki" path="res://assets/resources/Menus/ComputerBackground/comp6.png" id="9_n70vs"]
+[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/VG_Rave.ogg" id="10_og6xe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tr6y3"]
 animations = [{
@@ -57,12 +58,6 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "Level Select"
 
-[node name="butQuit" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Quit"
-
 [node name="butOpt" type="Button" parent="."]
 layout_mode = 0
 offset_right = 8.0
@@ -84,8 +79,13 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "New"
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_og6xe")
+volume_db = -6.0
+autoplay = true
+parameters/looping = true
+
 [connection signal="pressed" from="butSel" to="." method="_on_but_sel_pressed"]
-[connection signal="pressed" from="butQuit" to="." method="_on_but_quit_pressed"]
 [connection signal="pressed" from="butOpt" to="." method="_on_but_opt_pressed"]
 [connection signal="toggled" from="butOpt" to="." method="_on_but_opt_toggled"]
 [connection signal="pressed" from="butNew" to="." method="_on_but_new_pressed"]

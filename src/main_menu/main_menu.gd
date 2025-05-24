@@ -25,11 +25,9 @@ func _ready() -> void:
 	$butNew.size = Vector2(xUIScale, yUIScale)
 	$butNew.position = Vector2(5, 5)
 	$butSel.size = Vector2(xUIScale, yUIScale)
-	$butSel.position = Vector2(xUIScale + 10, 5)
+	$butSel.position = Vector2(xUIScale + 10, yUIScale + 5)
 	$butOpt.size = Vector2(xUIScale, yUIScale)
-	$butOpt.position = Vector2(5, yUIScale + 5)
-	$butQuit.size = Vector2(xUIScale, yUIScale)
-	$butQuit.position = Vector2(xUIScale + 10, yUIScale + 5)
+	$butOpt.position = Vector2(xUIScale + 10, 5)
 
 
 func _on_start_action_triggered():
@@ -37,15 +35,11 @@ func _on_start_action_triggered():
 
 
 func _on_but_new_pressed() -> void:
-	State.Scene.active_scene = "res://game/mining_area.tscn"
+	State.Scene.active_scene = "res://home_base/home_base.tscn"
 
 
 func _on_but_opt_pressed() -> void:
-	prints("options button")
-
-
-func _on_but_quit_pressed() -> void:
-	get_tree().quit()
+	State.Scene.active_scene = "res://main_menu/settings.tscn"
 
 
 func _on_but_sel_pressed() -> void:
