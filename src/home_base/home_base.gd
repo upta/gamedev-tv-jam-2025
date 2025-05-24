@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var input_context: GUIDEMappingContext
+
 @onready var market: Button = %Market
 @onready var shop: Button = %Shop
 @onready var mint: Button = %Mint
@@ -7,6 +9,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	GUIDE.enable_mapping_context(input_context, true)
+
 	market.pressed.connect(_on_market_pressed)
 	shop.pressed.connect(_on_shop_pressed)
 	mint.pressed.connect(_on_mint_pressed)
