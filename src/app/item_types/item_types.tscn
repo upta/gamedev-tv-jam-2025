@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cuc5666ypv6en"]
+[gd_scene load_steps=17 format=3 uid="uid://cuc5666ypv6en"]
 
 [ext_resource type="Script" uid="uid://706qbiasuvtd" path="res://app/item_types/item_types.gd" id="1_4utt5"]
 [ext_resource type="Script" uid="uid://dpiraumxsl8u3" path="res://market/coins/coin_resource.gd" id="2_idy0w"]
@@ -7,13 +7,15 @@
 [ext_resource type="Resource" uid="uid://ch0vk4b6srdgp" path="res://market/coins/sea_coin.tres" id="5_nhnim"]
 [ext_resource type="Script" uid="uid://d0vocvf6us5ft" path="res://game/resources/mining_resource.gd" id="6_ernd5"]
 [ext_resource type="Resource" uid="uid://dw66prwy4wlku" path="res://game/resources/blue_chip.tres" id="7_dyokw"]
-[ext_resource type="Resource" path="res://game/resources/green_chip.tres" id="8_3urno"]
-[ext_resource type="Resource" path="res://game/resources/red_chip.tres" id="9_ikluo"]
-[ext_resource type="Resource" path="res://game/resources/yellow_chip.tres" id="10_fj6gy"]
+[ext_resource type="Resource" uid="uid://drcjtavyj7whw" path="res://game/resources/green_chip.tres" id="8_3urno"]
+[ext_resource type="Resource" uid="uid://bu3fhegdriheo" path="res://game/resources/red_chip.tres" id="9_ikluo"]
+[ext_resource type="Resource" uid="uid://0x6y3yw4sskj" path="res://game/resources/yellow_chip.tres" id="10_fj6gy"]
 [ext_resource type="Script" uid="uid://b6jprnqs18iyp" path="res://mint/recipes/recipe_resource.gd" id="11_cswrp"]
-[ext_resource type="Resource" path="res://mint/recipes/a_coin_recipe.tres" id="12_0npk2"]
-[ext_resource type="Resource" path="res://mint/recipes/bee_coin_recipe.tres" id="13_wlrfm"]
-[ext_resource type="Resource" path="res://mint/recipes/sea_coin_recipe.tres" id="14_g3cpc"]
+[ext_resource type="Resource" uid="uid://dsdekw3qbxk6c" path="res://mint/recipes/a_coin_recipe.tres" id="12_0npk2"]
+[ext_resource type="Resource" uid="uid://cd6aqdhvf74xo" path="res://mint/recipes/bee_coin_recipe.tres" id="13_wlrfm"]
+[ext_resource type="Resource" uid="uid://cm2i87cmnmqyh" path="res://mint/recipes/sea_coin_recipe.tres" id="14_g3cpc"]
+[ext_resource type="Script" uid="uid://b3eoi302pmfhw" path="res://game/upgrades/upgrade_resource.gd" id="15_isfdc"]
+[ext_resource type="Resource" uid="uid://cyqwdatsworxq" path="res://game/upgrades/time_upgrade.tres" id="16_4niru"]
 
 [node name="ItemTypes" type="Node"]
 script = ExtResource("1_4utt5")
@@ -32,4 +34,7 @@ recipes = Dictionary[int, ExtResource("11_cswrp")]({
 0: ExtResource("12_0npk2"),
 1: ExtResource("13_wlrfm"),
 2: ExtResource("14_g3cpc")
+})
+upgrades = Dictionary[int, ExtResource("15_isfdc")]({
+3: ExtResource("16_4niru")
 })

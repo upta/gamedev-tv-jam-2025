@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://wp20c4t7t4e4" path="res://input/player.tscn" id="1_vfxb6"]
 [ext_resource type="Script" uid="uid://bynmhure2yh0v" path="res://game/mining/miner_player.gd" id="2_6pa6v"]
 [ext_resource type="AudioStream" uid="uid://d1e0fbkqx2osi" path="res://assets/sfx/hit.wav" id="3_7qbho"]
-[ext_resource type="AudioStream" uid="uid://bnkilusi7wa0a" path="res://assets/sfx/Nope.wav" id="4_0korg"]
-[ext_resource type="AudioStream" uid="uid://ybb4mf7j33jh" path="res://assets/sfx/Drop.wav" id="5_4678p"]
+[ext_resource type="AudioStream" uid="uid://bomy3nncasina" path="res://assets/sfx/Nope.wav" id="4_0korg"]
+[ext_resource type="AudioStream" uid="uid://ghwpw6hih4iu" path="res://assets/sfx/Drop.wav" id="5_4678p"]
 
 [node name="MinerPlayer" instance=ExtResource("1_vfxb6")]
 collision_mask = 1

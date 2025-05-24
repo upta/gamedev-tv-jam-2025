@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cyqwdatsworxq"]
+
+[ext_resource type="Script" uid="uid://ba4na06d1jeju" path="res://game/upgrades/time_upgrade.gd" id="1_jhn1g"]
+
+[resource]
+script = ExtResource("1_jhn1g")
+cost_base = 0
+cost_growth = 0.0
+time_increment = 0
+base_time = 0
+name = "Mining Time"
+type = 3
+metadata/_custom_type_script = "uid://b3eoi302pmfhw"

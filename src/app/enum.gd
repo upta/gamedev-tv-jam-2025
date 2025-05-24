@@ -36,6 +36,13 @@ enum BlockType {
 	YELLOW_CHIP,
 }
 
+enum UpgradeType {
+	BOMB,
+	SPEED,
+	MINE_POWER,
+	MINE_TIME,
+}
+
 
 static func direction_as_string(value: Direction) -> String:
 	match value:
