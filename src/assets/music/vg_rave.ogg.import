@@ -7,7 +7,7 @@ path="res://.godot/imported/VG_Rave.ogg-1970dd91f53be684a90deb1bbd43bdb5.oggvorb
 
 [deps]
 
-source_file="res://assets/music/vg__rave.ogg"
+source_file="res://assets/music/vg_rave.ogg"
 dest_files=["res://.godot/imported/VG_Rave.ogg-1970dd91f53be684a90deb1bbd43bdb5.oggvorbisstr"]
 
 [params]
