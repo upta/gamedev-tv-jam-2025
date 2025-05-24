@@ -14,3 +14,16 @@ func bank_staged_mining_resources():
 	for resource in staged:
 		State.Inventory.add_mining_resource(resource, staged[resource])
 		State.Inventory.update_staged_mining_resource(resource, 0)
+
+
+func pick_up_coin(coin_type: Enum.CoinType):
+	if State.Inventory.held_coin_type == Enum.CoinType.NONE:
+		State.Inventory.held_coin_type = coin_type
+
+
+func return_coin():
+	State.Inventory.held_coin_type = Enum.CoinType.NONE
+
+
+func has_held_coin() -> bool:
+	return State.Inventory.held_coin_type != -1
