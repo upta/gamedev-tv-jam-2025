@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2s730bh4dmq8"
-path="res://.godot/imported/Wobble.wav-794a22110d5555a054dd96349b304273.sample"
+path="res://.godot/imported/wobble.wav-430e0d1f2438aed171cc392e8af58b34.sample"
 
 [deps]
 
-source_file="res://assets/sfx/Wobble.wav"
-dest_files=["res://.godot/imported/Wobble.wav-794a22110d5555a054dd96349b304273.sample"]
+source_file="res://assets/sfx/wobble.wav"
+dest_files=["res://.godot/imported/wobble.wav-430e0d1f2438aed171cc392e8af58b34.sample"]
 
 [params]
 

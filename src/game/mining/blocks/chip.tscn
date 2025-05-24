@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/BoardTiles/BoardFill1.png" id="5_7s8l3"]
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="5_nmn0f"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="6_k7ctb"]
-[ext_resource type="AudioStream" uid="uid://d2s730bh4dmq8" path="res://assets/sfx/Wobble.wav" id="6_lwv0h"]
+[ext_resource type="AudioStream" uid="uid://d2s730bh4dmq8" path="res://assets/sfx/wobble.wav" id="6_lwv0h"]
 [ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="7_jwoq4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lwv0h"]
