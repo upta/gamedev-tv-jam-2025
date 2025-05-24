@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://1fcnpv3j3p75"]
+
+[ext_resource type="Script" uid="uid://bt5ofwkeme1dr" path="res://mint/ui/ingredient_display.gd" id="1_qdxmh"]
+[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="2_4i3wh"]
+
+[node name="Control" type="HBoxContainer"]
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_qdxmh")
+
+[node name="Icon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_4i3wh")
+stretch_mode = 5
+
+[node name="X" type="Label" parent="."]
+layout_mode = 2
+text = "X"
+
+[node name="Quantity" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = "123"

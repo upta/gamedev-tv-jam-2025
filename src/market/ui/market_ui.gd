@@ -1,7 +1,7 @@
 extends Control
 
 @onready var back_button: Button = %BackButton
-@onready var item_list: ItemList = %ItemList
+@onready var coin_list: CoinList = %CoinList
 @onready var coin_name: Label = %CoinName
 @onready var icon: TextureRect = %Icon
 @onready var price: Label = %Price
@@ -16,7 +16,7 @@ func _ready() -> void:
 	back_button.pressed.connect(_on_back_button_pressed)
 	sell_button.pressed.connect(_on_sell_button_pressed)
 	quantity.value_changed.connect(_on_quantity_value_changed)
-	item_list.item_selected.connect(_on_item_selected)
+	coin_list.selected.connect(_on_coin_list_selected)
 
 	# just to get some test data in there
 	Service.Market.fluxuate_prices()
@@ -27,36 +27,20 @@ func _ready() -> void:
 
 	# hacky way to hide the mouse coordinate position, since it doesn't actually expose a way
 	graph.get_node("PlotArea/Coordinate").visible = false
-	
-	# Clears the temp test data we need for editor view
-	item_list.clear()
-
-	var coins: Array[CoinResource] = ItemTypes.coins.values()
-
-	for i in coins.size():
-		var coin = coins[i]
-		item_list.add_item(coin.name, coin.icon)
-		item_list.set_item_metadata(i, coin)
-
-
 
 	#add some coin for testing
-	Service.Inventory.add_coins(Enum.CoinType.SHIT_COIN, 11)
-	Service.Inventory.add_coins(Enum.CoinType.DOS_COIN, 22)
-	Service.Inventory.add_coins(Enum.CoinType.A_COIN, 33)
-
-
-	# Defaulting first item so that temp test data doesn't show
-	_on_item_selected(0)
-	item_list.select(0)
+	Service.Inventory.add_coins(Enum.CoinType.A_COIN, 11)
+	Service.Inventory.add_coins(Enum.CoinType.BEE_COIN, 22)
+	Service.Inventory.add_coins(Enum.CoinType.SEA_COIN, 33)
+	
+	_on_coin_list_selected(coin_list.selected_coin)
 
 
 func _on_back_button_pressed():
 	State.Scene.active_scene = "res://home_base/home_base.tscn"
 
 
-func _on_item_selected(index: int):
-	var coin: CoinResource = item_list.get_item_metadata(index)
+func _on_coin_list_selected(coin: CoinResource):
 	var price_history = State.Market.prices[coin.type]
 
 	coin_name.text = coin.name
@@ -95,15 +79,6 @@ func _on_quantity_value_changed(value: float):
 
 
 func _on_sell_button_pressed():
-	# Find the selected item in the list and grab it's value
-	var selected = item_list.get_selected_items()
-	if selected.size() == 0:
-		return
+	Service.Market.sell_coins(coin_list.selected_coin.type, floori(quantity.value))
 
-	# There should only ever be 1 selected item
-	var index = selected[0]
-
-	var coin: CoinResource = item_list.get_item_metadata(index)
-	Service.Market.sell_coins(coin.type, floori(quantity.value))
-
-	_on_item_selected(index)
+	_on_coin_list_selected(coin_list.selected_coin)
