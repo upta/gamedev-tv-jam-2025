@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdeymf2o7kll2"]
+
+[ext_resource type="Texture2D" uid="uid://cplvw0x5ff18v" path="res://assets/resources/Minter/ethernetdoor.png" id="1_0fisj"]
+[ext_resource type="Script" uid="uid://d2pm5k13xtm3a" path="res://home_base/seller.gd" id="1_0p4gr"]
+[ext_resource type="PackedScene" uid="uid://d1jvudml7fra5" path="res://interaction/interactable.tscn" id="2_0p4gr"]
+
+[sub_resource type="Gradient" id="Gradient_bslgi"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0.764706, 0.266667)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0p4gr"]
+gradient = SubResource("Gradient_bslgi")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orf3j"]
+size = Vector2(95, 151)
+
+[sub_resource type="Animation" id="Animation_0p4gr"]
+resource_name = "fade"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HighlightContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_unpdw"]
+_data = {
+&"fade": SubResource("Animation_0p4gr")
+}
+
+[node name="Seller" type="Node2D"]
+script = ExtResource("1_0p4gr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0fisj")
+
+[node name="HighlightContainer" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-25, -32)
+
+[node name="HeldHighlight" type="Sprite2D" parent="HighlightContainer"]
+position = Vector2(2.25002, -10.5)
+scale = Vector2(0.279297, 13)
+texture = SubResource("GradientTexture1D_0p4gr")
+
+[node name="HeldHighlight2" type="Sprite2D" parent="HighlightContainer"]
+position = Vector2(2.12501, 10.5)
+scale = Vector2(0.280273, 13)
+texture = SubResource("GradientTexture1D_0p4gr")
+
+[node name="HeldHighlight3" type="Sprite2D" parent="HighlightContainer"]
+position = Vector2(2, 32)
+scale = Vector2(0.279297, 14)
+texture = SubResource("GradientTexture1D_0p4gr")
+
+[node name="HeldHighlight4" type="Sprite2D" parent="HighlightContainer"]
+position = Vector2(2.62501, 53.5)
+scale = Vector2(0.276367, 13)
+texture = SubResource("GradientTexture1D_0p4gr")
+
+[node name="HeldHighlight5" type="Sprite2D" parent="HighlightContainer"]
+position = Vector2(2.62501, 74.5)
+scale = Vector2(0.276367, 13)
+texture = SubResource("GradientTexture1D_0p4gr")
+
+[node name="Interactable" parent="." instance=ExtResource("2_0p4gr")]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(17.5, 31.5)
+shape = SubResource("RectangleShape2D_orf3j")
+debug_color = Color(0.690514, 0.637273, 0.303577, 0.419608)
+
+[node name="HighlightAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_unpdw")
+}
