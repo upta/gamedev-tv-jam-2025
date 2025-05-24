@@ -36,3 +36,7 @@ func _on_miner_player_drop_item(item: Node2D) -> void:
 
 func _on_miner_player_update_bomb_action_time(time: float) -> void:
 	$MiningUI.set_bomb_action_time(time)
+
+
+func _on_start_countdown_on_countdown_finished() -> void:
+	$MiningUI.visible = true

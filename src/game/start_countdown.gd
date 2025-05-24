@@ -2,6 +2,8 @@ extends CanvasLayer
 
 @export var countdown_time: int = 3
 
+signal on_countdown_finished()
+
 var elapsed_time: float = 0
 
 @onready var last_countdown_number: int = countdown_time + 1
@@ -36,5 +38,6 @@ func end_countdown():
 	get_tree().paused = false
 	hide()
 	beep_high_sfx.play()
+	on_countdown_finished.emit()
 	await beep_high_sfx.finished
 	queue_free()
