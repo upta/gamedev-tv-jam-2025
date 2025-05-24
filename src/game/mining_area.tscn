@@ -48,7 +48,6 @@ bomb = ExtResource("14_hatsj")
 [node name="Camera2D" type="Camera2D" parent="MinerPlayer"]
 
 [node name="MiningUI" parent="." node_paths=PackedStringArray("chip_labels") instance=ExtResource("10_x3fj0")]
-visible = false
 chip_labels = {
 0: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipBlue Label"),
 1: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipGreen Label"),

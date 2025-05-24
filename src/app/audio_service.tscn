@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpak1wh70kqjc"]
 
 [ext_resource type="Script" uid="uid://dbf1v8l7d5xq2" path="res://app/audio_service.gd" id="1_86uqd"]
-[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/VG_Rave.ogg" id="2_s2hrq"]
+[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="2_s2hrq"]
 
 [node name="AudioService" type="Node"]
 script = ExtResource("1_86uqd")
