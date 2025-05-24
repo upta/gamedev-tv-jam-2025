@@ -18,16 +18,17 @@ func _ready() -> void:
 
 	coin_list.selected.connect(_on_coin_list_selected)
 
-	Service.Inventory.add_coins(Enum.CoinType.A_COIN, 11)
-	Service.Inventory.add_coins(Enum.CoinType.BEE_COIN, 22)
-	Service.Inventory.add_coins(Enum.CoinType.SEA_COIN, 33)
+	if OS.has_feature("test") or OS.has_feature("debug"):
+		Service.Inventory.add_coins(Enum.CoinType.A_COIN, 11)
+		Service.Inventory.add_coins(Enum.CoinType.BEE_COIN, 22)
+		Service.Inventory.add_coins(Enum.CoinType.SEA_COIN, 33)
 
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.BLUE_CHIP, 20)
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.GREEN_CHIP, 20)
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.RED_CHIP, 20)
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.YELLOW_CHIP, 20)
+		Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.BLUE_CHIP, 20)
+		Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.GREEN_CHIP, 20)
+		Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.RED_CHIP, 20)
+		Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.YELLOW_CHIP, 20)
 
-	Service.Inventory.bank_staged_mining_resources()
+		Service.Inventory.bank_staged_mining_resources()
 
 	# Auto-select the first coin when UI loads
 	_on_coin_list_selected(coin_list.selected_coin)
