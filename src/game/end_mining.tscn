@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1q8xcp42pnas"]
+[gd_scene load_steps=6 format=3 uid="uid://d1q8xcp42pnas"]
 
 [ext_resource type="Script" uid="uid://xev43a1md78r" path="res://game/end_mining.gd" id="1_wrppg"]
 [ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="2_piox7"]
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="3_nj2gt"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="4_cqwx5"]
 [ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="5_2vukn"]
-[ext_resource type="AudioStream" uid="uid://dwdphhnar1c60" path="res://assets/sfx/phaser.wav" id="6_nj2gt"]
 
 [node name="EndMining" type="CanvasLayer" node_paths=PackedStringArray("chip_labels")]
 process_mode = 3
@@ -126,10 +125,6 @@ layout_mode = 2
 text = "0"
 horizontal_alignment = 1
 
-[node name="SFX" type="Node" parent="."]
-
-[node name="OutaTime" type="AudioStreamPlayer" parent="SFX"]
-stream = ExtResource("6_nj2gt")
-bus = &"Sound Effects"
-
+[connection signal="focus_entered" from="Button" to="." method="_on_button_focus_entered"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

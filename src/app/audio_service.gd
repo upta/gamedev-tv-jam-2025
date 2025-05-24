@@ -9,8 +9,17 @@ var _bus_values = {}
 @onready var game_start_sfx: AudioStreamPlayer = %GameStartSFX
 @onready var button_mouse_over: AudioStreamPlayer = %ButtonMouseOver
 @onready var button_select_menu: AudioStreamPlayer = %ButtonSelectMenu
-@onready var button_select_decision: AudioStreamPlayer = %ButtonSelectDecision
-@onready var victory: AudioStreamPlayer = %Victory
+@onready var beep_high: AudioStreamPlayer = %BeepHigh
+@onready var beep_low: AudioStreamPlayer = %BeepLow
+@onready var outa_time: AudioStreamPlayer = %OutaTime
+
+
+func _on_game_music_home_finished() -> void:
+	AudioService.game_music_home.play()
+
+
+func _on_game_music_mining_finished() -> void:
+	AudioService.game_music_mining.play()
 
 
 func set_volume(bus: String, value: float):
