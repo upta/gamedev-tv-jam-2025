@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://vjgiyr8m728k" path="res://home_base/upgrade_port.gd" id="1_cni7r"]
 [ext_resource type="Texture2D" uid="uid://dpw7c0n4wa36w" path="res://assets/resources/upgrades/energy1.png" id="2_dubf5"]
 [ext_resource type="Script" uid="uid://jnh5rjdjdg7r" path="res://interaction/interactable.gd" id="3_xu3sc"]
-[ext_resource type="Resource" uid="uid://dbppuvcdy4l45" path="res://input/game/actions/interact.tres" id="4_xu3sc"]
+[ext_resource type="Resource" path="res://input/game/actions/interact.tres" id="4_xu3sc"]
 [ext_resource type="AudioStream" uid="uid://dos6a3sr0n2ln" path="res://assets/sfx/power_up.wav" id="5_menly"]
 [ext_resource type="AudioStream" uid="uid://p3ck5vdwo32q" path="res://assets/sfx/nope.wav" id="6_f5par"]
 
