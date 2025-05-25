@@ -136,7 +136,7 @@ texture = ExtResource("10_0tcns")
 
 [node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Wall"]
 layout_mode = 2
-text = "These are indistructable"
+text = "These are indestructible"
 
 [node name="ContinueButton" type="Button" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
