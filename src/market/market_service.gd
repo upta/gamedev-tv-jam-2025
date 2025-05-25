@@ -10,7 +10,7 @@ func fluctuate_prices():
 	for coin_type in State.Market.prices.keys():
 		var current: float = State.Market.prices[coin_type].current_price
 		# Base upward trend factor
-		var trend_factor := 0.05 # 5% upward trend
+		var trend_factor := 0.10 # 5% upward trend
 		# Random variation from -15% to +15%
 		var random_factor := randf_range(-0.15, 0.15)
 		# Combined change (can go slightly negative but mostly positive)
@@ -41,7 +41,7 @@ func sell_coins(coin_type: Enum.CoinType, quantity: int):
 
 	# Adjust price downward after selling coins
 	# Use a non-linear formula: reduction_factor = base_factor * sqrt(quantity)
-	var base_factor := 0.01 # 1% reduction per coin as base
+	var base_factor := 0.10 # 10% reduction per coin as base
 	var reduction_factor := base_factor * sqrt(quantity)
 
 	# Calculate new price with the reduction
