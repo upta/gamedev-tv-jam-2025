@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_ggxo2")
-base_price = 3.0
+base_price = 14.0
 icon = ExtResource("1_kf28o")
 name = "Seacoin"
 type = 2

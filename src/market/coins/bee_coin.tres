@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_ggxo2")
-base_price = 5.0
+base_price = 11.0
 icon = ExtResource("1_rmlce")
 name = "Beecoin"
 type = 1
