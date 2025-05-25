@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="RecipeResource" load_steps=7 format=3 uid="uid://dkh7w2dj73cg5"]
 
 [ext_resource type="Script" uid="uid://b6jprnqs18iyp" path="res://mint/recipes/recipe_resource.gd" id="1_41x57"]
-[ext_resource type="Resource" uid="uid://dvdj8uuhx6jgw" path="res://market/coins/deez_coin.tres" id="2_68f7t"]
+[ext_resource type="Resource" path="res://market/coins/deez_coin.tres" id="2_68f7t"]
 [ext_resource type="Script" uid="uid://d0vocvf6us5ft" path="res://game/resources/mining_resource.gd" id="3_dmlgb"]
 [ext_resource type="Resource" uid="uid://dw66prwy4wlku" path="res://game/resources/blue_chip.tres" id="4_3uu1j"]
 [ext_resource type="Resource" uid="uid://drcjtavyj7whw" path="res://game/resources/green_chip.tres" id="5_yiwfa"]
