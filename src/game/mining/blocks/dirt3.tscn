@@ -1,14 +1,41 @@
-[gd_scene load_steps=6 format=3 uid="uid://s3bi4e2bd333"]
+[gd_scene load_steps=11 format=3 uid="uid://s3bi4e2bd333"]
 
 [ext_resource type="Script" uid="uid://cm4qmc74gk4wj" path="res://game/mining/blocks/dirt.gd" id="1_v7j1c"]
-[ext_resource type="Texture2D" uid="uid://c58r0p0siafvt" path="res://assets/resources/chips/chips_white.png" id="2_7rxb4"]
+[ext_resource type="Texture2D" uid="uid://rt4i1h3xcgcr" path="res://assets/resources/dirt/dirt020.png" id="2_ys4pn"]
 [ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/board_tiles/board_fill1.png" id="3_oigjj"]
+[ext_resource type="Texture2D" uid="uid://dtlfmub3v8e0g" path="res://assets/resources/dirt/dirt040.png" id="3_xos3a"]
+[ext_resource type="Texture2D" uid="uid://cr8fn7q3gdehj" path="res://assets/resources/dirt/dirt060.png" id="4_7nll3"]
 [ext_resource type="AudioStream" uid="uid://cva7bu6dm5rwu" path="res://assets/sfx/smash.wav" id="4_ul4sa"]
+[ext_resource type="Texture2D" uid="uid://dfwm6iixhb8mf" path="res://assets/resources/dirt/dirt080.png" id="5_jvy6e"]
+[ext_resource type="Texture2D" uid="uid://c06dpb2t3tthi" path="res://assets/resources/dirt/dirt100.png" id="6_ob0lb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pupr"]
 size = Vector2(40, 40)
 
-[node name="Dirt" type="StaticBody2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_5a1sc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ys4pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xos3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7nll3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jvy6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ob0lb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dirt2" type="StaticBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_v7j1c")
 durability = 3
@@ -16,10 +43,10 @@ durability = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7pupr")
 
-[node name="DirtSprite" type="Sprite2D" parent="."]
-position = Vector2(-0.134601, -0.0411035)
-scale = Vector2(0.691706, 0.720035)
-texture = ExtResource("2_7rxb4")
+[node name="DirtSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.54972e-06, -1.19209e-06)
+scale = Vector2(0.625, 0.625)
+sprite_frames = SubResource("SpriteFrames_5a1sc")
 
 [node name="BGSprite" type="Sprite2D" parent="."]
 position = Vector2(-0.117599, -0.117599)
