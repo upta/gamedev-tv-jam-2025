@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://co58bicar0i0k"]
+
+[ext_resource type="Script" uid="uid://bxe3sft55lxj1" path="res://home_base/upgrade_summary.gd" id="1_srify"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1whle"]
+size = Vector2(320, 150)
+
+[node name="UpgradeSummary" type="PanelContainer"]
+offset_right = 320.0
+offset_bottom = 153.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_srify")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(161, 76)
+shape = SubResource("RectangleShape2D_1whle")
+
+[node name="Container" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DefaultLabel" type="Label" parent="Container"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Stand on Upgrade
+For Details"
+horizontal_alignment = 1
+
+[node name="NameLabel" type="Label" parent="Container"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CostLabel" type="Label" parent="Container"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="PowerWarningLabel" type="Label" parent="Container"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.996812, 0.00132766, 0.000727159, 1)
+text = "!!Not Enough Power!!"
+horizontal_alignment = 1
+
+[node name="SpecLabel" type="Label" parent="Container"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2

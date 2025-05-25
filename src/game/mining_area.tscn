@@ -22,7 +22,6 @@
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
 input_context = ExtResource("2_7pupr")
-total_mining_time = 5.0
 
 [node name="ChunkMaster" parent="." instance=ExtResource("3_aipip")]
 block_types = Dictionary[int, PackedScene]({
