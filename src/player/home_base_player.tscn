@@ -22,13 +22,14 @@ debug_color = Color(0.868238, 0.179031, 0.746719, 0.42)
 [node name="InteractionHint" type="PanelContainer" parent="." index="3"]
 offset_left = -10.0
 offset_top = 13.0
-offset_right = 10.0
-offset_bottom = 36.0
+offset_right = 11.0
+offset_bottom = 37.0
 theme_type_variation = &"ThinPanelContainer"
 
 [node name="Label" type="Label" parent="InteractionHint" index="0"]
 layout_mode = 2
 theme_type_variation = &"SmallLabel"
+theme_override_font_sizes/font_size = 11
 text = "E"
 horizontal_alignment = 1
 vertical_alignment = 1

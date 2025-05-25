@@ -12,7 +12,7 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0.764706, 0.266667)
 gradient = SubResource("Gradient_bslgi")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orf3j"]
-size = Vector2(95, 151)
+size = Vector2(99.5, 151)
 
 [sub_resource type="Animation" id="Animation_0p4gr"]
 resource_name = "fade"
@@ -71,10 +71,9 @@ scale = Vector2(0.276367, 13)
 texture = SubResource("GradientTexture1D_0p4gr")
 
 [node name="Interactable" parent="." instance=ExtResource("2_0p4gr")]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
-position = Vector2(17.5, 31.5)
+position = Vector2(-9.25, 0)
 shape = SubResource("RectangleShape2D_orf3j")
 debug_color = Color(0.690514, 0.637273, 0.303577, 0.419608)
 
