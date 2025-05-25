@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://bpak1wh70kqjc"]
 
 [ext_resource type="Script" uid="uid://dbf1v8l7d5xq2" path="res://app/audio_service.gd" id="1_86uqd"]
-[ext_resource type="AudioStream" uid="uid://733ina8ba67c" path="res://assets/music/jonathan-gaming-143999.mp3" id="2_hyp4x"]
 [ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="2_s2hrq"]
+[ext_resource type="AudioStream" uid="uid://scw2xx2n3fds" path="res://assets/music/menu_chill.ogg" id="2_vxhvs"]
 [ext_resource type="AudioStream" uid="uid://dwdphhnar1c60" path="res://assets/sfx/phaser.wav" id="3_2tvxi"]
 [ext_resource type="AudioStream" uid="uid://dyuf56vlsy4we" path="res://assets/sfx/beep_low.wav" id="3_70ifp"]
 [ext_resource type="AudioStream" uid="uid://5p2pdu30qq5o" path="res://assets/sfx/drop.wav" id="4_kh0b1"]
@@ -15,8 +15,8 @@ script = ExtResource("1_86uqd")
 
 [node name="GameMusicHome" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("2_hyp4x")
-volume_db = -6.0
+stream = ExtResource("2_vxhvs")
+volume_db = -3.0
 bus = &"Music"
 
 [node name="GameMusicMining" type="AudioStreamPlayer" parent="."]

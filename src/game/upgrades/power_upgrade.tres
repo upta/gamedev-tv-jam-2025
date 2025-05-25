@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://brb40um6gwbnk"]
 
 [ext_resource type="Texture2D" uid="uid://cv8harke0n2cn" path="res://assets/resources/upgrades/power1.png" id="1_firiq"]
-[ext_resource type="Script" path="res://game/upgrades/power_upgrade.gd" id="1_qh0rn"]
+[ext_resource type="Script" uid="uid://cgho0gcnc5t53" path="res://game/upgrades/power_upgrade.gd" id="1_qh0rn"]
 
 [resource]
 script = ExtResource("1_qh0rn")
