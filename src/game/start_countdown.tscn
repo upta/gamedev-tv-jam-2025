@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnxuqu35cj1mi"]
+[gd_scene load_steps=11 format=3 uid="uid://cnxuqu35cj1mi"]
 
 [ext_resource type="Script" uid="uid://bkgvdcll8rl" path="res://game/start_countdown.gd" id="1_yva5m"]
+[ext_resource type="Texture2D" uid="uid://cdv8dmm86lhak" path="res://assets/characters/chipmunk/portrait/cpor1.png" id="2_7rwqi"]
+[ext_resource type="Texture2D" uid="uid://dja42r1s07753" path="res://assets/resources/pickaxe/pickaxe.png" id="3_1ujmk"]
+[ext_resource type="Texture2D" uid="uid://c58r0p0siafvt" path="res://assets/resources/chips/chips_white.png" id="4_0myrh"]
+[ext_resource type="Texture2D" uid="uid://c6runtmx1soam" path="res://assets/resources/boom/boom0.png" id="4_qfrmk"]
+[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="5_1vo6a"]
+[ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="6_msh8x"]
+[ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="7_17v4q"]
+[ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="8_jupuk"]
+[ext_resource type="Texture2D" uid="uid://bnv4x8f7bpcbq" path="res://assets/resources/capacitor/capacitor_white.png" id="10_0tcns"]
 
 [node name="StartCountdown" type="CanvasLayer"]
 process_mode = 3
@@ -15,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.392157)
 
-[node name="Countdown Label" type="Label" parent="."]
+[node name="CountdownLabel" type="Label" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -28,3 +37,108 @@ theme_override_font_sizes/font_size = 200
 text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Tutorial" type="CenterContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Tutorial"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Tutorial/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Movement" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Movement"]
+layout_mode = 2
+texture = ExtResource("2_7rwqi")
+
+[node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Movement"]
+layout_mode = 2
+text = "Move with W,A,S,D"
+
+[node name="Mining" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Mining"]
+layout_mode = 2
+texture = ExtResource("3_1ujmk")
+
+[node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Mining"]
+layout_mode = 2
+text = " Automatically mine by walking into blocks"
+
+[node name="Bomb" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Bomb"]
+layout_mode = 2
+texture = ExtResource("4_qfrmk")
+
+[node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Bomb"]
+layout_mode = 2
+text = "Press e to drop bombs when ready"
+
+[node name="Chips" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Chips"]
+layout_mode = 2
+texture = ExtResource("5_1vo6a")
+
+[node name="TextureRect2" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Chips"]
+layout_mode = 2
+texture = ExtResource("6_msh8x")
+
+[node name="TextureRect3" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Chips"]
+layout_mode = 2
+texture = ExtResource("7_17v4q")
+
+[node name="TextureRect4" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Chips"]
+layout_mode = 2
+texture = ExtResource("8_jupuk")
+
+[node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Chips"]
+layout_mode = 2
+text = "Mine chips to win"
+
+[node name="Dirt" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Dirt"]
+layout_mode = 2
+texture = ExtResource("4_0myrh")
+
+[node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Dirt"]
+layout_mode = 2
+text = "Bits just get in your way. Mine through them
+ Darker ones take more hits to mine"
+
+[node name="Wall" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Wall"]
+layout_mode = 2
+texture = ExtResource("10_0tcns")
+
+[node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Wall"]
+layout_mode = 2
+text = "These are indistructable"
+
+[node name="ContinueButton" type="Button" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "GOT it - let's mine"
