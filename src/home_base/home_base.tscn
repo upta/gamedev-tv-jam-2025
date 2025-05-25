@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=12 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://w3gos45ashu4" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
 [ext_resource type="PackedScene" uid="uid://b3fegi50mimbt" path="res://home_base/upgrade_port.tscn" id="8_n6jcb"]
 [ext_resource type="PackedScene" uid="uid://co58bicar0i0k" path="res://home_base/upgrade_summary.tscn" id="9_8e0gs"]
+[ext_resource type="PackedScene" path="res://home_base/cmos.tscn" id="10_gpvvs"]
 [ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://bdeymf2o7kll2" path="res://home_base/seller.tscn" id="13_orf3j"]
 [ext_resource type="PackedScene" uid="uid://ca0gqgaf1dci2" path="res://player/home_base_player.tscn" id="13_ui117"]
@@ -110,6 +111,9 @@ position = Vector2(1240, 640)
 [node name="MarketPrices" parent="." instance=ExtResource("7_2f1hc")]
 offset_left = 480.0
 offset_right = 800.0
+
+[node name="Cmos" parent="." instance=ExtResource("10_gpvvs")]
+position = Vector2(896, 64)
 
 [node name="UpgradeSummary" parent="." instance=ExtResource("9_8e0gs")]
 offset_left = 960.0

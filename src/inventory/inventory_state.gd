@@ -6,6 +6,8 @@ signal mining_resource_changed(resource_type: Enum.MiningResourceType, quantity:
 signal staged_mining_resource_changed(resource_type: Enum.MiningResourceType, quantity: int)
 signal held_coin_type_changed(old: Enum.CoinType, new: Enum.CoinType)
 
+const MAX_POWER := 1000.00
+
 var coins: Dictionary[Enum.CoinType, int] = {}
 # resources represent global inventory resources
 var mining_resources: Dictionary[Enum.MiningResourceType, int] = {}
