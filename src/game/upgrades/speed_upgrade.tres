@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_u5lw1")
-cost_base = 50
+cost_base = 5
 cost_growth = 0.1
 base_speed = 200
 speed_increment = 20

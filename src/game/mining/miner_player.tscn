@@ -23,7 +23,7 @@ position = Vector2(0, 0)
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="SFX" index="0"]
 stream = ExtResource("3_7qbho")
-volume_db = 11.853
+volume_db = 0.297
 bus = &"Sound Effects"
 
 [node name="Nope" type="AudioStreamPlayer2D" parent="SFX" index="1"]

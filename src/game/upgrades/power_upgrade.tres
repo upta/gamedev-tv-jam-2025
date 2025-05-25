@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_qh0rn")
-cost_base = 300
+cost_base = 30
 cost_growth = 0.4
 strength_increment = 1
 base_strength = 1
