@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=20 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
 [ext_resource type="TileSet" uid="uid://cscguflr1waw8" path="res://home_base/home_base_tileset.tres" id="3_fbnj6"]
 [ext_resource type="PackedScene" uid="uid://bhoynj4y8r6es" path="res://home_base/mining_door.tscn" id="5_n2u6b"]
-[ext_resource type="PackedScene" uid="uid://b8u2mxlaradk6" path="res://home_base/winning_door.tscn" id="6_0g1cd"]
+[ext_resource type="PackedScene" path="res://home_base/winning_door.tscn" id="6_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://w3gos45ashu4" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
 [ext_resource type="PackedScene" uid="uid://b3fegi50mimbt" path="res://home_base/upgrade_port.tscn" id="8_n6jcb"]
 [ext_resource type="PackedScene" uid="uid://co58bicar0i0k" path="res://home_base/upgrade_summary.tscn" id="9_8e0gs"]
@@ -13,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://bdeymf2o7kll2" path="res://home_base/seller.tscn" id="13_orf3j"]
 [ext_resource type="PackedScene" uid="uid://ca0gqgaf1dci2" path="res://player/home_base_player.tscn" id="13_ui117"]
+[ext_resource type="PackedScene" uid="uid://bgkow0rj4te1k" path="res://game/tutorial/overlay.tscn" id="14_ui117"]
+[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="15_28508"]
+[ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="16_y0i3c"]
+[ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="17_ngbo3"]
+[ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="18_sspq3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eb3fi"]
 size = Vector2(116, 196)
@@ -550,3 +555,512 @@ limit_top = 0
 limit_right = 1472
 limit_bottom = 896
 metadata/_edit_lock_ = true
+
+[node name="Tutorial" type="Node2D" parent="."]
+process_mode = 3
+visible = false
+
+[node name="Step1" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Overlay" parent="Tutorial/Step1" instance=ExtResource("14_ui117")]
+offset_right = 1344.0
+offset_bottom = 104.0
+
+[node name="Overlay2" parent="Tutorial/Step1" instance=ExtResource("14_ui117")]
+offset_top = 104.0
+offset_right = 192.0
+offset_bottom = 896.0
+
+[node name="Overlay3" parent="Tutorial/Step1" instance=ExtResource("14_ui117")]
+offset_left = 192.0
+offset_top = 184.0
+offset_right = 1344.0
+offset_bottom = 896.0
+
+[node name="Overlay4" parent="Tutorial/Step1" instance=ExtResource("14_ui117")]
+offset_left = 256.0
+offset_top = 104.0
+offset_right = 1280.0
+offset_bottom = 184.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step1"]
+offset_left = 272.0
+offset_top = 112.0
+offset_right = 800.0
+offset_bottom = 232.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step1/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/Step1/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Welcome! This is chip.
+
+She Lives in your Computer and wants
+to go to the moon."
+
+[node name="Step1Button" type="Button" parent="Tutorial/Step1/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COntinue"
+
+[node name="Step2" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Overlay" parent="Tutorial/Step2" instance=ExtResource("14_ui117")]
+offset_right = 1344.0
+
+[node name="Overlay5" parent="Tutorial/Step2" instance=ExtResource("14_ui117")]
+offset_top = 0.0
+offset_bottom = 192.0
+
+[node name="Overlay6" parent="Tutorial/Step2" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 0.0
+offset_right = 152.0
+offset_bottom = 72.0
+
+[node name="Overlay2" parent="Tutorial/Step2" instance=ExtResource("14_ui117")]
+offset_top = 192.0
+offset_right = 120.0
+offset_bottom = 896.0
+
+[node name="Overlay3" parent="Tutorial/Step2" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 72.0
+offset_right = 1344.0
+offset_bottom = 896.0
+
+[node name="Overlay4" parent="Tutorial/Step2" instance=ExtResource("14_ui117")]
+offset_left = 288.0
+offset_top = 0.0
+offset_right = 1344.0
+offset_bottom = 72.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step2"]
+offset_left = 296.0
+offset_right = 632.0
+offset_bottom = 198.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step2/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/Step2/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Enter here to mine your
+computer  for resources"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tutorial/Step2/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/Step2/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("15_28508")
+
+[node name="TextureRect2" type="TextureRect" parent="Tutorial/Step2/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("16_y0i3c")
+
+[node name="TextureRect3" type="TextureRect" parent="Tutorial/Step2/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("17_ngbo3")
+
+[node name="TextureRect4" type="TextureRect" parent="Tutorial/Step2/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("18_sspq3")
+
+[node name="Step2Button" type="Button" parent="Tutorial/Step2/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COntinue"
+
+[node name="Step3" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Overlay" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
+offset_right = 120.0
+
+[node name="Overlay5" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
+offset_top = 0.0
+offset_bottom = 192.0
+
+[node name="Overlay6" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
+offset_left = 560.0
+offset_top = 304.0
+offset_right = 1344.0
+offset_bottom = 896.0
+
+[node name="Overlay2" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
+offset_top = 192.0
+offset_right = 120.0
+offset_bottom = 896.0
+
+[node name="Overlay3" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 72.0
+offset_right = 1344.0
+offset_bottom = 304.0
+
+[node name="Overlay7" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 792.0
+offset_right = 560.0
+offset_bottom = 896.0
+
+[node name="Overlay4" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_right = 1344.0
+offset_bottom = 72.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step3"]
+offset_left = 312.0
+offset_top = 104.0
+offset_right = 720.0
+offset_bottom = 294.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step3/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/Step3/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Use the resources you collect
+to mint coins
+Each coin requires a
+different combination of
+resources"
+
+[node name="Step3Button" type="Button" parent="Tutorial/Step3/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COntinue"
+
+[node name="Step4" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Overlay" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_right = 120.0
+
+[node name="Overlay5" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 736.0
+offset_top = 304.0
+offset_right = 1192.0
+offset_bottom = 792.0
+
+[node name="Overlay8" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 1192.0
+offset_top = 304.0
+offset_right = 1272.0
+offset_bottom = 560.0
+
+[node name="Overlay9" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 1192.0
+offset_top = 720.0
+offset_right = 1272.0
+offset_bottom = 792.0
+
+[node name="Overlay6" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 1272.0
+offset_top = 304.0
+offset_right = 1344.0
+offset_bottom = 896.0
+
+[node name="Overlay2" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 896.0
+
+[node name="Overlay3" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 304.0
+offset_right = 632.0
+offset_bottom = 792.0
+
+[node name="Overlay7" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 792.0
+offset_right = 1272.0
+offset_bottom = 896.0
+
+[node name="Overlay4" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_right = 480.0
+offset_bottom = 304.0
+
+[node name="Overlay10" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 480.0
+offset_right = 1344.0
+offset_bottom = 304.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step4"]
+offset_left = 384.0
+offset_top = 180.0
+offset_right = 792.0
+offset_bottom = 290.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step4/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/Step4/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sell the coins for energy"
+
+[node name="Step4Button" type="Button" parent="Tutorial/Step4/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COntinue"
+
+[node name="Step5" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Overlay" parent="Tutorial/Step5" instance=ExtResource("14_ui117")]
+offset_right = 120.0
+
+[node name="Overlay9" parent="Tutorial/Step5" instance=ExtResource("14_ui117")]
+offset_left = 480.0
+offset_right = 800.0
+
+[node name="Overlay2" parent="Tutorial/Step5" instance=ExtResource("14_ui117")]
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 896.0
+
+[node name="Overlay3" parent="Tutorial/Step5" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 160.0
+offset_right = 1344.0
+offset_bottom = 792.0
+
+[node name="Overlay7" parent="Tutorial/Step5" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 792.0
+offset_right = 1344.0
+offset_bottom = 896.0
+
+[node name="Overlay4" parent="Tutorial/Step5" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_right = 480.0
+offset_bottom = 160.0
+
+[node name="Overlay10" parent="Tutorial/Step5" instance=ExtResource("14_ui117")]
+offset_left = 800.0
+offset_right = 1344.0
+offset_bottom = 160.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step5"]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = 180.0
+offset_right = 792.0
+offset_bottom = 290.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step5/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/Step5/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "The value of each coin
+Flucuates each time you mine.
+
+Be careful selling always
+makes the price drop"
+
+[node name="Step5Button" type="Button" parent="Tutorial/Step5/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COntinue"
+
+[node name="Step6" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Overlay" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_right = 120.0
+
+[node name="Overlay9" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_left = 864.0
+offset_right = 1344.0
+
+[node name="Overlay11" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_left = 952.0
+offset_top = 376.0
+offset_right = 1344.0
+offset_bottom = 792.0
+
+[node name="Overlay12" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_left = 1280.0
+offset_top = 0.0
+offset_right = 1344.0
+offset_bottom = 376.0
+
+[node name="Overlay13" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_left = 952.0
+offset_top = 176.0
+offset_right = 1040.0
+offset_bottom = 376.0
+
+[node name="Overlay2" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 896.0
+
+[node name="Overlay3" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 160.0
+offset_right = 952.0
+offset_bottom = 792.0
+
+[node name="Overlay7" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 792.0
+offset_right = 1344.0
+offset_bottom = 896.0
+
+[node name="Overlay4" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_right = 480.0
+offset_bottom = 160.0
+
+[node name="Overlay10" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
+offset_left = 480.0
+offset_right = 864.0
+offset_bottom = 160.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step6"]
+offset_left = 640.0
+offset_top = 168.0
+offset_right = 968.0
+offset_bottom = 298.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step6/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/Step6/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Use your engery to buy
+upgrades"
+
+[node name="Step6Button" type="Button" parent="Tutorial/Step6/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COntinue"
+
+[node name="Step7" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Overlay" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_right = 120.0
+
+[node name="Overlay9" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_left = 864.0
+offset_right = 1344.0
+
+[node name="Overlay11" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_left = 952.0
+offset_top = 376.0
+offset_right = 1344.0
+offset_bottom = 792.0
+
+[node name="Overlay12" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_left = 1280.0
+offset_top = 0.0
+offset_right = 1344.0
+offset_bottom = 376.0
+
+[node name="Overlay13" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_left = 952.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 376.0
+
+[node name="Overlay2" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 896.0
+
+[node name="Overlay3" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 160.0
+offset_right = 952.0
+offset_bottom = 792.0
+
+[node name="Overlay7" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_top = 792.0
+offset_right = 1344.0
+offset_bottom = 896.0
+
+[node name="Overlay4" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_left = 120.0
+offset_right = 320.0
+offset_bottom = 160.0
+
+[node name="Overlay10" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
+offset_left = 480.0
+offset_right = 864.0
+offset_bottom = 160.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step7"]
+offset_left = 320.0
+offset_top = 88.0
+offset_right = 651.0
+offset_bottom = 238.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step7/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/Step7/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Gain enough energy
+and the exit doors will
+open. Exit to WIN!"
+
+[node name="Step7Button" type="Button" parent="Tutorial/Step7/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COntinue"
+
+[node name="Step8" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Overlay" parent="Tutorial/Step8" instance=ExtResource("14_ui117")]
+offset_right = 1344.0
+offset_bottom = 104.0
+
+[node name="Overlay2" parent="Tutorial/Step8" instance=ExtResource("14_ui117")]
+offset_top = 104.0
+offset_right = 192.0
+offset_bottom = 896.0
+
+[node name="Overlay3" parent="Tutorial/Step8" instance=ExtResource("14_ui117")]
+offset_left = 192.0
+offset_top = 184.0
+offset_right = 1344.0
+offset_bottom = 896.0
+
+[node name="Overlay4" parent="Tutorial/Step8" instance=ExtResource("14_ui117")]
+offset_left = 256.0
+offset_top = 104.0
+offset_right = 1280.0
+offset_bottom = 184.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step8"]
+offset_left = 272.0
+offset_top = 112.0
+offset_right = 800.0
+offset_bottom = 232.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step8/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/Step8/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Use W, A, S, D keys to move
+
+Use E key to interact
+
+Good Luck!"
+
+[node name="Step8Button" type="Button" parent="Tutorial/Step8/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COntinue"
