@@ -7,8 +7,6 @@ signal on_countdown_finished()
 var elapsed_time: float = 0
 
 @onready var last_countdown_number: int = countdown_time + 1
-@onready var beep_low_sfx: AudioStreamPlayer = $SFX/LowBeep
-@onready var beep_high_sfx: AudioStreamPlayer = $SFX/HighBeep
 
 
 func _ready() -> void:
@@ -23,7 +21,7 @@ func _process(delta: float) -> void:
 	if time_left > 0:
 		if last_countdown_number != time_left:
 			last_countdown_number = time_left
-			beep_low_sfx.play()
+			AudioService.beep_low.play()
 	else:
 		if last_countdown_number > 0:
 			last_countdown_number = 0
@@ -37,7 +35,7 @@ func pause_game():
 func end_countdown():
 	get_tree().paused = false
 	hide()
-	beep_high_sfx.play()
+	AudioService.beep_high.play()
 	on_countdown_finished.emit()
-	await beep_high_sfx.finished
+	await AudioService.beep_high.finished
 	queue_free()
