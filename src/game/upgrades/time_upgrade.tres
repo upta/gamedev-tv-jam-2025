@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_jhn1g")
-cost_base = 100
+cost_base = 10
 cost_growth = 0.2
 time_increment = 5
 base_time = 60
