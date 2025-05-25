@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=14 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
@@ -6,13 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://w3gos45ashu4" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
 [ext_resource type="PackedScene" uid="uid://b3fegi50mimbt" path="res://home_base/upgrade_port.tscn" id="8_n6jcb"]
 [ext_resource type="PackedScene" uid="uid://co58bicar0i0k" path="res://home_base/upgrade_summary.tscn" id="9_8e0gs"]
-[ext_resource type="PackedScene" path="res://home_base/cmos.tscn" id="10_gpvvs"]
+[ext_resource type="PackedScene" uid="uid://beb0sp2xir1j4" path="res://game/resource_list/mining_resource_list.tscn" id="10_eb3fi"]
+[ext_resource type="PackedScene" uid="uid://cbucjm0nsb7nf" path="res://home_base/cmos.tscn" id="10_gpvvs"]
 [ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://bdeymf2o7kll2" path="res://home_base/seller.tscn" id="13_orf3j"]
 [ext_resource type="PackedScene" uid="uid://ca0gqgaf1dci2" path="res://player/home_base_player.tscn" id="13_ui117"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2u6b"]
 size = Vector2(128, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb3fi"]
+size = Vector2(116, 196)
 
 [node name="HomeBase" type="Node2D"]
 script = ExtResource("1_md8vl")
@@ -133,6 +137,17 @@ position = Vector2(896, 64)
 offset_left = 960.0
 offset_right = 1280.0
 offset_bottom = 176.0
+
+[node name="MiningResourceDisplay" parent="." instance=ExtResource("10_eb3fi")]
+offset_right = 116.0
+offset_bottom = 196.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MiningResourceDisplay"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MiningResourceDisplay/StaticBody2D"]
+position = Vector2(58, 98)
+shape = SubResource("RectangleShape2D_eb3fi")
 
 [node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
 position = Vector2(256, 128)

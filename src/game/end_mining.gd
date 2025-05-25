@@ -21,13 +21,8 @@ func on_time_up():
 
 	AudioService.outa_time.play()
 
-	var chip_resources = State.Inventory.get_all_staged_mining_resources()
-	for chip_type in chip_labels:
-		var chip_qty = chip_resources.get(chip_type, 0)
-
-		update_chips(chip_type, chip_qty)
-
-	Service.Inventory.bank_staged_mining_resources()
+	for resource_type in State.Inventory.mining_resources.keys():
+		update_chips(resource_type, State.Inventory.mining_resources.get(resource_type, 0))
 
 
 func update_chips(resource_type: Enum.MiningResourceType, quantity: int):

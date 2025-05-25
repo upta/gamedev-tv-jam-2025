@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://beb0sp2xir1j4"]
+
+[ext_resource type="Script" uid="uid://du7mlr2geawqk" path="res://game/resource_list/mining_resource_list.gd" id="1_00vls"]
+[ext_resource type="PackedScene" uid="uid://4scanx06rvfh" path="res://game/resource_list/mining_resource_list_item.tscn" id="2_bfnx4"]
+
+[node name="MiningResourceDisplay" type="PanelContainer"]
+offset_right = 76.0
+offset_bottom = 120.0
+script = ExtResource("1_00vls")
+list_item_scene = ExtResource("2_bfnx4")
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MiningResourceListItem" parent="Container" instance=ExtResource("2_bfnx4")]
+layout_mode = 2
+
+[node name="MiningResourceListItem2" parent="Container" instance=ExtResource("2_bfnx4")]
+layout_mode = 2
+
+[node name="MiningResourceListItem3" parent="Container" instance=ExtResource("2_bfnx4")]
+layout_mode = 2
+
+[node name="MiningResourceListItem4" parent="Container" instance=ExtResource("2_bfnx4")]
+layout_mode = 2

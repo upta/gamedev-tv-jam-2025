@@ -22,7 +22,7 @@ func _ready() -> void:
 func on_mined():
 	collision_shape.disabled = true
 	chip_empty_sprite.show()
-	Service.Inventory.add_staged_mining_resources(chip_type, 1)
+	State.Inventory.add_mining_resource(chip_type, 1)
 	mined_sfx.play()
 
 	chip_sprite.self_modulate.a = 0.75

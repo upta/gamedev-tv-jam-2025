@@ -1,21 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://b01msrd728kv1"]
+[gd_scene load_steps=5 format=3 uid="uid://b01msrd728kv1"]
 
-[ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="1_k40xb"]
 [ext_resource type="Script" uid="uid://be2lbiw6ue4dm" path="res://game/mining/mining_ui.gd" id="1_wsfr7"]
-[ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="2_wsfr7"]
-[ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="3_g48as"]
-[ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="4_rnpqn"]
+[ext_resource type="PackedScene" uid="uid://beb0sp2xir1j4" path="res://game/resource_list/mining_resource_list.tscn" id="2_k40xb"]
 [ext_resource type="PackedScene" uid="uid://df7ccgsuqr27i" path="res://game/mining/action_indicator.tscn" id="6_g48as"]
 [ext_resource type="Texture2D" uid="uid://c2c7tqyix7n8t" path="res://assets/resources/boom/capactitor.png" id="7_rnpqn"]
 
-[node name="MiningUI" type="CanvasLayer" node_paths=PackedStringArray("chip_labels", "time_left_label", "bomb_action_indicator")]
+[node name="MiningUI" type="CanvasLayer" node_paths=PackedStringArray("time_left_label", "bomb_action_indicator")]
 script = ExtResource("1_wsfr7")
-chip_labels = {
-0: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipBlue Label"),
-1: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipGreen Label"),
-2: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipRed Label"),
-3: NodePath("ResourceContainer/MarginContainer/GridContainer/ChipYellow Label")
-}
 time_left_label = NodePath("Control/TimeLeftLabel")
 bomb_action_indicator = NodePath("PowersContainer/MarginContainer/GridContainer/BombActionIndicator")
 
@@ -38,62 +29,14 @@ theme_override_font_sizes/font_size = 30
 text = "Time left:"
 text_overrun_behavior = 1
 
-[node name="ResourceContainer" type="PanelContainer" parent="."]
-offset_left = 1215.0
-offset_top = 8.0
-offset_right = 1270.0
-offset_bottom = 112.0
-
-[node name="MarginContainer" type="MarginContainer" parent="ResourceContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 2
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 2
-
-[node name="GridContainer" type="GridContainer" parent="ResourceContainer/MarginContainer"]
-layout_mode = 2
-columns = 2
-
-[node name="ChipBlue Icon" type="TextureRect" parent="ResourceContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_k40xb")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="ChipBlue Label" type="Label" parent="ResourceContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = "0"
-
-[node name="ChipGreen Icon" type="TextureRect" parent="ResourceContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("2_wsfr7")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="ChipGreen Label" type="Label" parent="ResourceContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = "0"
-
-[node name="ChipRed Icon" type="TextureRect" parent="ResourceContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("3_g48as")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="ChipRed Label" type="Label" parent="ResourceContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = "0"
-
-[node name="ChipYellow Icon" type="TextureRect" parent="ResourceContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("4_rnpqn")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="ChipYellow Label" type="Label" parent="ResourceContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = "0"
+[node name="MiningResourceDisplay" parent="." instance=ExtResource("2_k40xb")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -116.0
+offset_right = 0.0
+offset_bottom = 196.0
+grow_horizontal = 0
 
 [node name="PowersContainer" type="PanelContainer" parent="."]
 anchors_preset = 7

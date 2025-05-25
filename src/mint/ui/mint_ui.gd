@@ -23,12 +23,10 @@ func _ready() -> void:
 		Service.Inventory.add_coins(Enum.CoinType.BEE_COIN, 22)
 		Service.Inventory.add_coins(Enum.CoinType.SEA_COIN, 33)
 
-		Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.BLUE_CHIP, 20)
-		Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.GREEN_CHIP, 20)
-		Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.RED_CHIP, 20)
-		Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.YELLOW_CHIP, 20)
-
-		Service.Inventory.bank_staged_mining_resources()
+		State.Inventory.add_mining_resource(Enum.MiningResourceType.BLUE_CHIP, 20)
+		State.Inventory.add_mining_resource(Enum.MiningResourceType.GREEN_CHIP, 20)
+		State.Inventory.add_mining_resource(Enum.MiningResourceType.RED_CHIP, 20)
+		State.Inventory.add_mining_resource(Enum.MiningResourceType.YELLOW_CHIP, 20)
 
 	# Auto-select the first coin when UI loads
 	_on_coin_list_selected(coin_list.selected_coin)
