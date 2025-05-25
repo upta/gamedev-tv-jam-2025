@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://bm5gjgadon6hb" path="res://addons/guide/modifiers/guide_modifier_input_swizzle.gd" id="6_hft5s"]
 [ext_resource type="Script" uid="uid://ckggy40lm0vjc" path="res://addons/guide/modifiers/guide_modifier_negate.gd" id="7_say3m"]
 [ext_resource type="Script" uid="uid://x74mnwgr08a7" path="res://addons/guide/triggers/guide_trigger.gd" id="8_r6o0e"]
-[ext_resource type="Resource" uid="uid://dbppuvcdy4l45" path="res://input/game/actions/interact.tres" id="9_1enlb"]
+[ext_resource type="Resource" path="res://input/game/actions/interact.tres" id="9_1enlb"]
 [ext_resource type="Script" uid="uid://dsa1dnifd6w32" path="res://addons/guide/guide_mapping_context.gd" id="9_ofgej"]
 [ext_resource type="Script" uid="uid://b52rqq28tuqpg" path="res://addons/guide/triggers/guide_trigger_pressed.gd" id="10_n3oba"]
 

@@ -1,14 +1,18 @@
-[gd_scene load_steps=18 format=3 uid="uid://cqfd1a8bvojms"]
+[gd_scene load_steps=22 format=3 uid="uid://cqfd1a8bvojms"]
 
 [ext_resource type="Script" uid="uid://bbfflnbqq66yw" path="res://game/mining_area.gd" id="1_bdnut"]
 [ext_resource type="Resource" uid="uid://b21g17kle5gak" path="res://input/game/mining_context.tres" id="2_7pupr"]
 [ext_resource type="PackedScene" uid="uid://bbbwjt5ay0u58" path="res://game/mining/chunk_master.tscn" id="3_aipip"]
 [ext_resource type="PackedScene" uid="uid://bsjevfbrnec8e" path="res://game/mining/miner_player.tscn" id="3_ujp4m"]
 [ext_resource type="PackedScene" uid="uid://clmb3d6jg1rcg" path="res://game/mining/blocks/dirt.tscn" id="4_tvd5v"]
+[ext_resource type="PackedScene" uid="uid://cjtybvu0visdh" path="res://game/mining/blocks/dirt2.tscn" id="5_23pos"]
 [ext_resource type="PackedScene" uid="uid://c5vufw7g3ksiw" path="res://game/mining/blocks/solid_wall.tscn" id="5_in7h5"]
 [ext_resource type="PackedScene" uid="uid://bn5s5y6x2w8t" path="res://game/mining/chunk.tscn" id="5_ujp4m"]
 [ext_resource type="PackedScene" uid="uid://b58mymyph0k1" path="res://game/mining/blocks/chip.tscn" id="6_in7h5"]
+[ext_resource type="PackedScene" uid="uid://s3bi4e2bd333" path="res://game/mining/blocks/dirt3.tscn" id="6_r5tvw"]
+[ext_resource type="PackedScene" uid="uid://cveiek8pkk6hu" path="res://game/mining/blocks/dirt4.tscn" id="7_84ow0"]
 [ext_resource type="PackedScene" uid="uid://clx3xveo5i3ah" path="res://game/mining/blocks/empty.tscn" id="7_x3fj0"]
+[ext_resource type="PackedScene" uid="uid://ncwhn3qn5a7t" path="res://game/mining/blocks/dirt5.tscn" id="8_n4l8t"]
 [ext_resource type="PackedScene" uid="uid://by0qi6nefenrm" path="res://game/mining/blocks/green_chip.tscn" id="8_sf5yd"]
 [ext_resource type="PackedScene" uid="uid://b0xa86vjrxpke" path="res://game/mining/blocks/red_chip.tscn" id="9_82gt4"]
 [ext_resource type="PackedScene" uid="uid://egxwgiobe2o1" path="res://game/mining/blocks/yellow_chip.tscn" id="10_hatsj"]
@@ -21,17 +25,20 @@
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
 input_context = ExtResource("2_7pupr")
-total_mining_time = 2.0
 
 [node name="ChunkMaster" parent="." instance=ExtResource("3_aipip")]
 block_types = Dictionary[int, PackedScene]({
 0: ExtResource("7_x3fj0"),
 1: ExtResource("4_tvd5v"),
-2: ExtResource("5_in7h5"),
-3: ExtResource("6_in7h5"),
-4: ExtResource("8_sf5yd"),
-5: ExtResource("9_82gt4"),
-6: ExtResource("10_hatsj")
+2: ExtResource("5_23pos"),
+3: ExtResource("6_r5tvw"),
+4: ExtResource("7_84ow0"),
+5: ExtResource("8_n4l8t"),
+6: ExtResource("5_in7h5"),
+7: ExtResource("6_in7h5"),
+8: ExtResource("8_sf5yd"),
+9: ExtResource("9_82gt4"),
+10: ExtResource("10_hatsj")
 })
 block_size_px = 40.0
 chunk_radius = 10
