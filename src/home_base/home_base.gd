@@ -20,7 +20,7 @@ func _ready() -> void:
 	shop.pressed.connect(_on_shop_pressed)
 	mint.pressed.connect(_on_mint_pressed)
 
-	Service.Market.fluxuate_prices()
+	Service.Market.fluctuate_prices()
 
 
 func _on_market_pressed():
