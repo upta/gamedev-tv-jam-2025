@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkp2hv83gfafu"]
+
+[ext_resource type="Script" uid="uid://dgr5nx1fqtbn0" path="res://credits/credits.gd" id="1_1yjav"]
+[ext_resource type="Texture2D" uid="uid://q4eur46hd5n2" path="res://assets/resources/credits/credits1.png" id="1_5uwby"]
+[ext_resource type="Texture2D" uid="uid://ctjgpq57230sh" path="res://assets/resources/credits/credits2.png" id="2_eo3r1"]
+[ext_resource type="Texture2D" uid="uid://m5y0p1nfipys" path="res://assets/resources/credits/credits3.png" id="3_1yjav"]
+[ext_resource type="Texture2D" uid="uid://dc0y1ba3qgocb" path="res://assets/resources/credits/credits4.png" id="4_bvn8s"]
+[ext_resource type="Texture2D" uid="uid://dcm25ctwpw0uv" path="res://assets/resources/credits/credits5.png" id="5_t8fr6"]
+[ext_resource type="Texture2D" uid="uid://fuspwfla0os5" path="res://assets/resources/credits/credits6.png" id="6_dsoe1"]
+[ext_resource type="Texture2D" uid="uid://ohc6lyhulk7h" path="res://assets/resources/credits/credits7.png" id="7_1w3mc"]
+[ext_resource type="Texture2D" uid="uid://3skpeolu0p7" path="res://assets/resources/credits/credits8.png" id="8_i0jd1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o7wt1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5uwby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eo3r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1yjav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bvn8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t8fr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dsoe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1w3mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i0jd1")
+}],
+"loop": false,
+"name": &"credits",
+"speed": 0.5
+}]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_1yjav")
+
+[node name="CreditsAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(4.26, 5.60938)
+sprite_frames = SubResource("SpriteFrames_o7wt1")
+animation = &"credits"
+autoplay = "credits"
