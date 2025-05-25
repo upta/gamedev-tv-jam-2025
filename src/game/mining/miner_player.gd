@@ -1,7 +1,5 @@
 extends Player
 
-@onready var sfx_drop: AudioStreamPlayer2D = $SFX/Drop
-
 signal drop_item(item: Node2D)
 signal update_bomb_action_time(time: float)
 
@@ -34,6 +32,7 @@ var last_bomb_delta: float = 0.0:
 
 @onready var sfx_hit: AudioStreamPlayer2D = $SFX/Hit
 @onready var sfx_nope: AudioStreamPlayer2D = $SFX/Nope
+@onready var sfx_drop: AudioStreamPlayer2D = $SFX/Drop
 
 
 func _ready() -> void:
@@ -70,6 +69,7 @@ func _try_mine(mineable: Mineable):
 func _try_drop_bomb():
 	if can_bomb:
 		last_bomb_delta = 0.0
+		sfx_drop.play()
 		var new_bomb: Node2D = bomb.instantiate()
 		new_bomb.global_position = global_position
 		drop_item.emit(new_bomb)
