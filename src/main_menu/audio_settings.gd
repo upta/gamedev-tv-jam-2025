@@ -1,5 +1,7 @@
 extends VBoxContainer
 
+static var bus_values: Dictionary[String, float] = {}
+
 @onready var master: HSlider = %MasterAudioVolume
 @onready var music: HSlider = %MusicAudioVolume
 @onready var sfx: HSlider = %SFXAudioVolume
@@ -8,16 +10,23 @@ extends VBoxContainer
 func _ready() -> void:
 	AudioService.volume_changed.connect(_on_volume_changed)
 
+	master.value = bus_values.get("Master", 1.0)
+	music.value = bus_values.get("Music", 1.0)
+	sfx.value = bus_values.get("Sound Effects", 1.0)
+
 
 func _on_master_audio_volume_value_changed(value: float) -> void:
+	bus_values.set("Master", value)
 	AudioService.set_volume("Master", value)
 
 
 func _on_music_audio_volume_value_changed(value: float) -> void:
+	bus_values.set("Music", value)
 	AudioService.set_volume("Music", value)
 
 
 func _on_sfx_audio_volume_value_changed(value: float) -> void:
+	bus_values.set("Sound Effects", value)
 	AudioService.set_volume("Sound Effects", value)
 
 

@@ -1,8 +1,9 @@
-class_name Settings
-extends PanelContainer
+class_name Settings extends Control
 
 signal closed
 
+
+var _bus_values = {}
 
 func _on_master_audio_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(value))
@@ -18,7 +19,7 @@ func _on_sfx_audio_volume_value_changed(value: float) -> void:
 
 func _on_close_settings_pressed() -> void:
 	AudioService.button_select_menu.play()
-	State.Scene.active_scene = "res://main_menu/main_menu.tscn"
+	closed.emit()
 
 
 func _on_close_settings_mouse_entered() -> void:

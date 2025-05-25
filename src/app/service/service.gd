@@ -2,8 +2,10 @@ extends Node
 
 # gdlint: disable=class-variable-name
 var Inventory := InventoryService.new()
+var Guide := GuideService.new()
 var Market := MarketService.new()
 var Mint := MintService.new()
+var Pause := PauseService.new()
 var Upgrade := UpgradeService.new()
 
 # gdlint: enable=class-variable-name

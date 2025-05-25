@@ -20,7 +20,7 @@ offset_bottom = 719.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Control"]
 layout_mode = 0
-offset_right = 409.0
+offset_right = 379.0
 offset_bottom = 68.0
 
 [node name="TimeLeftLabel" type="Label" parent="Control/PanelContainer"]
@@ -28,7 +28,7 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 30
-text = "Time left:"
+text = "Time left: 000"
 text_overrun_behavior = 1
 
 [node name="MiningResourceDisplay" parent="." instance=ExtResource("2_k40xb")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cqfd1a8bvojms"]
+[gd_scene load_steps=23 format=3 uid="uid://cqfd1a8bvojms"]
 
 [ext_resource type="Script" uid="uid://bbfflnbqq66yw" path="res://game/mining_area.gd" id="1_bdnut"]
 [ext_resource type="Resource" uid="uid://b21g17kle5gak" path="res://input/game/mining_context.tres" id="2_7pupr"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://d1q8xcp42pnas" path="res://game/end_mining.tscn" id="12_wb13v"]
 [ext_resource type="Resource" uid="uid://b1m2s22saotf4" path="res://input/game/actions/bomb.tres" id="13_82gt4"]
 [ext_resource type="PackedScene" uid="uid://d0tlmjbftirap" path="res://game/mining/tools/bomb.tscn" id="14_hatsj"]
+[ext_resource type="PackedScene" uid="uid://s1i3pw58usio" path="res://pause/pause_overlay.tscn" id="22_r5tvw"]
 
 [node name="MiningArea" type="Node2D"]
 script = ExtResource("1_bdnut")
@@ -66,6 +67,8 @@ chip_labels = {
 2: NodePath("PanelContainer/MarginContainer/GridContainer/ChipRed Label"),
 3: NodePath("PanelContainer/MarginContainer/GridContainer/ChipYellow Label")
 }
+
+[node name="PauseOverlay" parent="." instance=ExtResource("22_r5tvw")]
 
 [connection signal="drop_item" from="MinerPlayer" to="." method="_on_miner_player_drop_item"]
 [connection signal="update_bomb_action_time" from="MinerPlayer" to="." method="_on_miner_player_update_bomb_action_time"]
