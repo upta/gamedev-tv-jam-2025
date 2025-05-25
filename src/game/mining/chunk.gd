@@ -35,15 +35,7 @@ func _fill_chunk() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if not has_spawned and body is Player:
-		has_spawned = true
-		_spawn_sibling_chunks()
-
-
-func _spawn_sibling_chunks() -> void:
-	var physics = PhysicsServer2D.space_get_direct_state(get_world_2d().get_space())
-
-	for sibling_location in _get_sibling_locations().filter(func(pos): return not _has_sibling_chunk(pos, physics)):
-		_create_sibling(sibling_location)
+		spawn_sibling_chunks()
 
 
 func _create_sibling(at: Vector2) -> void:
@@ -68,3 +60,11 @@ func _get_sibling_locations() -> Array[Vector2]:
 	var results: Array[Vector2]
 	results.assign(ordinal_positions.map(func(pos): return pos * chunk_size_px + origin))
 	return results
+
+
+func spawn_sibling_chunks() -> void:
+	has_spawned = true
+	var physics = PhysicsServer2D.space_get_direct_state(get_world_2d().get_space())
+
+	for sibling_location in _get_sibling_locations().filter(func(pos): return not _has_sibling_chunk(pos, physics)):
+		_create_sibling(sibling_location)

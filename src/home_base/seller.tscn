@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdeymf2o7kll2"]
+[gd_scene load_steps=10 format=3 uid="uid://bdeymf2o7kll2"]
 
 [ext_resource type="Texture2D" uid="uid://cplvw0x5ff18v" path="res://assets/resources/minter/ethernetdoor.png" id="1_0fisj"]
 [ext_resource type="Script" uid="uid://d2pm5k13xtm3a" path="res://home_base/seller.gd" id="1_0p4gr"]
 [ext_resource type="PackedScene" uid="uid://d1jvudml7fra5" path="res://interaction/interactable.tscn" id="2_0p4gr"]
+[ext_resource type="AudioStream" uid="uid://p3ck5vdwo32q" path="res://assets/sfx/nope.wav" id="4_unpdw"]
 
 [sub_resource type="Gradient" id="Gradient_bslgi"]
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0.764706, 0.266667)
@@ -81,3 +82,6 @@ debug_color = Color(0.690514, 0.637273, 0.303577, 0.419608)
 libraries = {
 &"": SubResource("AnimationLibrary_unpdw")
 }
+
+[node name="NopeSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_unpdw")

@@ -15,6 +15,9 @@ func _ready():
 	total_mining_time = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.MINE_TIME, "time")
 	time_left = total_mining_time
 
+	# Prespawn sibling chunks for first area
+	$Chunk.spawn_sibling_chunks()
+
 
 func _process(delta: float) -> void:
 	time_elapsed += delta
