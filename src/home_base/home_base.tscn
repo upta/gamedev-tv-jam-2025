@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=11 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
 [ext_resource type="TileSet" uid="uid://cscguflr1waw8" path="res://home_base/home_base_tileset.tres" id="3_fbnj6"]
-[ext_resource type="PackedScene" uid="uid://cfx01dud2km8a" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
+[ext_resource type="PackedScene" uid="uid://w3gos45ashu4" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
 [ext_resource type="PackedScene" uid="uid://b3fegi50mimbt" path="res://home_base/upgrade_port.tscn" id="8_n6jcb"]
+[ext_resource type="PackedScene" uid="uid://co58bicar0i0k" path="res://home_base/upgrade_summary.tscn" id="9_8e0gs"]
 [ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://bdeymf2o7kll2" path="res://home_base/seller.tscn" id="13_orf3j"]
 [ext_resource type="PackedScene" uid="uid://ca0gqgaf1dci2" path="res://player/home_base_player.tscn" id="13_ui117"]
@@ -61,9 +62,10 @@ metadata/_edit_lock_ = true
 
 [node name="Upgrades" type="Node2D" parent="."]
 
-[node name="MineTimeUpgrade" parent="Upgrades" instance=ExtResource("8_n6jcb")]
-position = Vector2(995, 106)
+[node name="MineTimeUpgrade" parent="Upgrades" node_paths=PackedStringArray("upgrade_summary") instance=ExtResource("8_n6jcb")]
+position = Vector2(995, 220)
 type = 3
+upgrade_summary = NodePath("../../UpgradeSummary")
 
 [node name="Exit" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -108,6 +110,10 @@ position = Vector2(1240, 640)
 [node name="MarketPrices" parent="." instance=ExtResource("7_2f1hc")]
 offset_left = 480.0
 offset_right = 800.0
+
+[node name="UpgradeSummary" parent="." instance=ExtResource("9_8e0gs")]
+offset_left = 960.0
+offset_right = 1280.0
 
 [node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
 position = Vector2(256, 128)
