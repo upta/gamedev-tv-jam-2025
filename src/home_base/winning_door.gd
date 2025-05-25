@@ -11,14 +11,6 @@ func _ready():
 	interactable.interacted.connect(_on_interacted)
 	State.Inventory.power_changed.connect(_on_power_changed)
 
-	await get_tree().create_timer(2).timeout
-
-	State.Inventory.power = 10000
-
-	await get_tree().create_timer(2).timeout
-
-	State.Inventory.power = 50
-
 
 func _on_interacted():
 	if _can_win():

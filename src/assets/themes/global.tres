@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=83 format=4 uid="uid://dytoj03c16d40"]
+[gd_resource type="Theme" load_steps=82 format=4 uid="uid://dytoj03c16d40"]
 
 [ext_resource type="FontFile" uid="uid://edd365i3ynvg" path="res://assets/themes/digitaldream.ttf" id="1_4s5xv"]
 [ext_resource type="Texture2D" uid="uid://nob02pixsfk8" path="res://assets/resources/menus/disabledbutton.png" id="2_ppnu3"]
@@ -1067,19 +1067,6 @@ data = {
 [sub_resource type="ImageTexture" id="ImageTexture_eki6i"]
 image = SubResource("Image_kio8b")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_be1dv"]
-content_margin_left = 0.0
-content_margin_top = 5.0
-content_margin_right = 0.0
-content_margin_bottom = 5.0
-texture = ExtResource("8_wm80j")
-texture_margin_left = 2.0
-texture_margin_top = 1.0
-texture_margin_right = 2.0
-texture_margin_bottom = 1.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0242"]
 content_margin_left = 0.0
 content_margin_top = 5.0
@@ -1093,7 +1080,7 @@ texture_margin_bottom = 1.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oq706"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_be1dv"]
 content_margin_left = 0.0
 content_margin_top = 5.0
 content_margin_right = 0.0
@@ -2207,9 +2194,9 @@ HSlider/icons/grabber = ExtResource("8_bb3cb")
 HSlider/icons/grabber_disabled = ExtResource("9_n8xa2")
 HSlider/icons/grabber_highlight = ExtResource("8_bb3cb")
 HSlider/icons/tick = SubResource("ImageTexture_eki6i")
-HSlider/styles/grabber_area = SubResource("StyleBoxTexture_be1dv")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_v0242")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_v0242")
-HSlider/styles/slider = SubResource("StyleBoxTexture_oq706")
+HSlider/styles/slider = SubResource("StyleBoxTexture_be1dv")
 ItemList/colors/font_color = Color(0.65, 0.65, 0.65, 1)
 ItemList/colors/font_hovered_color = Color(0.95, 0.95, 0.95, 1)
 ItemList/colors/font_hovered_selected_color = Color(1, 1, 1, 1)

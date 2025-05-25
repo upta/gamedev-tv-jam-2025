@@ -9,6 +9,7 @@ func _on_button_pressed() -> void:
 	State.Scene.active_scene = "res://home_base/home_base.tscn"
 	get_tree().paused = false
 	await AudioService.button_select_menu.finished
+	AudioService.game_music_home.play()
 
 
 func _on_button_mouse_entered() -> void:

@@ -10,13 +10,14 @@ var time_left: float
 
 
 func _ready():
-	GUIDE.enable_mapping_context(input_context, true)
+	Service.Guide.add_local_context(input_context)
 
 	total_mining_time = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.MINE_TIME, "time")
 	time_left = total_mining_time
 
 	# Prespawn sibling chunks for first area
 	$Chunk.spawn_sibling_chunks()
+	$PauseOverlay.is_enabled = false
 
 
 func _process(delta: float) -> void:
@@ -34,7 +35,6 @@ func _end_mining() -> void:
 	$EndMining.on_time_up.call_deferred()
 	$MiningUI.visible = false
 	AudioService.game_music_mining.stop()
-	AudioService.game_music_home.play()
 
 
 func _on_miner_player_drop_item(item: Node2D) -> void:
@@ -49,3 +49,4 @@ func _on_miner_player_update_bomb_action_time(time: float) -> void:
 func _on_start_countdown_on_countdown_finished() -> void:
 	AudioService.game_music_mining.play()
 	$MiningUI.visible = true
+	$PauseOverlay.is_enabled = true

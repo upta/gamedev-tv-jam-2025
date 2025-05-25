@@ -5,7 +5,7 @@ extends Control
 
 
 func _ready() -> void:
-	GUIDE.enable_mapping_context(input_context, true)
+	Service.Guide.add_local_context(input_context)
 	start_action.triggered.connect(_on_start_action_triggered)
 	_music_playing()
 
@@ -48,7 +48,7 @@ func _on_but_new_pressed() -> void:
 
 func _on_but_opt_pressed() -> void:
 	AudioService.button_select_menu.play()
-	State.Scene.active_scene = "res://main_menu/settings.tscn"
+	Service.Pause.show_pause()
 
 
 func _on_but_sel_pressed() -> void:

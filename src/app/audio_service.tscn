@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dos6a3sr0n2ln" path="res://assets/sfx/power_up.wav" id="9_vxhvs"]
 
 [node name="AudioService" type="Node"]
+process_mode = 3
 script = ExtResource("1_86uqd")
 
 [node name="GameMusicHome" type="AudioStreamPlayer" parent="."]

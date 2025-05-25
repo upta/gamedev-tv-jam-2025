@@ -2,11 +2,6 @@ extends Node2D
 
 @export var input_context: GUIDEMappingContext
 
-@onready var market: Button = %Market
-@onready var shop: Button = %Shop
-@onready var mint: Button = %Mint
-@onready var mining: Button = %Mining
-
 @onready var boundary: TileMapLayer = %Boundary
 @onready var camera: Camera2D = %Camera2D
 
@@ -14,29 +9,13 @@ extends Node2D
 func _ready() -> void:
 	_set_camera_limit()
 
-	GUIDE.enable_mapping_context(input_context, true)
-
-	market.pressed.connect(_on_market_pressed)
-	shop.pressed.connect(_on_shop_pressed)
-	mint.pressed.connect(_on_mint_pressed)
+	Service.Guide.add_local_context(input_context)
 
 	Service.Market.fluctuate_prices()
 
 	if State.Tutorial.should_show_opening_tutorial:
 		State.Tutorial.should_show_opening_tutorial = false
 		_show_tutorial()
-
-
-func _on_market_pressed():
-	State.Scene.active_scene = "res://market/ui/market_ui.tscn"
-
-
-func _on_shop_pressed():
-	return
-
-
-func _on_mint_pressed():
-	State.Scene.active_scene = "res://mint/ui/mint_ui.tscn"
 
 
 ## Sets the camera limits based on the boundary tilemap.
