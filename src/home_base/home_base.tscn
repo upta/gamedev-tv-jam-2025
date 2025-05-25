@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
 [ext_resource type="TileSet" uid="uid://cscguflr1waw8" path="res://home_base/home_base_tileset.tres" id="3_fbnj6"]
+[ext_resource type="PackedScene" uid="uid://bhoynj4y8r6es" path="res://home_base/minig_door.tscn" id="5_n2u6b"]
 [ext_resource type="PackedScene" uid="uid://w3gos45ashu4" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
 [ext_resource type="PackedScene" uid="uid://b3fegi50mimbt" path="res://home_base/upgrade_port.tscn" id="8_n6jcb"]
 [ext_resource type="PackedScene" uid="uid://co58bicar0i0k" path="res://home_base/upgrade_summary.tscn" id="9_8e0gs"]
@@ -11,9 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://bdeymf2o7kll2" path="res://home_base/seller.tscn" id="13_orf3j"]
 [ext_resource type="PackedScene" uid="uid://ca0gqgaf1dci2" path="res://player/home_base_player.tscn" id="13_ui117"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2u6b"]
-size = Vector2(128, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eb3fi"]
 size = Vector2(116, 196)
@@ -86,22 +84,9 @@ position = Vector2(1088, 328)
 type = 1
 upgrade_summary = NodePath("../../UpgradeSummary")
 
-[node name="Exit" type="Area2D" parent="."]
+[node name="MiningDoor" parent="." instance=ExtResource("5_n2u6b")]
 unique_name_in_owner = true
-position = Vector2(192, 0)
-metadata/_edit_lock_ = true
-
-[node name="ColorRect" type="ColorRect" parent="Exit"]
-custom_minimum_size = Vector2(128, 64)
-offset_right = 128.0
-offset_bottom = 64.0
-color = Color(0.385249, 0.292233, 0.0269555, 1)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(64, 32)
-shape = SubResource("RectangleShape2D_n2u6b")
-metadata/_edit_lock_ = true
+position = Vector2(192, 32)
 
 [node name="AcoinMinter" parent="." instance=ExtResource("13_0g1cd")]
 offset_left = 128.0
