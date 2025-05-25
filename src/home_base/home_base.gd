@@ -21,7 +21,7 @@ func _ready() -> void:
 	mint.pressed.connect(_on_mint_pressed)
 
 	Service.Market.fluctuate_prices()
-    
+
 	if State.Tutorial.should_show_opening_tutorial:
 		State.Tutorial.should_show_opening_tutorial = false
 		_show_tutorial()
