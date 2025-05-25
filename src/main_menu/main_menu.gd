@@ -49,7 +49,6 @@ func _on_but_new_pressed() -> void:
 func _on_but_opt_pressed() -> void:
 	AudioService.button_select_menu.play()
 	Service.Pause.show_pause()
-	#State.Scene.active_scene = "res://main_menu/settings.tscn"
 
 
 func _on_but_sel_pressed() -> void:
