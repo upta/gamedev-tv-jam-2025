@@ -49,13 +49,13 @@ func _generate_wall_heavy(distance_from_center: float) -> Enum.BlockType:
 
 func _generate_default(distance_from_center: float) -> Enum.BlockType:
 	if randf() < min(percent(20), percent(4) * log(distance_from_center)):
-		if distance_from_center > 60 && randf() < min(percent(20), percent(30) * log(distance_from_center + 60)):
+		if distance_from_center > 20 && randf() < min(percent(20), percent(30) * log(distance_from_center + 60)):
 			return Enum.BlockType.YELLOW_CHIP
 
-		if distance_from_center > 40 && randf() < min(percent(25), percent(30) * log(distance_from_center + 40)):
+		if distance_from_center > 15 && randf() < min(percent(25), percent(30) * log(distance_from_center + 40)):
 			return Enum.BlockType.RED_CHIP
 
-		if distance_from_center > 20 && randf() < min(percent(30), percent(30) * log(distance_from_center + 20)):
+		if distance_from_center > 10 && randf() < min(percent(30), percent(30) * log(distance_from_center + 20)):
 			return Enum.BlockType.GREEN_CHIP
 
 		return Enum.BlockType.BLUE_CHIP
@@ -65,6 +65,15 @@ func _generate_default(distance_from_center: float) -> Enum.BlockType:
 
 	if randf() < max(1 / distance_from_center, percent(1)):
 		return Enum.BlockType.EMPTY
+
+	if randf() < percent(0.2) * distance_from_center:
+		return Enum.BlockType.DIRT5
+	if randf() < percent(0.3) * distance_from_center:
+		return Enum.BlockType.DIRT4
+	if randf() < percent(0.4) * distance_from_center:
+		return Enum.BlockType.DIRT3
+	if randf() < percent(0.5) * distance_from_center:
+		return Enum.BlockType.DIRT2
 
 	return Enum.BlockType.DIRT
 

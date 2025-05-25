@@ -29,6 +29,10 @@ enum MiningResourceType {
 enum BlockType {
 	EMPTY,
 	DIRT,
+	DIRT2,
+	DIRT3,
+	DIRT4,
+	DIRT5,
 	WALL,
 	BLUE_CHIP,
 	GREEN_CHIP,

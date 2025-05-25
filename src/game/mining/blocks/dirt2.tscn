@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjtybvu0visdh"]
+
+[ext_resource type="Script" uid="uid://cm4qmc74gk4wj" path="res://game/mining/blocks/dirt.gd" id="1_piokg"]
+[ext_resource type="Texture2D" uid="uid://c58r0p0siafvt" path="res://assets/resources/chips/chips_white.png" id="2_bm6kr"]
+[ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/board_tiles/board_fill1.png" id="3_xkcvv"]
+[ext_resource type="AudioStream" uid="uid://cva7bu6dm5rwu" path="res://assets/sfx/smash.wav" id="4_s4rgl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pupr"]
+size = Vector2(40, 40)
+
+[node name="Dirt" type="StaticBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_piokg")
+durability = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7pupr")
+
+[node name="DirtSprite" type="Sprite2D" parent="."]
+position = Vector2(-0.134601, -0.0411035)
+scale = Vector2(0.691706, 0.720035)
+texture = ExtResource("2_bm6kr")
+
+[node name="BGSprite" type="Sprite2D" parent="."]
+position = Vector2(-0.117599, -0.117599)
+scale = Vector2(0.628675, 0.628675)
+texture = ExtResource("3_xkcvv")
+
+[node name="MinedSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_s4rgl")
+bus = &"Sound Effects"
