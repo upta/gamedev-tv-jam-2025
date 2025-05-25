@@ -1,14 +1,13 @@
 [gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dc03h7pic31q3"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w3ciw"]
-load_path = "res://.godot/imported/hoverbutton.png-35dcc6962e78aeb7ea2b4c048ba4139c.ctex"
+[ext_resource type="Texture2D" uid="uid://k7vunyycimqd" path="res://assets/resources/menus/hoverbutton.png" id="1_gv8ot"]
 
 [resource]
 content_margin_left = 18.0
 content_margin_top = 18.0
 content_margin_right = 18.0
 content_margin_bottom = 18.0
-texture = SubResource("CompressedTexture2D_w3ciw")
+texture = ExtResource("1_gv8ot")
 texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
