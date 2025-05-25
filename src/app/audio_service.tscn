@@ -1,48 +1,59 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpak1wh70kqjc"]
+[gd_scene load_steps=8 format=3 uid="uid://bpak1wh70kqjc"]
 
 [ext_resource type="Script" uid="uid://dbf1v8l7d5xq2" path="res://app/audio_service.gd" id="1_86uqd"]
 [ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="2_s2hrq"]
+[ext_resource type="AudioStream" uid="uid://dwdphhnar1c60" path="res://assets/sfx/phaser.wav" id="3_2tvxi"]
+[ext_resource type="AudioStream" uid="uid://dyuf56vlsy4we" path="res://assets/sfx/beep_low.wav" id="3_70ifp"]
+[ext_resource type="AudioStream" uid="uid://ghwpw6hih4iu" path="res://assets/sfx/Drop.wav" id="3_kyw5x"]
+[ext_resource type="AudioStream" uid="uid://b5kig328m0mdk" path="res://assets/sfx/beep_high.wav" id="4_kyw5x"]
+[ext_resource type="AudioStream" uid="uid://d1e0fbkqx2osi" path="res://assets/sfx/hit.wav" id="5_kh0b1"]
 
 [node name="AudioService" type="Node"]
 script = ExtResource("1_86uqd")
 
 [node name="GameMusicHome" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-volume_db = -15.0
+volume_db = -10.0
 bus = &"Music"
 
 [node name="GameMusicMining" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("2_s2hrq")
-volume_db = -15.0
+volume_db = -10.0
 bus = &"Music"
 
 [node name="GameStartSFX" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-volume_db = -12.0
+stream = ExtResource("3_2tvxi")
+volume_db = -8.0
 bus = &"Sound Effects"
 
 [node name="ButtonMouseOver" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-volume_db = -15.0
+stream = ExtResource("3_kyw5x")
+volume_db = -5.0
 bus = &"Sound Effects"
 
 [node name="ButtonSelectMenu" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-volume_db = -8.0
+stream = ExtResource("5_kh0b1")
+volume_db = -5.0
 bus = &"Sound Effects"
 
-[node name="ButtonSelectDecision" type="AudioStreamPlayer" parent="."]
+[node name="BeepLow" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-volume_db = -8.0
+stream = ExtResource("3_70ifp")
+bus = &"Sound Effects"
 
-[node name="Victory" type="AudioStreamPlayer" parent="."]
+[node name="BeepHigh" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-volume_db = -15.0
+stream = ExtResource("4_kyw5x")
+bus = &"Sound Effects"
 
-[node name="Victory2" type="AudioStreamPlayer" parent="."]
-volume_db = -15.0
+[node name="OutaTime" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_2tvxi")
+bus = &"Sound Effects"
 
-[connection signal="finished" from="GameMusicHome" to="." method="_on_game_music_finished"]
-[connection signal="finished" from="GameMusicMining" to="." method="_on_game_music_finished"]
-[connection signal="finished" from="ButtonSelectDecision" to="." method="_on_button_select_decision_finished"]
+[connection signal="finished" from="GameMusicHome" to="." method="_on_game_music_home_finished"]
+[connection signal="finished" from="GameMusicMining" to="." method="_on_game_music_mining_finished"]

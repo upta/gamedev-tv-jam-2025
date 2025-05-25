@@ -35,10 +35,12 @@ func _on_start_action_triggered():
 
 
 func _on_but_new_pressed() -> void:
+	AudioService.button_select_menu.play()
 	State.Scene.active_scene = "res://home_base/home_base.tscn"
 
 
 func _on_but_opt_pressed() -> void:
+	AudioService.button_select_menu.play()
 	State.Scene.active_scene = "res://main_menu/settings.tscn"
 
 
@@ -46,6 +48,9 @@ func _on_but_sel_pressed() -> void:
 	State.Scene.active_scene = "res://main_menu/level_select/level_select.tscn"
 
 
-func _on_but_opt_toggled(toggled_on: bool) -> void:
-	prints("Toggled")
-	# Replace with function body.
+func _on_but_opt_mouse_entered() -> void:
+	AudioService.button_mouse_over.play()
+
+
+func _on_but_new_mouse_entered() -> void:
+	AudioService.button_mouse_over.play()

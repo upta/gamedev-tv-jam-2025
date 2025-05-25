@@ -14,6 +14,7 @@ extends Node2D
 
 func _ready() -> void:
 	_set_camera_limit()
+	AudioService.game_music_home.play()
 
 	GUIDE.enable_mapping_context(input_context, true)
 
@@ -35,6 +36,7 @@ func _ready() -> void:
 
 func _on_exit_body_entered(_body: Node2D):
 	State.Scene.active_scene = "res://game/mining_area.tscn"
+	AudioService.game_music_home.stop()
 
 
 func _on_market_pressed():
