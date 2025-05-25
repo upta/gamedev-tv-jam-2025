@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=10 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
 [ext_resource type="TileSet" uid="uid://cscguflr1waw8" path="res://home_base/home_base_tileset.tres" id="3_fbnj6"]
 [ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="7_2f1hc"]
+[ext_resource type="PackedScene" uid="uid://b3fegi50mimbt" path="res://home_base/upgrade_port.tscn" id="8_n6jcb"]
 [ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://bdeymf2o7kll2" path="res://home_base/seller.tscn" id="13_orf3j"]
 [ext_resource type="PackedScene" uid="uid://ca0gqgaf1dci2" path="res://player/home_base_player.tscn" id="13_ui117"]
@@ -57,6 +58,12 @@ unique_name_in_owner = true
 tile_map_data = PackedByteArray("AAD/////CAAAAAAAAAD//wAACAAAAAAAAAD//wEACAAAAAAAAAD//wIACAAAAAAAAAD//wMACAAAAAAAAAD//wQACAAAAAAAAAD//wUACAAAAAAAAAD//wYACAAAAAAAAAD//wcACAAAAAAAAAD//wgACAAAAAAAAAD//wkACAAAAAAAAAD//woACAAAAAAAAAD//wsACAAAAAAAAAD//wwACAAAAAAAAAD//w0ACAAAAAAAAAD//w4ACAAAAAAAAAAAAA4ACAAAAAAAAAABAA4ACAAAAAAAAAACAA4ACAAAAAAAAAADAA4ACAAAAAAAAAAEAA4ACAAAAAAAAAAFAA4ACAAAAAAAAAAGAA4ACAAAAAAAAAAHAA4ACAAAAAAAAAAIAA4ACAAAAAAAAAAJAA4ACAAAAAAAAAAKAA4ACAAAAAAAAAALAA4ACAAAAAAAAAAMAA4ACAAAAAAAAAANAA4ACAAAAAAAAAAOAA4ACAAAAAAAAAAPAA4ACAAAAAAAAAAQAA4ACAAAAAAAAAARAA4ACAAAAAAAAAASAA4ACAAAAAAAAAATAA4ACAAAAAAAAAAUAA4ACAAAAAAAAAAAAP//CAAAAAAAAAABAP//CAAAAAAAAAACAP//CAAAAAAAAAADAP//CAAAAAAAAAAEAP//CAAAAAAAAAAFAP//CAAAAAAAAAAGAP//CAAAAAAAAAAHAP//CAAAAAAAAAAIAP//CAAAAAAAAAAJAP//CAAAAAAAAAAKAP//CAAAAAAAAAALAP//CAAAAAAAAAAMAP//CAAAAAAAAAANAP//CAAAAAAAAAAOAP//CAAAAAAAAAAPAP//CAAAAAAAAAAQAP//CAAAAAAAAAARAP//CAAAAAAAAAASAP//CAAAAAAAAAATAP//CAAAAAAAAAAUAP//CAAAAAAAAAAUAA0ACAAAAAAAAAAUAAwACAAAAAAAAAAUAAsACAAAAAAAAAAUAAoACAAAAAAAAAAUAAkACAAAAAAAAAAUAAgACAAAAAAAAAAUAAcACAAAAAAAAAAUAAYACAAAAAAAAAAUAAUACAAAAAAAAAAUAAQACAAAAAAAAAAUAAMACAAAAAAAAAAUAAIACAAAAAAAAAAUAAEACAAAAAAAAAAUAAAACAAAAAAAAAA=")
 tile_set = ExtResource("3_fbnj6")
 metadata/_edit_lock_ = true
+
+[node name="Upgrades" type="Node2D" parent="."]
+
+[node name="MineTimeUpgrade" parent="Upgrades" instance=ExtResource("8_n6jcb")]
+position = Vector2(995, 106)
+type = 3
 
 [node name="Exit" type="Area2D" parent="."]
 unique_name_in_owner = true
