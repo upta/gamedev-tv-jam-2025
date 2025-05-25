@@ -20,15 +20,9 @@ func _ready() -> void:
 	shop.pressed.connect(_on_shop_pressed)
 	mint.pressed.connect(_on_mint_pressed)
 
-
-	#State.Inventory.add_mining_resource(Enum.MiningResourceType.BLUE_CHIP, 20)
-	#State.Inventory.add_mining_resource(Enum.MiningResourceType.GREEN_CHIP, 20)
-	#State.Inventory.add_mining_resource(Enum.MiningResourceType.RED_CHIP, 20)
-	#State.Inventory.add_mining_resource(Enum.MiningResourceType.YELLOW_CHIP, 20)
-	#
-	#Service.Inventory.add_coins(Enum.CoinType.A_COIN, 5)
-
-
+	if State.Tutorial.should_show_opening_tutorial:
+		State.Tutorial.should_show_opening_tutorial = false
+		_show_tutorial()
 
 
 func _on_market_pressed():
@@ -58,3 +52,42 @@ func _set_camera_limit():
 	camera.limit_left = left
 	camera.limit_right = left + width
 	camera.limit_bottom = top + height
+
+
+func _show_tutorial():
+	get_tree().paused = true
+	$Tutorial.show()
+	$Tutorial/Step1.show()
+	await %Step1Button.pressed
+	$Tutorial/Step1.hide()
+
+	$Tutorial/Step2.show()
+	await %Step2Button.pressed
+	$Tutorial/Step2.hide()
+
+	$Tutorial/Step3.show()
+	await %Step3Button.pressed
+	$Tutorial/Step3.hide()
+
+	$Tutorial/Step4.show()
+	await %Step4Button.pressed
+	$Tutorial/Step4.hide()
+
+	$Tutorial/Step5.show()
+	await %Step5Button.pressed
+	$Tutorial/Step5.hide()
+
+	$Tutorial/Step6.show()
+	await %Step6Button.pressed
+	$Tutorial/Step6.hide()
+
+	$Tutorial/Step7.show()
+	await %Step7Button.pressed
+	$Tutorial/Step7.hide()
+
+	$Tutorial/Step8.show()
+	await %Step8Button.pressed
+	$Tutorial/Step8.hide()
+
+	$Tutorial.hide()
+	get_tree().paused = false
