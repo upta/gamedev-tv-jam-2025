@@ -10,6 +10,7 @@ signal update_bomb_action_time(time: float)
 @export var bomb: PackedScene
 
 var base_bomb_rate: float
+var mining_strength: int
 
 var can_mine: bool:
 	get: return last_mined_delta >= base_mining_rate
@@ -37,6 +38,7 @@ var last_bomb_delta: float = 0.0:
 
 func _ready() -> void:
 	base_bomb_rate = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.BOMB, "cooldown")
+	mining_strength = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.MINE_POWER, "strength")
 	$AudioListener2D.make_current()
 	bomb_action.completed.connect(_try_drop_bomb)
 
@@ -58,7 +60,7 @@ func _handle_collision(collider: Object):
 
 
 func _try_mine(mineable: Mineable):
-	if can_mine and mineable.try_mine():
+	if can_mine and mineable.try_mine(mining_strength):
 		last_mined_delta = 0.0
 		sfx_hit.position = mineable.global_position - global_position
 		sfx_hit.play()

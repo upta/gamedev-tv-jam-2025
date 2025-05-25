@@ -72,6 +72,11 @@ upgrade_summary = NodePath("../../UpgradeSummary")
 position = Vector2(1096, 224)
 upgrade_summary = NodePath("../../UpgradeSummary")
 
+[node name="MiningUgrade" parent="Upgrades" node_paths=PackedStringArray("upgrade_summary") instance=ExtResource("8_n6jcb")]
+position = Vector2(1199, 224)
+type = 2
+upgrade_summary = NodePath("../../UpgradeSummary")
+
 [node name="Exit" type="Area2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(192, 0)
