@@ -54,6 +54,7 @@ func _process(delta: float) -> void:
 
 
 func _handle_collision(collider: Object):
+	velocity = Vector2.ZERO
 	if collider is Mineable:
 		if facing_direction == Enum.vector_to_orthogonal_direction(collider.global_position - global_position):
 			_try_mine(collider)
