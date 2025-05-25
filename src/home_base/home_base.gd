@@ -14,7 +14,6 @@ extends Node2D
 
 func _ready() -> void:
 	_set_camera_limit()
-	AudioService.game_music_home.play()
 
 	GUIDE.enable_mapping_context(input_context, true)
 

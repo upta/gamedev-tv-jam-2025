@@ -7,6 +7,7 @@ extends Control
 func _ready() -> void:
 	GUIDE.enable_mapping_context(input_context, true)
 	start_action.triggered.connect(_on_start_action_triggered)
+	_music_playing()
 
 	# get size scale to 1024x1024
 	var viewPort = get_viewport().get_visible_rect().size
@@ -28,6 +29,12 @@ func _ready() -> void:
 	$butSel.position = Vector2(xUIScale + 10, yUIScale + 5)
 	$butOpt.size = Vector2(xUIScale, yUIScale)
 	$butOpt.position = Vector2(xUIScale + 10, 5)
+
+
+func _music_playing():
+	if AudioService.game_music_home.playing:
+		pass
+	else: AudioService.game_music_home.play()
 
 
 func _on_start_action_triggered():
