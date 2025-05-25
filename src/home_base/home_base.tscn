@@ -59,9 +59,356 @@ metadata/_edit_lock_ = true
 
 [node name="Boundary" type="TileMapLayer" parent="."]
 unique_name_in_owner = true
-tile_map_data = PackedByteArray("AAD/////CAAAAAAAAAD//wAACAAAAAAAAAD//wEACAAAAAAAAAD//wIACAAAAAAAAAD//wMACAAAAAAAAAD//wQACAAAAAAAAAD//wUACAAAAAAAAAD//wYACAAAAAAAAAD//wcACAAAAAAAAAD//wgACAAAAAAAAAD//wkACAAAAAAAAAD//woACAAAAAAAAAD//wsACAAAAAAAAAD//wwACAAAAAAAAAD//w0ACAAAAAAAAAD//w4ACAAAAAAAAAAAAA4ACAAAAAAAAAABAA4ACAAAAAAAAAACAA4ACAAAAAAAAAADAA4ACAAAAAAAAAAEAA4ACAAAAAAAAAAFAA4ACAAAAAAAAAAGAA4ACAAAAAAAAAAHAA4ACAAAAAAAAAAIAA4ACAAAAAAAAAAJAA4ACAAAAAAAAAAKAA4ACAAAAAAAAAALAA4ACAAAAAAAAAAMAA4ACAAAAAAAAAANAA4ACAAAAAAAAAAOAA4ACAAAAAAAAAAPAA4ACAAAAAAAAAAQAA4ACAAAAAAAAAARAA4ACAAAAAAAAAASAA4ACAAAAAAAAAATAA4ACAAAAAAAAAAUAA4ACAAAAAAAAAAAAP//CAAAAAAAAAABAP//CAAAAAAAAAACAP//CAAAAAAAAAADAP//CAAAAAAAAAAEAP//CAAAAAAAAAAFAP//CAAAAAAAAAAGAP//CAAAAAAAAAAHAP//CAAAAAAAAAAIAP//CAAAAAAAAAAJAP//CAAAAAAAAAAKAP//CAAAAAAAAAALAP//CAAAAAAAAAAMAP//CAAAAAAAAAANAP//CAAAAAAAAAAOAP//CAAAAAAAAAAPAP//CAAAAAAAAAAQAP//CAAAAAAAAAARAP//CAAAAAAAAAASAP//CAAAAAAAAAATAP//CAAAAAAAAAAUAP//CAAAAAAAAAAUAA0ACAAAAAAAAAAUAAwACAAAAAAAAAAUAAsACAAAAAAAAAAUAAoACAAAAAAAAAAUAAkACAAAAAAAAAAUAAgACAAAAAAAAAAUAAcACAAAAAAAAAAUAAYACAAAAAAAAAAUAAUACAAAAAAAAAAUAAQACAAAAAAAAAAUAAMACAAAAAAAAAAUAAIACAAAAAAAAAAUAAEACAAAAAAAAAAUAAAACAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD/////CAAAAAAAAAD//wAACAAAAAAAAAD//wEACAAAAAAAAAD//wIACAAAAAAAAAD//wMACAAAAAAAAAD//wQACAAAAAAAAAD//wUACAAAAAAAAAD//wYACAAAAAAAAAD//wcACAAAAAAAAAD//wgACAAAAAAAAAD//wkACAAAAAAAAAD//woACAAAAAAAAAD//wsACAAAAAAAAAD//wwACAAAAAAAAAD//w0ACAAAAAAAAAAAAP//CAAAAAAAAAABAP//CAAAAAAAAAACAP//CAAAAAAAAAADAP//CAAAAAAAAAAEAP//CAAAAAAAAAAFAP//CAAAAAAAAAAGAP//CAAAAAAAAAAHAP//CAAAAAAAAAAIAP//CAAAAAAAAAAJAP//CAAAAAAAAAAKAP//CAAAAAAAAAALAP//CAAAAAAAAAAMAP//CAAAAAAAAAANAP//CAAAAAAAAAAOAP//CAAAAAAAAAAPAP//CAAAAAAAAAAQAP//CAAAAAAAAAARAP//CAAAAAAAAAASAP//CAAAAAAAAAATAP//CAAAAAAAAAAUAP//CAAAAAAAAAAUAA0ACAAAAAAAAAAUAAwACAAAAAAAAAAUAAsACAAAAAAAAAAUAAoACAAAAAAAAAAUAAkACAAAAAAAAAAUAAgACAAAAAAAAAAUAAcACAAAAAAAAAAUAAYACAAAAAAAAAAUAAUACAAAAAAAAAAUAAQACAAAAAAAAAAUAAMACAAAAAAAAAAUAAIACAAAAAAAAAAUAAEACAAAAAAAAAAUAAAACAAAAAAAAAAAAA0ACAAAAAAAAAABAA0ACAAAAAAAAAACAA0ACAAAAAAAAAADAA0ACAAAAAAAAAAEAA0ACAAAAAAAAAAFAA0ACAAAAAAAAAAGAA0ACAAAAAAAAAAHAA0ACAAAAAAAAAAIAA0ACAAAAAAAAAAJAA0ACAAAAAAAAAAKAA0ACAAAAAAAAAALAA0ACAAAAAAAAAAMAA0ACAAAAAAAAAANAA0ACAAAAAAAAAAOAA0ACAAAAAAAAAAPAA0ACAAAAAAAAAAQAA0ACAAAAAAAAAARAA0ACAAAAAAAAAASAA0ACAAAAAAAAAATAA0ACAAAAAAAAAA=")
 tile_set = ExtResource("3_fbnj6")
 metadata/_edit_lock_ = true
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="DoorToDisplay" type="Node2D" parent="Lines"]
+
+[node name="Circles" type="Node2D" parent="Lines/DoorToDisplay"]
+
+[node name="Left" type="Line2D" parent="Lines/DoorToDisplay/Circles"]
+position = Vector2(-942, -534)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Right" type="Line2D" parent="Lines/DoorToDisplay/Circles"]
+position = Vector2(-878, -534)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Lines" type="Node2D" parent="Lines/DoorToDisplay"]
+
+[node name="Left" type="Node2D" parent="Lines/DoorToDisplay/Lines"]
+
+[node name="Top" type="Line2D" parent="Lines/DoorToDisplay/Lines/Left"]
+position = Vector2(-684, 26)
+points = PackedVector2Array(870, 54, 828, 54, 812, 38, 812, 6, 800, 6)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Bottom" type="Line2D" parent="Lines/DoorToDisplay/Lines/Left"]
+position = Vector2(-688, 42)
+points = PackedVector2Array(876, 42, 866, 50, 834, 50, 816, 38, 804, 38)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Right" type="Node2D" parent="Lines/DoorToDisplay/Lines"]
+
+[node name="Top" type="Line2D" parent="Lines/DoorToDisplay/Lines/Right"]
+position = Vector2(-626, 40)
+points = PackedVector2Array(876, 40, 850, 40, 822, 70, 772, 70, 754, 90, 740, 90)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Bottom" type="Line2D" parent="Lines/DoorToDisplay/Lines/Right"]
+position = Vector2(-626, 40)
+points = PackedVector2Array(878, 44, 870, 50, 854, 50, 824, 80, 776, 80, 754, 104, 740, 104)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="ResourceToMinter" type="Node2D" parent="Lines"]
+
+[node name="First" type="Node2D" parent="Lines/ResourceToMinter"]
+position = Vector2(0, -160)
+
+[node name="Line2D" type="Line2D" parent="Lines/ResourceToMinter/First"]
+position = Vector2(64, -308)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D4" type="Line2D" parent="Lines/ResourceToMinter/First"]
+position = Vector2(64, -292)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D5" type="Line2D" parent="Lines/ResourceToMinter/First"]
+position = Vector2(64, -276)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D6" type="Line2D" parent="Lines/ResourceToMinter/First"]
+position = Vector2(64, -260)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Second" type="Node2D" parent="Lines/ResourceToMinter"]
+position = Vector2(-16, -32)
+
+[node name="Line2D" type="Line2D" parent="Lines/ResourceToMinter/Second"]
+position = Vector2(64, -308)
+points = PackedVector2Array(32, 372, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D4" type="Line2D" parent="Lines/ResourceToMinter/Second"]
+position = Vector2(64, -292)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D5" type="Line2D" parent="Lines/ResourceToMinter/Second"]
+position = Vector2(64, -276)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D6" type="Line2D" parent="Lines/ResourceToMinter/Second"]
+position = Vector2(64, -260)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Third" type="Node2D" parent="Lines/ResourceToMinter"]
+position = Vector2(-32, 96)
+
+[node name="Line2D" type="Line2D" parent="Lines/ResourceToMinter/Third"]
+position = Vector2(64, -308)
+points = PackedVector2Array(32, 244, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D4" type="Line2D" parent="Lines/ResourceToMinter/Third"]
+position = Vector2(64, -292)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D5" type="Line2D" parent="Lines/ResourceToMinter/Third"]
+position = Vector2(64, -276)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D6" type="Line2D" parent="Lines/ResourceToMinter/Third"]
+position = Vector2(64, -260)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Fourth" type="Node2D" parent="Lines/ResourceToMinter"]
+position = Vector2(-48, 224)
+
+[node name="Line2D" type="Line2D" parent="Lines/ResourceToMinter/Fourth"]
+position = Vector2(64, -308)
+points = PackedVector2Array(32, 244, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D4" type="Line2D" parent="Lines/ResourceToMinter/Fourth"]
+position = Vector2(64, -292)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D5" type="Line2D" parent="Lines/ResourceToMinter/Fourth"]
+position = Vector2(64, -276)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="Line2D6" type="Line2D" parent="Lines/ResourceToMinter/Fourth"]
+position = Vector2(64, -260)
+points = PackedVector2Array(32, 464, 32, 784, 48, 800, 132, 800)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
+
+[node name="MinterToEthernet" type="Node2D" parent="Lines"]
+
+[node name="Circles" type="Node2D" parent="Lines/MinterToEthernet"]
+position = Vector2(18, 0)
+
+[node name="First" type="Line2D" parent="Lines/MinterToEthernet/Circles"]
+position = Vector2(32, -24)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Second" type="Line2D" parent="Lines/MinterToEthernet/Circles"]
+position = Vector2(32, 8)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Third" type="Line2D" parent="Lines/MinterToEthernet/Circles"]
+position = Vector2(32, 40)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Fourth" type="Line2D" parent="Lines/MinterToEthernet/Circles"]
+position = Vector2(32, 72)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Lines" type="Node2D" parent="Lines/MinterToEthernet"]
+
+[node name="First" type="Line2D" parent="Lines/MinterToEthernet/Lines"]
+position = Vector2(0, -2)
+points = PackedVector2Array(726, 356, 746, 356, 746, 450, 826, 542, 960, 592, 1178, 592)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Second" type="Line2D" parent="Lines/MinterToEthernet/Lines"]
+position = Vector2(6, 128)
+points = PackedVector2Array(720, 356, 740, 356, 810, 436, 954, 494, 1172, 494)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Third" type="Line2D" parent="Lines/MinterToEthernet/Lines"]
+position = Vector2(4, 254)
+points = PackedVector2Array(722, 354, 812, 354, 956, 400, 1174, 400)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Fourth" type="Line2D" parent="Lines/MinterToEthernet/Lines"]
+position = Vector2(4, 254)
+points = PackedVector2Array(722, 486, 740, 486, 812, 432, 956, 432, 1174, 432)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="EthernetToCmos" type="Node2D" parent="Lines"]
+
+[node name="Circles" type="Node2D" parent="Lines/EthernetToCmos"]
+
+[node name="Left" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
+position = Vector2(-254, -496)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Middle" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
+position = Vector2(-238, -496)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Right" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
+position = Vector2(-222, -496)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Lines" type="Node2D" parent="Lines/EthernetToCmos"]
+
+[node name="Left" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
+points = PackedVector2Array(1224, 568, 1224, 544, 880, 352, 880, 124)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Middle" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
+position = Vector2(16, 0)
+points = PackedVector2Array(1224, 568, 1224, 536, 880, 344, 880, 124)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Right" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
+position = Vector2(32, 0)
+points = PackedVector2Array(1224, 568, 1224, 528, 880, 336, 880, 124)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="CmosToMarket" type="Node2D" parent="Lines"]
+
+[node name="Lines" type="Node2D" parent="Lines/CmosToMarket"]
+
+[node name="Horizontal" type="Line2D" parent="Lines/CmosToMarket/Lines"]
+points = PackedVector2Array(872, 64, 794, 64)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Vertical" type="Line2D" parent="Lines/CmosToMarket/Lines"]
+points = PackedVector2Array(816, 38, 816, 130)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Circles" type="Node2D" parent="Lines/CmosToMarket"]
+
+[node name="Top" type="Line2D" parent="Lines/CmosToMarket/Circles"]
+position = Vector2(-318, -582)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Bottom" type="Line2D" parent="Lines/CmosToMarket/Circles"]
+position = Vector2(-318, -478)
+points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
+closed = true
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="CmosToUpgrade" type="Node2D" parent="Lines"]
+
+[node name="Horizontal" type="Line2D" parent="Lines/CmosToUpgrade"]
+points = PackedVector2Array(918, 64, 972, 64)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="UpgradeToItems" type="Node2D" parent="Lines"]
+
+[node name="Left" type="Node2D" parent="Lines/UpgradeToItems"]
+
+[node name="Main" type="Line2D" parent="Lines/UpgradeToItems/Left"]
+position = Vector2(320, 134)
+points = PackedVector2Array(816, 38, 816, 122, 800, 138, 768, 138)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Small" type="Line2D" parent="Lines/UpgradeToItems/Left"]
+position = Vector2(320, 134)
+points = PackedVector2Array(768, 120, 768, 166)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Right" type="Node2D" parent="Lines/UpgradeToItems"]
+position = Vector2(16, 0)
+
+[node name="Main" type="Line2D" parent="Lines/UpgradeToItems/Right"]
+position = Vector2(320, 134)
+points = PackedVector2Array(816, 38, 816, 122, 832, 138, 864, 138)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
+
+[node name="Small" type="Line2D" parent="Lines/UpgradeToItems/Right"]
+position = Vector2(416, 132)
+points = PackedVector2Array(768, 120, 768, 166)
+width = 2.0
+default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="Upgrades" type="Node2D" parent="."]
 
@@ -85,26 +432,33 @@ type = 1
 upgrade_summary = NodePath("../../UpgradeSummary")
 
 [node name="MiningDoor" parent="." instance=ExtResource("5_n2u6b")]
-position = Vector2(192, 32)
+position = Vector2(224, 32)
 
 [node name="AcoinMinter" parent="." instance=ExtResource("13_0g1cd")]
 offset_left = 128.0
-offset_top = 480.0
+offset_top = 320.0
 offset_right = 728.0
-offset_bottom = 552.0
+offset_bottom = 392.0
 
 [node name="BeecoinMinter" parent="." instance=ExtResource("13_0g1cd")]
 offset_left = 128.0
-offset_top = 608.0
+offset_top = 448.0
 offset_right = 728.0
-offset_bottom = 680.0
+offset_bottom = 520.0
 coin_type = 1
 
 [node name="SeacoinMinter" parent="." instance=ExtResource("13_0g1cd")]
 offset_left = 128.0
-offset_top = 736.0
+offset_top = 576.0
 offset_right = 728.0
-offset_bottom = 808.0
+offset_bottom = 648.0
+coin_type = 2
+
+[node name="DeezcoinMinter" parent="." instance=ExtResource("13_0g1cd")]
+offset_left = 128.0
+offset_top = 704.0
+offset_right = 728.0
+offset_bottom = 776.0
 coin_type = 2
 
 [node name="Seller" parent="." instance=ExtResource("13_orf3j")]
@@ -134,7 +488,7 @@ position = Vector2(58, 98)
 shape = SubResource("RectangleShape2D_eb3fi")
 
 [node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
-position = Vector2(256, 128)
+position = Vector2(224, 144)
 
 [node name="Camera2D" type="Camera2D" parent="HomeBasePlayer"]
 unique_name_in_owner = true
