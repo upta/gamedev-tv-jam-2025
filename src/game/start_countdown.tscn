@@ -1,15 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://cnxuqu35cj1mi"]
+[gd_scene load_steps=13 format=3 uid="uid://cnxuqu35cj1mi"]
 
 [ext_resource type="Script" uid="uid://bkgvdcll8rl" path="res://game/start_countdown.gd" id="1_yva5m"]
 [ext_resource type="Texture2D" uid="uid://cdv8dmm86lhak" path="res://assets/characters/chipmunk/portrait/cpor1.png" id="2_7rwqi"]
 [ext_resource type="Texture2D" uid="uid://dja42r1s07753" path="res://assets/resources/pickaxe/pickaxe.png" id="3_1ujmk"]
-[ext_resource type="Texture2D" uid="uid://c58r0p0siafvt" path="res://assets/resources/chips/chips_white.png" id="4_0myrh"]
 [ext_resource type="Texture2D" uid="uid://c6runtmx1soam" path="res://assets/resources/boom/boom0.png" id="4_qfrmk"]
 [ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="5_1vo6a"]
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="6_msh8x"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="7_17v4q"]
 [ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="8_jupuk"]
+[ext_resource type="Texture2D" uid="uid://c06dpb2t3tthi" path="res://assets/resources/dirt/dirt100.png" id="9_msh8x"]
 [ext_resource type="Texture2D" uid="uid://bnv4x8f7bpcbq" path="res://assets/resources/capacitor/capacitor_white.png" id="10_0tcns"]
+[ext_resource type="Texture2D" uid="uid://dosgfpxvaljk3" path="res://assets/resources/dirt/dirt050.png" id="10_17v4q"]
+[ext_resource type="Texture2D" uid="uid://rt4i1h3xcgcr" path="res://assets/resources/dirt/dirt020.png" id="11_jupuk"]
 
 [node name="StartCountdown" type="CanvasLayer"]
 process_mode = 3
@@ -90,7 +92,7 @@ texture = ExtResource("4_qfrmk")
 
 [node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Bomb"]
 layout_mode = 2
-text = "Press e to drop bombs when ready"
+text = " Press \"e\" to drop bombs when ready"
 
 [node name="Chips" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -120,12 +122,21 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Dirt"]
 layout_mode = 2
-texture = ExtResource("4_0myrh")
+texture = ExtResource("9_msh8x")
+
+[node name="TextureRect2" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Dirt"]
+layout_mode = 2
+texture = ExtResource("10_17v4q")
+
+[node name="TextureRect3" type="TextureRect" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Dirt"]
+layout_mode = 2
+texture = ExtResource("11_jupuk")
 
 [node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Dirt"]
 layout_mode = 2
-text = "Bits just get in your way. Mine through them
- Darker ones take more hits to mine"
+text = " Bits just get in your way.
+ Mine through them.
+ "
 
 [node name="Wall" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
