@@ -22,7 +22,7 @@ func _ready() -> void:
 	var xUIScale = (xScale) * 250
 	var yUIScale = (yScale) * 125
 
-	prints(xUIScale, yUIScale)
+	#prints(xUIScale, yUIScale)
 	$butNew.size = Vector2(xUIScale, yUIScale)
 	$butNew.position = Vector2(5, 5)
 	$butSel.size = Vector2(xUIScale, yUIScale)
