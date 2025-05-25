@@ -31,7 +31,7 @@ func update_price(coin_type: Enum.CoinType, price: float):
 class PriceHistory:
 	var coin: CoinResource
 	var current_price: float
-	var history: Array[float]
+	var history: Array[float] = []
 
 	func _init(_coin: CoinResource):
 		coin = _coin

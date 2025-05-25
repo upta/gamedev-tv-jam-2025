@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
 [ext_resource type="TileSet" uid="uid://cscguflr1waw8" path="res://home_base/home_base_tileset.tres" id="3_fbnj6"]
-[ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="7_2f1hc"]
+[ext_resource type="PackedScene" uid="uid://cfx01dud2km8a" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
 [ext_resource type="PackedScene" uid="uid://b3fegi50mimbt" path="res://home_base/upgrade_port.tscn" id="8_n6jcb"]
 [ext_resource type="PackedScene" uid="uid://bb20ib4m7dplu" path="res://mint/minter.tscn" id="13_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://bdeymf2o7kll2" path="res://home_base/seller.tscn" id="13_orf3j"]
@@ -105,6 +105,10 @@ coin_type = 2
 [node name="Seller" parent="." instance=ExtResource("13_orf3j")]
 position = Vector2(1240, 640)
 
+[node name="MarketPrices" parent="." instance=ExtResource("7_2f1hc")]
+offset_left = 480.0
+offset_right = 800.0
+
 [node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
 position = Vector2(256, 128)
 
@@ -117,8 +121,6 @@ limit_bottom = 896
 metadata/_edit_lock_ = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_2f1hc")
 volume_db = -6.0
 autoplay = true
 bus = &"Music"
-parameters/looping = true

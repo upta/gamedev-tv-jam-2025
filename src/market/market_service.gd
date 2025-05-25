@@ -15,8 +15,7 @@ func fluxuate_prices():
 		var random_factor := randf_range(-0.15, 0.15)
 		# Combined change (can go slightly negative but mostly positive)
 		var change_percent := trend_factor + random_factor
-		var new_price := current * (1.0 + change_percent)
-
+		var new_price := current * (1.0 + change_percent)		
 		State.Market.update_price(coin_type, new_price)
 
 
