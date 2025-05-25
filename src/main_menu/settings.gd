@@ -3,8 +3,6 @@ class_name Settings extends Control
 signal closed
 
 
-var _bus_values = {}
-
 func _on_master_audio_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(value))
 
