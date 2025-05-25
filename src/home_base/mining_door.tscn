@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhoynj4y8r6es"]
+
+[ext_resource type="PackedScene" uid="uid://d1jvudml7fra5" path="res://interaction/interactable.tscn" id="1_3ykub"]
+[ext_resource type="Script" uid="uid://c21pem2unsqpn" path="res://home_base/mining_door.gd" id="1_13yxg"]
+[ext_resource type="Texture2D" uid="uid://h30bn282ouhu" path="res://assets/resources/minter/minedoor.png" id="1_k75bu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2u6b"]
+size = Vector2(128, 64)
+
+[node name="MiningDoor" type="Node2D"]
+script = ExtResource("1_13yxg")
+
+[node name="Interactable" parent="." instance=ExtResource("1_3ykub")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("RectangleShape2D_n2u6b")
+
+[node name="MiningDoor" type="Sprite2D" parent="."]
+texture = ExtResource("1_k75bu")
