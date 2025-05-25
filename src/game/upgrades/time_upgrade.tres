@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://cyqwdatsworxq"]
 
 [ext_resource type="Script" uid="uid://ba4na06d1jeju" path="res://game/upgrades/time_upgrade.gd" id="1_jhn1g"]
-[ext_resource type="Texture2D" uid="uid://cxxkmreen05i6" path="res://assets/resources/upgrades/empty_energy.png" id="1_xp3w7"]
+[ext_resource type="Texture2D" uid="uid://u2b04ejg53ua" path="res://assets/resources/upgrades/clock1.png" id="1_xp3w7"]
 
 [resource]
 script = ExtResource("1_jhn1g")
