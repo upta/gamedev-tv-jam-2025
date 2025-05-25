@@ -7,7 +7,6 @@ extends Node2D
 @onready var mint: Button = %Mint
 @onready var mining: Button = %Mining
 
-@onready var exit: Area2D = %MiningDoor
 @onready var boundary: TileMapLayer = %Boundary
 @onready var camera: Camera2D = %Camera2D
 
@@ -21,7 +20,6 @@ func _ready() -> void:
 	shop.pressed.connect(_on_shop_pressed)
 	mint.pressed.connect(_on_mint_pressed)
 
-	exit.body_entered.connect(_on_exit_body_entered)
 
 	#State.Inventory.add_mining_resource(Enum.MiningResourceType.BLUE_CHIP, 20)
 	#State.Inventory.add_mining_resource(Enum.MiningResourceType.GREEN_CHIP, 20)
@@ -31,9 +29,6 @@ func _ready() -> void:
 	#Service.Inventory.add_coins(Enum.CoinType.A_COIN, 5)
 
 
-func _on_exit_body_entered(_body: Node2D):
-	State.Scene.active_scene = "res://game/mining_area.tscn"
-	AudioService.game_music_home.stop()
 
 
 func _on_market_pressed():
