@@ -47,15 +47,21 @@ func _on_held_coin_type_changed(old: Enum.CoinType, new: Enum.CoinType):
 func _on_input_interacted():
 	if Service.Mint.can_craft(coin_type) and not Service.Inventory.has_held_coin():
 		Service.Mint.mint_coin(coin_type, 1)
+	else:
+		$NopeSFX.play()
 
 
 func _on_output_interacted():
 	if Service.Inventory.has_held_coin():
 		if State.Inventory.held_coin_type == coin_type:
 			Service.Inventory.return_coin()
+		else:
+			$NopeSFX.play()
 	else:
 		if State.Inventory.coins.get(coin_type, 0) > 0:
 			Service.Inventory.pick_up_coin(coin_type)
+		else:
+			$NopeSFX.play()
 
 
 func _update_recipe():

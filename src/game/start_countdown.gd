@@ -16,7 +16,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	elapsed_time += delta
 	var time_left = ceili(countdown_time - elapsed_time)
-	$"Countdown Label".text = str(time_left)
+	$CountdownLabel.text = str(time_left)
 
 	if time_left > 0:
 		if last_countdown_number != time_left:
@@ -33,6 +33,12 @@ func pause_game():
 
 
 func end_countdown():
+	$CountdownLabel.hide()
+	if State.Tutorial.should_show_mining_tutorial:
+		State.Tutorial.should_show_mining_tutorial = false
+		$Tutorial.show()
+		await %ContinueButton.pressed
+
 	get_tree().paused = false
 	hide()
 	AudioService.beep_high.play()
