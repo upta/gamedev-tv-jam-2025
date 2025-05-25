@@ -19,11 +19,11 @@ func _ready() -> void:
 	coin_list.selected.connect(_on_coin_list_selected)
 
 	# just to get some test data in there
-	Service.Market.fluxuate_prices()
-	Service.Market.fluxuate_prices()
-	Service.Market.fluxuate_prices()
-	Service.Market.fluxuate_prices()
-	Service.Market.fluxuate_prices()
+	Service.Market.fluctuate_prices()
+	Service.Market.fluctuate_prices()
+	Service.Market.fluctuate_prices()
+	Service.Market.fluctuate_prices()
+	Service.Market.fluctuate_prices()
 
 	# hacky way to hide the mouse coordinate position, since it doesn't actually expose a way
 	graph.get_node("PlotArea/Coordinate").visible = false

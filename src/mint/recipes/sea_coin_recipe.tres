@@ -1,17 +1,15 @@
-[gd_resource type="Resource" script_class="RecipeResource" load_steps=7 format=3 uid="uid://cm2i87cmnmqyh"]
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=6 format=3 uid="uid://cm2i87cmnmqyh"]
 
 [ext_resource type="Script" uid="uid://b6jprnqs18iyp" path="res://mint/recipes/recipe_resource.gd" id="1_g4s7b"]
 [ext_resource type="Resource" uid="uid://ch0vk4b6srdgp" path="res://market/coins/sea_coin.tres" id="2_bnlhd"]
 [ext_resource type="Script" uid="uid://d0vocvf6us5ft" path="res://game/resources/mining_resource.gd" id="2_k6j1q"]
 [ext_resource type="Resource" uid="uid://dw66prwy4wlku" path="res://game/resources/blue_chip.tres" id="3_rkrpa"]
-[ext_resource type="Resource" uid="uid://bu3fhegdriheo" path="res://game/resources/red_chip.tres" id="4_5fgwg"]
 [ext_resource type="Resource" uid="uid://0x6y3yw4sskj" path="res://game/resources/yellow_chip.tres" id="5_wugts"]
 
 [resource]
 script = ExtResource("1_g4s7b")
 coin = ExtResource("2_bnlhd")
 resources = Dictionary[ExtResource("2_k6j1q"), int]({
-ExtResource("3_rkrpa"): 1,
-ExtResource("4_5fgwg"): 2,
+ExtResource("3_rkrpa"): 2,
 ExtResource("5_wugts"): 2
 })
