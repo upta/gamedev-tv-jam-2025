@@ -310,21 +310,21 @@ default_color = Color(0.827451, 0.772549, 0.392157, 1)
 [node name="Circles" type="Node2D" parent="Lines/EthernetToCmos"]
 
 [node name="Left" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
-position = Vector2(-254, -496)
+position = Vector2(-254, -506)
 points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="Middle" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
-position = Vector2(-238, -496)
+position = Vector2(-238, -506)
 points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="Right" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
-position = Vector2(-222, -496)
+position = Vector2(-222, -506)
 points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 616, 1136, 620, 1132, 620, 1128, 616)
 closed = true
 width = 2.0
@@ -333,19 +333,19 @@ default_color = Color(0.827451, 0.772549, 0.392157, 1)
 [node name="Lines" type="Node2D" parent="Lines/EthernetToCmos"]
 
 [node name="Left" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
-points = PackedVector2Array(1224, 568, 1224, 544, 880, 352, 880, 124)
+points = PackedVector2Array(1224, 568, 1224, 544, 880, 352, 880, 114)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="Middle" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
 position = Vector2(16, 0)
-points = PackedVector2Array(1224, 568, 1224, 536, 880, 344, 880, 124)
+points = PackedVector2Array(1224, 568, 1224, 536, 880, 344, 880, 114)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="Right" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
 position = Vector2(32, 0)
-points = PackedVector2Array(1224, 568, 1224, 528, 880, 336, 880, 124)
+points = PackedVector2Array(1224, 568, 1224, 528, 880, 336, 880, 114)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
@@ -546,6 +546,7 @@ metadata/_edit_lock_ = true
 
 [node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
 position = Vector2(224, 144)
+speed = 400.0
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="HomeBasePlayer"]

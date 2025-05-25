@@ -20,4 +20,4 @@ func _on_power_changed(power: float):
 
 	play(str(rounded_ratio))
 
-	current_power.text = "%.02f" % power
+	current_power.text = "%d" % power
