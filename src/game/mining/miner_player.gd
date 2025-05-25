@@ -6,9 +6,10 @@ signal drop_item(item: Node2D)
 signal update_bomb_action_time(time: float)
 
 @export var base_mining_rate: float = 1.0
-@export var base_bomb_rate: float = 5.0
 @export var bomb_action: GUIDEAction
 @export var bomb: PackedScene
+
+var base_bomb_rate: float
 
 var can_mine: bool:
 	get: return last_mined_delta >= base_mining_rate
@@ -35,6 +36,7 @@ var last_bomb_delta: float = 0.0:
 
 
 func _ready() -> void:
+	base_bomb_rate = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.BOMB, "cooldown")
 	$AudioListener2D.make_current()
 	bomb_action.completed.connect(_try_drop_bomb)
 

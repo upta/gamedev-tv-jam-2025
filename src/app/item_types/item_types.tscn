@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cuc5666ypv6en"]
+[gd_scene load_steps=20 format=3 uid="uid://cuc5666ypv6en"]
 
 [ext_resource type="Script" uid="uid://706qbiasuvtd" path="res://app/item_types/item_types.gd" id="1_4utt5"]
 [ext_resource type="Script" uid="uid://dpiraumxsl8u3" path="res://market/coins/coin_resource.gd" id="2_idy0w"]
@@ -16,6 +16,9 @@
 [ext_resource type="Resource" uid="uid://cm2i87cmnmqyh" path="res://mint/recipes/sea_coin_recipe.tres" id="14_g3cpc"]
 [ext_resource type="Script" uid="uid://b3eoi302pmfhw" path="res://game/upgrades/upgrade_resource.gd" id="15_isfdc"]
 [ext_resource type="Resource" uid="uid://cyqwdatsworxq" path="res://game/upgrades/time_upgrade.tres" id="16_4niru"]
+[ext_resource type="Resource" uid="uid://d0qscsvoaq7f2" path="res://game/upgrades/bomb_upgrade.tres" id="17_ypi7e"]
+[ext_resource type="Resource" uid="uid://dksqy4uvfi6ye" path="res://game/upgrades/speed_upgrade.tres" id="18_d8v25"]
+[ext_resource type="Resource" uid="uid://brb40um6gwbnk" path="res://game/upgrades/power_upgrade.tres" id="19_58b3g"]
 
 [node name="ItemTypes" type="Node"]
 script = ExtResource("1_4utt5")
@@ -36,5 +39,8 @@ recipes = Dictionary[int, ExtResource("11_cswrp")]({
 2: ExtResource("14_g3cpc")
 })
 upgrades = Dictionary[int, ExtResource("15_isfdc")]({
+0: ExtResource("17_ypi7e"),
+1: ExtResource("18_d8v25"),
+2: ExtResource("19_58b3g"),
 3: ExtResource("16_4niru")
 })

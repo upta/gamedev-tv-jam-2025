@@ -31,9 +31,10 @@ func show_summary(of: Enum.UpgradeType):
 
 	spec_label.text = ""
 	for key in item.get_upgrade_keys():
-		spec_label.text += "%s: %d" % [item.get_key_name(key), item.get_upgrade_value(key, current_level)]
+		spec_label.text += "%s: %.2f" % [item.get_key_name(key), item.get_upgrade_value(key, current_level)]
 		if not is_max_level:
-			spec_label.text += " -> %d" % item.get_upgrade_value(key, current_level + 1)
+			spec_label.text += " -> %.2f" % item.get_upgrade_value(key, current_level + 1)
+		spec_label.text += "\n"
 	spec_label.show()
 
 

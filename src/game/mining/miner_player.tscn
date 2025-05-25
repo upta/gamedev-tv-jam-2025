@@ -10,7 +10,6 @@
 collision_mask = 1
 script = ExtResource("2_6pa6v")
 base_mining_rate = 1.0
-base_bomb_rate = 5.0
 bomb_action = null
 bomb = null
 

@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://bxe3sft55lxj1" path="res://home_base/upgrade_summary.gd" id="1_srify"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1whle"]
-size = Vector2(320, 150)
+size = Vector2(320, 172)
 
 [node name="UpgradeSummary" type="PanelContainer"]
 offset_right = 320.0
-offset_bottom = 153.0
+offset_bottom = 173.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_srify")
@@ -16,7 +16,7 @@ script = ExtResource("1_srify")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(161, 76)
+position = Vector2(161, 87)
 shape = SubResource("RectangleShape2D_1whle")
 
 [node name="Container" type="VBoxContainer" parent="."]
