@@ -21,7 +21,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	time_elapsed += delta
-	time_left = max(total_mining_time - time_elapsed, 0)
+	time_left = maxi(ceili(total_mining_time - time_elapsed), 0)
 
 	$MiningUI.set_time_left(time_left)
 

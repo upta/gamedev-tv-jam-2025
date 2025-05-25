@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b01msrd728kv1"]
+[gd_scene load_steps=6 format=3 uid="uid://b01msrd728kv1"]
 
 [ext_resource type="Script" uid="uid://be2lbiw6ue4dm" path="res://game/mining/mining_ui.gd" id="1_wsfr7"]
 [ext_resource type="PackedScene" uid="uid://beb0sp2xir1j4" path="res://game/resource_list/mining_resource_list.tscn" id="2_k40xb"]
+[ext_resource type="AudioStream" uid="uid://dyuf56vlsy4we" path="res://assets/sfx/beep_low.wav" id="5_wsfr7"]
 [ext_resource type="PackedScene" uid="uid://df7ccgsuqr27i" path="res://game/mining/action_indicator.tscn" id="6_g48as"]
 [ext_resource type="Texture2D" uid="uid://c2c7tqyix7n8t" path="res://assets/resources/boom/capactitor.png" id="7_rnpqn"]
 
 [node name="MiningUI" type="CanvasLayer" node_paths=PackedStringArray("time_left_label", "bomb_action_indicator")]
 script = ExtResource("1_wsfr7")
-time_left_label = NodePath("Control/TimeLeftLabel")
+time_left_label = NodePath("Control/PanelContainer/TimeLeftLabel")
 bomb_action_indicator = NodePath("PowersContainer/MarginContainer/GridContainer/BombActionIndicator")
 
 [node name="Control" type="Control" parent="."]
@@ -17,12 +18,13 @@ offset_left = 3.0
 offset_right = 1283.0
 offset_bottom = 719.0
 
-[node name="TimeLeftLabel" type="Label" parent="Control"]
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 9.0
-offset_right = 1088.0
-offset_bottom = 59.0
+offset_right = 409.0
+offset_bottom = 68.0
+
+[node name="TimeLeftLabel" type="Label" parent="Control/PanelContainer"]
+layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 30
@@ -64,3 +66,7 @@ layout_mode = 2
 layout_mode = 2
 icon = ExtResource("7_rnpqn")
 hot_key = "E"
+
+[node name="TimingOutSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_wsfr7")
+bus = &"Sound Effects"
