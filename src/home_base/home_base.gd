@@ -7,7 +7,7 @@ extends Node2D
 @onready var mint: Button = %Mint
 @onready var mining: Button = %Mining
 
-@onready var exit: Area2D = %Exit
+@onready var exit: Area2D = %MiningDoor
 @onready var boundary: TileMapLayer = %Boundary
 @onready var camera: Camera2D = %Camera2D
 
