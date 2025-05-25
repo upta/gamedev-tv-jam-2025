@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d0qscsvoaq7f2"]
+
+[ext_resource type="Texture2D" uid="uid://cxxkmreen05i6" path="res://assets/resources/upgrades/empty_energy.png" id="1_supnt"]
+[ext_resource type="Script" uid="uid://br4y05yirm1gj" path="res://game/upgrades/bomb_upgrade.gd" id="2_supnt"]
+
+[resource]
+script = ExtResource("2_supnt")
+max_levels = 10
+cost_base = 200
+cost_growth = 0.3
+base_strength = 2
+min_cooldown = 1.0
+strength_growth = 0.5
+base_cooldown = 5.0
+cooldown_shrink = 0.5
+max_strength = 5
+base_radius = 2
+max_radius = 5
+radius_growth = 0.25
+name = "Bomb Upgrade"
+icon = ExtResource("1_supnt")
+type = 0
+metadata/_custom_type_script = "uid://b3eoi302pmfhw"

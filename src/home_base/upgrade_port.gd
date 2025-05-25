@@ -27,6 +27,7 @@ func _on_interacted():
 	var item = ItemTypes.upgrades[type]
 	if item.can_upgrade_to(current_level + 1) and available_power >= item.get_upgrade_cost(current_level + 1):
 		State.Upgrade.set_level(type, current_level + 1)
+		State.Inventory.power -= item.get_upgrade_cost(current_level + 1)
 		upgrade_summary.show_summary(type)
 		$PowerUpSFX.play()
 	else:

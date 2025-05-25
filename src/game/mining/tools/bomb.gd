@@ -1,13 +1,19 @@
 extends Node2D
 
 @export var explosion_time: float = 2.0
-@export var explosion_radius: int = 3
 @export var block_size_px: float = 10.0
-@export var explosion_power: float = 2.0
 @export var explosion: PackedScene
+
+var explosion_radius: int
+var explosion_power: int
 
 var exploding := false
 var wait_for_free := false
+
+
+func _ready() -> void:
+	explosion_radius = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.BOMB, "radius")
+	explosion_power = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.BOMB, "strength")
 
 
 func _process(delta: float) -> void:
