@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=84 format=4 uid="uid://dytoj03c16d40"]
+[gd_resource type="Theme" load_steps=83 format=4 uid="uid://dytoj03c16d40"]
 
 [ext_resource type="FontFile" uid="uid://edd365i3ynvg" path="res://assets/themes/digitaldream.ttf" id="1_4s5xv"]
 [ext_resource type="Texture2D" uid="uid://nob02pixsfk8" path="res://assets/resources/menus/disabledbutton.png" id="2_ppnu3"]
@@ -2025,15 +2025,12 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nvmaf"]
-load_path = "res://.godot/imported/hoverbutton.png-35dcc6962e78aeb7ea2b4c048ba4139c.ctex"
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cd2bt"]
 content_margin_left = 6.0
 content_margin_top = 6.0
 content_margin_right = 6.0
 content_margin_bottom = 6.0
-texture = SubResource("CompressedTexture2D_nvmaf")
+texture = ExtResource("11_oq706")
 texture_margin_left = 5.86122
 texture_margin_top = 5.4547
 texture_margin_right = 5.81758
