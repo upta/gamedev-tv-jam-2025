@@ -10,6 +10,6 @@
 script = ExtResource("1_g4s7b")
 coin = ExtResource("2_bnlhd")
 resources = Dictionary[ExtResource("2_depc5"), int]({
-ExtResource("3_rkrpa"): 4,
-ExtResource("4_5fgwg"): 2
+ExtResource("3_rkrpa"): 2,
+ExtResource("4_5fgwg"): 1
 })

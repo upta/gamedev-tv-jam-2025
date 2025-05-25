@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
 [ext_resource type="TileSet" uid="uid://cscguflr1waw8" path="res://home_base/home_base_tileset.tres" id="3_fbnj6"]
 [ext_resource type="PackedScene" uid="uid://bhoynj4y8r6es" path="res://home_base/mining_door.tscn" id="5_n2u6b"]
-[ext_resource type="PackedScene" uid="uid://b8u2mxlaradk6" path="res://home_base/winning_door.tscn" id="6_0g1cd"]
+[ext_resource type="PackedScene" path="res://home_base/winning_door.tscn" id="6_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://w3gos45ashu4" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
 [ext_resource type="PackedScene" uid="uid://b3fegi50mimbt" path="res://home_base/upgrade_port.tscn" id="8_n6jcb"]
 [ext_resource type="PackedScene" uid="uid://co58bicar0i0k" path="res://home_base/upgrade_summary.tscn" id="9_8e0gs"]

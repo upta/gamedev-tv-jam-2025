@@ -20,15 +20,7 @@ func _ready() -> void:
 	shop.pressed.connect(_on_shop_pressed)
 	mint.pressed.connect(_on_mint_pressed)
 
-
-	#State.Inventory.add_mining_resource(Enum.MiningResourceType.BLUE_CHIP, 20)
-	#State.Inventory.add_mining_resource(Enum.MiningResourceType.GREEN_CHIP, 20)
-	#State.Inventory.add_mining_resource(Enum.MiningResourceType.RED_CHIP, 20)
-	#State.Inventory.add_mining_resource(Enum.MiningResourceType.YELLOW_CHIP, 20)
-	#
-	#Service.Inventory.add_coins(Enum.CoinType.A_COIN, 5)
-
-
+	Service.Market.fluxuate_prices()
 
 
 func _on_market_pressed():
