@@ -31,6 +31,7 @@ func _end_mining() -> void:
 	$EndMining.on_time_up.call_deferred()
 	$MiningUI.visible = false
 	AudioService.game_music_mining.stop()
+	AudioService.game_music_home.play()
 
 
 func _on_miner_player_drop_item(item: Node2D) -> void:

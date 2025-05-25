@@ -16,6 +16,7 @@ func _on_interacted():
 
 		Service.Market.sell_coins(type, count)
 		Service.Inventory.return_coin()
+		AudioService.making_power.play()
 
 
 func _on_held_coin_type_changed(_old: Enum.CoinType, _new: Enum.CoinType):
