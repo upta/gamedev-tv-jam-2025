@@ -1,25 +1,28 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpak1wh70kqjc"]
+[gd_scene load_steps=10 format=3 uid="uid://bpak1wh70kqjc"]
 
 [ext_resource type="Script" uid="uid://dbf1v8l7d5xq2" path="res://app/audio_service.gd" id="1_86uqd"]
+[ext_resource type="AudioStream" uid="uid://733ina8ba67c" path="res://assets/music/jonathan-gaming-143999.mp3" id="2_hyp4x"]
 [ext_resource type="AudioStream" uid="uid://hqf24276caf1" path="res://assets/music/vg_rave.ogg" id="2_s2hrq"]
 [ext_resource type="AudioStream" uid="uid://dwdphhnar1c60" path="res://assets/sfx/phaser.wav" id="3_2tvxi"]
 [ext_resource type="AudioStream" uid="uid://dyuf56vlsy4we" path="res://assets/sfx/beep_low.wav" id="3_70ifp"]
-[ext_resource type="AudioStream" uid="uid://ghwpw6hih4iu" path="res://assets/sfx/Drop.wav" id="3_kyw5x"]
+[ext_resource type="AudioStream" uid="uid://5p2pdu30qq5o" path="res://assets/sfx/drop.wav" id="4_kh0b1"]
 [ext_resource type="AudioStream" uid="uid://b5kig328m0mdk" path="res://assets/sfx/beep_high.wav" id="4_kyw5x"]
 [ext_resource type="AudioStream" uid="uid://d1e0fbkqx2osi" path="res://assets/sfx/hit.wav" id="5_kh0b1"]
+[ext_resource type="AudioStream" uid="uid://dos6a3sr0n2ln" path="res://assets/sfx/power_up.wav" id="9_vxhvs"]
 
 [node name="AudioService" type="Node"]
 script = ExtResource("1_86uqd")
 
 [node name="GameMusicHome" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-volume_db = -10.0
+stream = ExtResource("2_hyp4x")
+volume_db = -6.0
 bus = &"Music"
 
 [node name="GameMusicMining" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("2_s2hrq")
-volume_db = -10.0
+volume_db = -6.0
 bus = &"Music"
 
 [node name="GameStartSFX" type="AudioStreamPlayer" parent="."]
@@ -30,7 +33,7 @@ bus = &"Sound Effects"
 
 [node name="ButtonMouseOver" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("3_kyw5x")
+stream = ExtResource("4_kh0b1")
 volume_db = -5.0
 bus = &"Sound Effects"
 
@@ -48,6 +51,11 @@ bus = &"Sound Effects"
 [node name="BeepHigh" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_kyw5x")
+bus = &"Sound Effects"
+
+[node name="MakingPower" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("9_vxhvs")
 bus = &"Sound Effects"
 
 [node name="OutaTime" type="AudioStreamPlayer" parent="."]

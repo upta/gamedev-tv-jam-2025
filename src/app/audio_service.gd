@@ -12,6 +12,7 @@ var _bus_values = {}
 @onready var beep_high: AudioStreamPlayer = %BeepHigh
 @onready var beep_low: AudioStreamPlayer = %BeepLow
 @onready var outa_time: AudioStreamPlayer = %OutaTime
+@onready var making_power: AudioStreamPlayer = %MakingPower
 
 
 func _on_game_music_home_finished() -> void:
