@@ -24,14 +24,12 @@ func _ready() -> void:
 
 	exit.body_entered.connect(_on_exit_body_entered)
 
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.BLUE_CHIP, 20)
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.GREEN_CHIP, 20)
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.RED_CHIP, 20)
-	Service.Inventory.add_staged_mining_resources(Enum.MiningResourceType.YELLOW_CHIP, 20)
-
-	Service.Inventory.bank_staged_mining_resources()
-
-	Service.Inventory.add_coins(Enum.CoinType.A_COIN, 5)
+	#State.Inventory.add_mining_resource(Enum.MiningResourceType.BLUE_CHIP, 20)
+	#State.Inventory.add_mining_resource(Enum.MiningResourceType.GREEN_CHIP, 20)
+	#State.Inventory.add_mining_resource(Enum.MiningResourceType.RED_CHIP, 20)
+	#State.Inventory.add_mining_resource(Enum.MiningResourceType.YELLOW_CHIP, 20)
+	#
+	#Service.Inventory.add_coins(Enum.CoinType.A_COIN, 5)
 
 
 func _on_exit_body_entered(_body: Node2D):

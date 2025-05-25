@@ -26,4 +26,6 @@ func activate(_resource: MiningResource, _cost: int) -> void:
 	texture_rect.texture = resource.icon
 	quantity_label.text = str(_cost)
 
-	_on_mining_resource_changed(_resource.type, _cost)
+	var quantity = State.Inventory.mining_resources.get(_resource.type, 0)
+
+	_on_mining_resource_changed(_resource.type, quantity)
