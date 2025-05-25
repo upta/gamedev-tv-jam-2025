@@ -114,10 +114,14 @@ script = ExtResource("12_cpfqs")
 
 [node name="CurrentPower" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = -24.0
-offset_top = 23.0
-offset_right = 28.0
-offset_bottom = 40.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_top = -47.0
+offset_right = -6.0
+offset_bottom = -30.0
+grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 text = "0000"
