@@ -1,39 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://ncwhn3qn5a7t"]
+[gd_scene load_steps=6 format=3 uid="uid://ncwhn3qn5a7t"]
 
 [ext_resource type="Script" uid="uid://cm4qmc74gk4wj" path="res://game/mining/blocks/dirt.gd" id="1_b6llx"]
+[ext_resource type="PackedScene" uid="uid://b3jme5hv3bmk" path="res://game/mining/blocks/dirt_sprite.tscn" id="2_b6llx"]
 [ext_resource type="Texture2D" uid="uid://bdpsvf2x05app" path="res://assets/tiles/board_tiles/board_fill1.png" id="3_p06jj"]
-[ext_resource type="Texture2D" uid="uid://rt4i1h3xcgcr" path="res://assets/resources/dirt/dirt020.png" id="4_82n4u"]
 [ext_resource type="AudioStream" uid="uid://cva7bu6dm5rwu" path="res://assets/sfx/smash.wav" id="4_c1sau"]
-[ext_resource type="Texture2D" uid="uid://dtlfmub3v8e0g" path="res://assets/resources/dirt/dirt040.png" id="5_jaeaw"]
-[ext_resource type="Texture2D" uid="uid://cr8fn7q3gdehj" path="res://assets/resources/dirt/dirt060.png" id="6_f6f7n"]
-[ext_resource type="Texture2D" uid="uid://dfwm6iixhb8mf" path="res://assets/resources/dirt/dirt080.png" id="7_swsl5"]
-[ext_resource type="Texture2D" uid="uid://c06dpb2t3tthi" path="res://assets/resources/dirt/dirt100.png" id="8_mpq6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pupr"]
 size = Vector2(40, 40)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_b57pl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_82n4u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_jaeaw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_f6f7n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_swsl5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_mpq6t")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="Dirt" type="StaticBody2D"]
 y_sort_enabled = true
@@ -43,10 +16,7 @@ durability = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7pupr")
 
-[node name="DirtSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.54972e-06, -1.19209e-06)
-scale = Vector2(0.625, 0.625)
-sprite_frames = SubResource("SpriteFrames_b57pl")
+[node name="DirtSprite" parent="." instance=ExtResource("2_b6llx")]
 
 [node name="BGSprite" type="Sprite2D" parent="."]
 position = Vector2(-0.117599, -0.117599)
