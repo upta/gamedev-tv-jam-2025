@@ -1,22 +1,23 @@
 extends UpgradeResource
 
-@export var cost_base: int;
-@export var cost_growth: float;
-@export var time_increment: int;
-@export var base_time: int;
+@export var cost_base: int
+@export var cost_growth: float
+@export var base_speed: int
+@export var speed_increment: int
+@export var max_level: int
 
 
 func get_upgrade_keys() -> Array[String]:
-	return ["time"]
+	return ["speed"]
 
 
 func can_upgrade_to(level: int) -> bool:
-	return true
+	return level <= max_level
 
 
 func get_upgrade_value(key: String, level: int) -> float:
-	if key == "time":
-		return base_time + time_increment * level
+	if key == "speed":
+		return base_speed + speed_increment * level
 
 	return 0
 
@@ -26,7 +27,7 @@ func get_upgrade_cost(level: int) -> int:
 
 
 func get_key_name(key: String) -> String:
-	if key == "time":
-		return "Time"
+	if key == "speed":
+		return "Speed"
 
 	return ""

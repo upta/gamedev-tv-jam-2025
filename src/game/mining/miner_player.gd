@@ -39,6 +39,7 @@ var last_bomb_delta: float = 0.0:
 func _ready() -> void:
 	base_bomb_rate = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.BOMB, "cooldown")
 	mining_strength = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.MINE_POWER, "strength")
+	speed = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.SPEED, "speed")
 	$AudioListener2D.make_current()
 	bomb_action.completed.connect(_try_drop_bomb)
 
