@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5b7lf1cyadx5"
-path="res://.godot/imported/minterDownArrow.png-2eb1edbd74b139528324ef3edb38ec22.ctex"
+uid="uid://cs0vouycy24o5"
+path="res://.godot/imported/minter_down_arrow.png-fa2a2d2a4f6a2fb8ac03b1df8e7133cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/resources/minter/minterDownArrow.png"
-dest_files=["res://.godot/imported/minterDownArrow.png-2eb1edbd74b139528324ef3edb38ec22.ctex"]
+source_file="res://assets/resources/minter/minter_down_arrow.png"
+dest_files=["res://.godot/imported/minter_down_arrow.png-fa2a2d2a4f6a2fb8ac03b1df8e7133cd.ctex"]
 
 [params]
 

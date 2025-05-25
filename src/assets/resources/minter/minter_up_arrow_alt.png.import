@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bixg40ftrri35"
-path="res://.godot/imported/minterUpArrowAlt.png-4d99f081a953cdd9c153ef11328f1603.ctex"
+uid="uid://b27mahk48g7ri"
+path="res://.godot/imported/minter_up_arrow_alt.png-f429ec4a32db4e30f798010943ba3b84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/resources/minter/minterUpArrowAlt.png"
-dest_files=["res://.godot/imported/minterUpArrowAlt.png-4d99f081a953cdd9c153ef11328f1603.ctex"]
+source_file="res://assets/resources/minter/minter_up_arrow_alt.png"
+dest_files=["res://.godot/imported/minter_up_arrow_alt.png-f429ec4a32db4e30f798010943ba3b84.ctex"]
 
 [params]
 
