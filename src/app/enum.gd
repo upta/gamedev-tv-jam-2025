@@ -17,6 +17,7 @@ enum CoinType {
 	A_COIN,
 	BEE_COIN,
 	SEA_COIN,
+	DEEZ_COIN,
 }
 
 enum MiningResourceType {

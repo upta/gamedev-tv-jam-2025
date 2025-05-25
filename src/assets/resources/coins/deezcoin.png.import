@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctyqmndaa8cg2"
-path="res://.godot/imported/deezcoins.png-133106de1471d6990f2bf7687d143c05.ctex"
+uid="uid://bbxsb40gtwody"
+path="res://.godot/imported/deezcoin.png-dafc009ded4eec53624f4c8f8e9060ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/resources/coins/deezcoins.png"
-dest_files=["res://.godot/imported/deezcoins.png-133106de1471d6990f2bf7687d143c05.ctex"]
+source_file="res://assets/resources/coins/deezcoin.png"
+dest_files=["res://.godot/imported/deezcoin.png-dafc009ded4eec53624f4c8f8e9060ef.ctex"]
 
 [params]
 
