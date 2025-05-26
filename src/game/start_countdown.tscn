@@ -140,8 +140,8 @@ texture = ExtResource("11_jupuk")
 
 [node name="Label" type="Label" parent="Tutorial/Panel/MarginContainer/VBoxContainer/Dirt"]
 layout_mode = 2
-text = " Bits just get in your way.
- Mine through them.
+text = "These just get in your way
+Mine through them
  "
 
 [node name="Wall" type="HBoxContainer" parent="Tutorial/Panel/MarginContainer/VBoxContainer"]
