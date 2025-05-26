@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 func _on_interact_change(_interactable: bool):
-	if interactable:
+	if _interactable:
 		upgrade_summary.show_summary(type)
 	else:
 		upgrade_summary.clear_summary()
