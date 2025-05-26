@@ -477,8 +477,7 @@ offset_left = 1112.0
 offset_top = 684.0
 offset_right = 1266.0
 offset_bottom = 721.0
-text = "Coin Dropoff
-"
+text = "Coin Dropoff"
 
 [node name="Upgrades" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
