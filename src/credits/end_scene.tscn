@@ -1,0 +1,59 @@
+[gd_scene load_steps=12 format=3 uid="uid://bkp2hv83gfafu"]
+
+[ext_resource type="Script" uid="uid://dgr5nx1fqtbn0" path="res://credits/end_scene.gd" id="1_78lbw"]
+[ext_resource type="Texture2D" uid="uid://dfqoifvgpomf7" path="res://assets/resources/endscene/alt/end-1.png" id="2_qsroo"]
+[ext_resource type="Texture2D" uid="uid://bo7xr28ev7ckp" path="res://assets/resources/endscene/alt/end-2.png" id="3_twb46"]
+[ext_resource type="Texture2D" uid="uid://dag5tfpxjqo03" path="res://assets/resources/endscene/alt/end-3.png" id="4_ca46i"]
+[ext_resource type="Texture2D" uid="uid://4c25vc7kw5jl" path="res://assets/resources/endscene/alt/end-4.png" id="5_doer8"]
+[ext_resource type="Texture2D" uid="uid://dbj33twfchyb1" path="res://assets/resources/endscene/alt/end-5.png" id="6_0voac"]
+[ext_resource type="Texture2D" uid="uid://ccgq1uo0x1omw" path="res://assets/resources/endscene/alt/end-6.png" id="7_od55u"]
+[ext_resource type="Texture2D" uid="uid://bdsjsx7g8h507" path="res://assets/resources/endscene/alt/end-7.png" id="8_eqdva"]
+[ext_resource type="Texture2D" uid="uid://bk300ohgdr84o" path="res://assets/resources/endscene/alt/end-8.png" id="9_cqeg3"]
+[ext_resource type="Texture2D" uid="uid://b7lrne554uw3b" path="res://assets/resources/endscene/alt/end-9.png" id="10_36l4k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o7wt1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qsroo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_twb46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ca46i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_doer8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0voac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_od55u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eqdva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cqeg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_36l4k")
+}],
+"loop": false,
+"name": &"credits",
+"speed": 3.0
+}]
+
+[node name="EndScene" type="Node2D"]
+script = ExtResource("1_78lbw")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(1.25, 0.9375)
+sprite_frames = SubResource("SpriteFrames_o7wt1")
+animation = &"credits"
+autoplay = "credits"
+frame = 8
+frame_progress = 1.0
