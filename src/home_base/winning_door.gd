@@ -14,7 +14,7 @@ func _ready():
 
 func _on_interacted():
 	if _can_win():
-		State.Scene.active_scene = "res://credits/credits.tscn"
+		State.Scene.active_scene = "res://credits/end_scene.tscn"
 	else:
 		nope_sfx.play()
 
