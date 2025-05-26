@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=4 uid="uid://c1tb7gaxku0hi"]
+[gd_scene load_steps=23 format=4 uid="uid://c1tb7gaxku0hi"]
 
 [ext_resource type="Script" uid="uid://dg4cojk1rchie" path="res://home_base/home_base.gd" id="1_md8vl"]
 [ext_resource type="Resource" uid="uid://dl5v5cvk2xg0l" path="res://input/game/home_base_context.tres" id="2_eb3fi"]
+[ext_resource type="Resource" uid="uid://fpfhuuxfwr23" path="res://input/tutorial/actions/next.tres" id="2_sspq3"]
 [ext_resource type="TileSet" uid="uid://cscguflr1waw8" path="res://home_base/home_base_tileset.tres" id="3_fbnj6"]
 [ext_resource type="PackedScene" uid="uid://s1i3pw58usio" path="res://pause/pause_overlay.tscn" id="3_y0i3c"]
+[ext_resource type="Resource" uid="uid://usvvwpk3jfux" path="res://input/tutorial/tutorial_context.tres" id="4_xvcyn"]
 [ext_resource type="PackedScene" uid="uid://bhoynj4y8r6es" path="res://home_base/mining_door.tscn" id="5_n2u6b"]
 [ext_resource type="PackedScene" uid="uid://b8u2mxlaradk6" path="res://home_base/winning_door.tscn" id="6_0g1cd"]
 [ext_resource type="PackedScene" uid="uid://w3gos45ashu4" path="res://home_base/market_prices.tscn" id="7_2f1hc"]
@@ -25,7 +27,9 @@ size = Vector2(116, 196)
 
 [node name="HomeBase" type="Node2D"]
 script = ExtResource("1_md8vl")
-input_context = ExtResource("2_eb3fi")
+tutorial_next = ExtResource("2_sspq3")
+main_context = ExtResource("2_eb3fi")
+tutorial_context = ExtResource("4_xvcyn")
 
 [node name="PauseOverlay" parent="." instance=ExtResource("3_y0i3c")]
 

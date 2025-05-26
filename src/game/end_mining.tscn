@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1q8xcp42pnas"]
+[gd_scene load_steps=8 format=3 uid="uid://d1q8xcp42pnas"]
 
 [ext_resource type="Script" uid="uid://xev43a1md78r" path="res://game/end_mining.gd" id="1_wrppg"]
+[ext_resource type="Resource" uid="uid://usvvwpk3jfux" path="res://input/tutorial/tutorial_context.tres" id="2_cqwx5"]
 [ext_resource type="Texture2D" uid="uid://drgb84dfv17xp" path="res://assets/resources/memory/chip_blue.png" id="2_piox7"]
+[ext_resource type="Resource" uid="uid://fpfhuuxfwr23" path="res://input/tutorial/actions/next.tres" id="3_2vukn"]
 [ext_resource type="Texture2D" uid="uid://dgicfkr54srxn" path="res://assets/resources/memory/chip_green.png" id="3_nj2gt"]
 [ext_resource type="Texture2D" uid="uid://dtiej8ruxskwl" path="res://assets/resources/memory/chip_red.png" id="4_cqwx5"]
 [ext_resource type="Texture2D" uid="uid://bt23ug0kj206j" path="res://assets/resources/memory/chip_yellow.png" id="5_2vukn"]
@@ -17,6 +19,8 @@ chip_labels = {
 2: NodePath("PanelContainer/MarginContainer/GridContainer/ChipRed Label"),
 3: NodePath("PanelContainer/MarginContainer/GridContainer/ChipYellow Label")
 }
+tutorial_context = ExtResource("2_cqwx5")
+tutorial_next = ExtResource("3_2vukn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

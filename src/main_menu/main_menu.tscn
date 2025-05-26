@@ -55,6 +55,7 @@ start_action = ExtResource("2_d3a7t")
 sprite_frames = SubResource("SpriteFrames_tr6y3")
 
 [node name="butSel" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
