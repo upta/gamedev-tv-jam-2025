@@ -11,6 +11,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	boundary.visible = false
+
 	_set_camera_limit()
 
 	Service.Market.fluctuate_prices()
