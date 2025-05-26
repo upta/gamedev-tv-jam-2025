@@ -632,7 +632,7 @@ theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step1/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Welcome! This is chip.
+text = "Welcome! This is bit.
 
 She Lives in your Computer and wants
 to go to the moon."
