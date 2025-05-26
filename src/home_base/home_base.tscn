@@ -972,7 +972,7 @@ theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step6/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Use your engery to
+text = "Use your energy to
 buy upgrades to your 
 mining gear."
 
