@@ -2,6 +2,21 @@ class_name EndMining
 extends CanvasLayer
 
 @export var chip_labels: Dictionary [Enum.MiningResourceType, Label]
+@export var tutorial_context: GUIDEMappingContext
+@export var tutorial_next: GUIDEAction
+
+
+func _ready() -> void:
+	visibility_changed.connect(_on_visibility_changed)
+
+
+func _on_visibility_changed():
+	if !visible:
+		return
+
+	Service.Guide.set_local_context(tutorial_context)
+	tutorial_next.triggered.connect(_on_button_pressed)
+	$Button.grab_focus()
 
 
 func _on_button_pressed() -> void:

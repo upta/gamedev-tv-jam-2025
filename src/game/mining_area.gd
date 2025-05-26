@@ -10,8 +10,6 @@ var time_left: float
 
 
 func _ready():
-	Service.Guide.add_local_context(input_context)
-
 	total_mining_time = Service.Upgrade.get_upgrade_value(Enum.UpgradeType.MINE_TIME, "time")
 	time_left = total_mining_time
 

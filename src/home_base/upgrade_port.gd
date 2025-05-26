@@ -14,8 +14,8 @@ func _ready() -> void:
 	interactable.can_interact_changed.connect(_on_interact_change)
 
 
-func _on_interact_change(interactable: bool):
-	if interactable:
+func _on_interact_change(_interactable: bool):
+	if _interactable:
 		upgrade_summary.show_summary(type)
 	else:
 		upgrade_summary.clear_summary()

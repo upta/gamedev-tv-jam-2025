@@ -10,7 +10,7 @@ func get_upgrade_keys() -> Array[String]:
 	return ["time"]
 
 
-func can_upgrade_to(level: int) -> bool:
+func can_upgrade_to(_level: int) -> bool:
 	return true
 
 

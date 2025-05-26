@@ -5,7 +5,7 @@ extends Control
 
 
 func _ready() -> void:
-	Service.Guide.add_local_context(input_context)
+	Service.Guide.set_local_context(input_context)
 	start_action.triggered.connect(_on_start_action_triggered)
 	_music_playing()
 
