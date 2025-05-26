@@ -32,6 +32,7 @@ main_context = ExtResource("2_eb3fi")
 tutorial_context = ExtResource("4_xvcyn")
 
 [node name="PauseOverlay" parent="." instance=ExtResource("3_y0i3c")]
+visible = false
 
 [node name="Background" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAARAAcAAwAAAAAAAAARAAYABwAAAAAAAAARAAUAAwAAAAAAAAARAAQABQAAAAAAAAARAAMAAQAAAAAAAAARAAIAAAAAAAAAAAARAAEABgAAAAAAAAARAAAAAgAAAAAAAAAQAAcABQAAAAAAAAAQAAYAAgAAAAAAAAAQAAUAAwAAAAAAAAAQAAQABQAAAAAAAAAQAAMABwAAAAAAAAAQAAIABgAAAAAAAAAQAAEABAAAAAAAAAAQAAAAAwAAAAAAAAAPAAcAAQAAAAAAAAAPAAYABQAAAAAAAAAPAAUAAAAAAAAAAAAPAAQABAAAAAAAAAAPAAMABgAAAAAAAAAPAAIABAAAAAAAAAAPAAEABAAAAAAAAAAPAAAAAgAAAAAAAAAOAAcAAQAAAAAAAAAOAAYAAAAAAAAAAAAOAAUABAAAAAAAAAAOAAQAAAAAAAAAAAAOAAMABwAAAAAAAAAOAAIABgAAAAAAAAAOAAEAAwAAAAAAAAAOAAAAAQAAAAAAAAANAAcABgAAAAAAAAANAAYABQAAAAAAAAANAAUABAAAAAAAAAANAAQAAAAAAAAAAAANAAMAAQAAAAAAAAANAAIAAwAAAAAAAAANAAEAAQAAAAAAAAANAAAAAgAAAAAAAAAMAAcABwAAAAAAAAAMAAYAAQAAAAAAAAAMAAUAAgAAAAAAAAAMAAQAAQAAAAAAAAAMAAMABwAAAAAAAAAMAAIAAAAAAAAAAAAMAAEABQAAAAAAAAAMAAAAAwAAAAAAAAALAAcABgAAAAAAAAALAAYAAgAAAAAAAAALAAUABQAAAAAAAAALAAQAAgAAAAAAAAALAAMABwAAAAAAAAALAAIABQAAAAAAAAALAAEAAwAAAAAAAAALAAAABQAAAAAAAAAKAAcABQAAAAAAAAAKAAYAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAQABwAAAAAAAAAKAAMAAgAAAAAAAAAKAAIABQAAAAAAAAAKAAEAAwAAAAAAAAAKAAAAAQAAAAAAAAAJAAcAAAAAAAAAAAAJAAYABgAAAAAAAAAJAAUABgAAAAAAAAAJAAQABQAAAAAAAAAJAAMABAAAAAAAAAAJAAIABQAAAAAAAAAJAAEABAAAAAAAAAAJAAAABQAAAAAAAAAIAAcAAgAAAAAAAAAIAAYAAQAAAAAAAAAIAAUABQAAAAAAAAAIAAQABQAAAAAAAAAIAAMAAAAAAAAAAAAIAAIAAwAAAAAAAAAIAAEABwAAAAAAAAAIAAAAAAAAAAAAAAAHAAcAAQAAAAAAAAAHAAYAAQAAAAAAAAAHAAUAAAAAAAAAAAAHAAQABQAAAAAAAAAHAAMAAQAAAAAAAAAHAAIABAAAAAAAAAAHAAEAAQAAAAAAAAAHAAAAAwAAAAAAAAAGAAcAAgAAAAAAAAAGAAYABAAAAAAAAAAGAAUABwAAAAAAAAAGAAQAAgAAAAAAAAAGAAMAAAAAAAAAAAAGAAIAAwAAAAAAAAAGAAEABwAAAAAAAAAGAAAABwAAAAAAAAAFAAcAAgAAAAAAAAAFAAYABAAAAAAAAAAFAAUAAAAAAAAAAAAFAAQABQAAAAAAAAAFAAMAAQAAAAAAAAAFAAIABQAAAAAAAAAFAAEABAAAAAAAAAAFAAAAAQAAAAAAAAAEAAcAAwAAAAAAAAAEAAYAAQAAAAAAAAAEAAUAAQAAAAAAAAAEAAQABAAAAAAAAAAEAAMABgAAAAAAAAAEAAIABQAAAAAAAAAEAAEABwAAAAAAAAAEAAAAAQAAAAAAAAADAAcABAAAAAAAAAADAAYAAgAAAAAAAAADAAUAAgAAAAAAAAADAAQABwAAAAAAAAADAAMABgAAAAAAAAADAAIABQAAAAAAAAADAAEAAwAAAAAAAAADAAAAAgAAAAAAAAACAAcAAwAAAAAAAAACAAYABgAAAAAAAAACAAUABAAAAAAAAAACAAQAAgAAAAAAAAACAAMABwAAAAAAAAACAAIABQAAAAAAAAACAAEABwAAAAAAAAACAAAABgAAAAAAAAABAAcABwAAAAAAAAABAAYABQAAAAAAAAABAAUAAAAAAAAAAAABAAQAAAAAAAAAAAABAAMABAAAAAAAAAABAAIABQAAAAAAAAABAAEAAgAAAAAAAAABAAAAAAAAAAAAAAAAAAcAAQAAAAAAAAAAAAYABQAAAAAAAAAAAAUABwAAAAAAAAAAAAQAAgAAAAAAAAAAAAMAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAEABwAAAAAAAAAAAAAAAgAAAAAAAAAUAAsAAAAAAAAAAAAUAAoAAAAAAAAAAAAUAAkAAgAAAAAAAAAUAAgABgAAAAAAAAAUAAcAAgAAAAAAAAAUAAYAAgAAAAAAAAAUAAUAAgAAAAAAAAAUAAQABAAAAAAAAAAUAAMAAwAAAAAAAAAUAAIAAwAAAAAAAAAUAAEAAgAAAAAAAAAUAAAABAAAAAAAAAATAAsABgAAAAAAAAATAAoABAAAAAAAAAATAAkAAAAAAAAAAAATAAgABwAAAAAAAAATAAcABwAAAAAAAAATAAYABgAAAAAAAAATAAUAAAAAAAAAAAATAAQABQAAAAAAAAATAAMABgAAAAAAAAATAAIAAQAAAAAAAAATAAEABgAAAAAAAAATAAAABAAAAAAAAAASAAsAAQAAAAAAAAASAAoAAgAAAAAAAAASAAkABgAAAAAAAAASAAgAAQAAAAAAAAASAAcAAwAAAAAAAAASAAYAAQAAAAAAAAASAAUABAAAAAAAAAASAAQAAQAAAAAAAAASAAMABQAAAAAAAAASAAIAAgAAAAAAAAASAAEABgAAAAAAAAASAAAABwAAAAAAAAARAAsAAQAAAAAAAAARAAoABAAAAAAAAAARAAkAAwAAAAAAAAARAAgAAgAAAAAAAAAQAAsABAAAAAAAAAAQAAoAAwAAAAAAAAAQAAkAAgAAAAAAAAAQAAgAAAAAAAAAAAAPAAsAAQAAAAAAAAAPAAoABAAAAAAAAAAPAAkABQAAAAAAAAAPAAgABgAAAAAAAAAOAAsAAAAAAAAAAAAOAAoABQAAAAAAAAAOAAkAAAAAAAAAAAAOAAgAAQAAAAAAAAANAAsAAAAAAAAAAAANAAoAAwAAAAAAAAANAAkABQAAAAAAAAANAAgABQAAAAAAAAAMAAsAAgAAAAAAAAAMAAoAAwAAAAAAAAAMAAkABAAAAAAAAAAMAAgABwAAAAAAAAALAAsABgAAAAAAAAALAAoABgAAAAAAAAALAAkAAwAAAAAAAAALAAgABQAAAAAAAAAKAAsAAwAAAAAAAAAKAAoABwAAAAAAAAAKAAkABQAAAAAAAAAKAAgABQAAAAAAAAAJAAsABAAAAAAAAAAJAAoABAAAAAAAAAAJAAkAAwAAAAAAAAAJAAgABwAAAAAAAAAIAAsABAAAAAAAAAAIAAoAAQAAAAAAAAAIAAkAAwAAAAAAAAAIAAgAAwAAAAAAAAAHAAsAAAAAAAAAAAAHAAoAAwAAAAAAAAAHAAkAAgAAAAAAAAAHAAgAAAAAAAAAAAAGAAsAAQAAAAAAAAAGAAoABgAAAAAAAAAGAAkABAAAAAAAAAAGAAgABwAAAAAAAAAFAAsABQAAAAAAAAAFAAoAAQAAAAAAAAAFAAkAAgAAAAAAAAAFAAgABwAAAAAAAAAEAAsABwAAAAAAAAAEAAoABQAAAAAAAAAEAAkABAAAAAAAAAAEAAgAAgAAAAAAAAADAAsAAQAAAAAAAAADAAoAAAAAAAAAAAADAAkAAgAAAAAAAAADAAgAAgAAAAAAAAACAAsAAQAAAAAAAAACAAoABgAAAAAAAAACAAkAAgAAAAAAAAACAAgABwAAAAAAAAABAAsABgAAAAAAAAABAAoABgAAAAAAAAABAAkABwAAAAAAAAABAAgAAQAAAAAAAAAAAAsABwAAAAAAAAAAAAoAAgAAAAAAAAAAAAkABwAAAAAAAAAAAAgABQAAAAAAAAAVAAAABwAAAAAAAAAVAAEAAwAAAAAAAAAVAAIABgAAAAAAAAAVAAMAAQAAAAAAAAAVAAQAAgAAAAAAAAAVAAUAAQAAAAAAAAAVAAYABAAAAAAAAAAVAAcAAQAAAAAAAAAVAAgAAgAAAAAAAAAVAAkABQAAAAAAAAAVAAoAAAAAAAAAAAAVAAsABgAAAAAAAAAWAAsAAQAAAAAAAAAWAAoAAwAAAAAAAAAWAAkABwAAAAAAAAAWAAgAAgAAAAAAAAAWAAcABAAAAAAAAAAWAAYAAgAAAAAAAAAWAAUAAgAAAAAAAAAWAAQAAAAAAAAAAAAWAAMABgAAAAAAAAAWAAIABgAAAAAAAAAWAAEABQAAAAAAAAAWAAAAAwAAAAAAAAAWAA0AAQAAAAAAAAAWAAwABgAAAAAAAAAVAA0AAQAAAAAAAAAVAAwABwAAAAAAAAAUAA0ABAAAAAAAAAAUAAwAAQAAAAAAAAATAA0ABwAAAAAAAAATAAwAAAAAAAAAAAASAA0ABgAAAAAAAAASAAwAAAAAAAAAAAARAA0AAgAAAAAAAAARAAwABQAAAAAAAAAQAA0AAAAAAAAAAAAQAAwAAAAAAAAAAAAPAA0AAgAAAAAAAAAPAAwABgAAAAAAAAAOAA0AAAAAAAAAAAAOAAwAAQAAAAAAAAANAA0ABwAAAAAAAAANAAwABAAAAAAAAAAMAA0ABAAAAAAAAAAMAAwABAAAAAAAAAALAA0ABAAAAAAAAAALAAwABgAAAAAAAAAKAA0ABwAAAAAAAAAKAAwAAgAAAAAAAAAJAA0AAwAAAAAAAAAJAAwAAAAAAAAAAAAIAA0ABAAAAAAAAAAIAAwABQAAAAAAAAAHAA0AAAAAAAAAAAAHAAwAAgAAAAAAAAAGAA0AAQAAAAAAAAAGAAwABAAAAAAAAAAFAA0ABQAAAAAAAAAFAAwAAwAAAAAAAAAEAA0ABwAAAAAAAAAEAAwABgAAAAAAAAADAA0ABgAAAAAAAAADAAwAAwAAAAAAAAACAA0AAwAAAAAAAAACAAwAAQAAAAAAAAABAA0AAgAAAAAAAAABAAwAAgAAAAAAAAAAAA0ABQAAAAAAAAAAAAwABAAAAAAAAAD/////AwAAAAAAAAAAAP//AAAAAAAAAAABAP//AgAAAAAAAAACAP//BgAAAAAAAAADAP//BQAAAAAAAAAEAP//BgAAAAAAAAAFAP//AAAAAAAAAAAGAP//BwAAAAAAAAAHAP//AAAAAAAAAAAIAP//AgAAAAAAAAAJAP//BwAAAAAAAAAKAP//AgAAAAAAAAALAP//BwAAAAAAAAAMAP//AwAAAAAAAAANAP//AgAAAAAAAAAOAP//BwAAAAAAAAAPAP//BAAAAAAAAAAQAP//AAAAAAAAAAARAP//BgAAAAAAAAASAP//AwAAAAAAAAATAP//AwAAAAAAAAAUAP//BAAAAAAAAAAVAP//BwAAAAAAAAAWAP//BQAAAAAAAAAXAP//BAAAAAAAAAAXAAAAAwAAAAAAAAAXAAEAAQAAAAAAAAAXAAIABQAAAAAAAAAXAAMAAgAAAAAAAAAXAAQAAAAAAAAAAAAXAAUABAAAAAAAAAAXAAYAAAAAAAAAAAAXAAcAAwAAAAAAAAAXAAgAAwAAAAAAAAAXAAkAAQAAAAAAAAAXAAoAAgAAAAAAAAAXAAsABgAAAAAAAAAXAAwAAgAAAAAAAAAXAA0AAwAAAAAAAAAXAA4AAgAAAAAAAAAWAA4AAQAAAAAAAAAVAA4ABwAAAAAAAAAUAA4ABAAAAAAAAAATAA4ABAAAAAAAAAASAA4ABAAAAAAAAAARAA4ABAAAAAAAAAAQAA4ABAAAAAAAAAAPAA4ABwAAAAAAAAAOAA4ABAAAAAAAAAANAA4ABwAAAAAAAAAMAA4AAwAAAAAAAAALAA4ABQAAAAAAAAAKAA4AAAAAAAAAAAAJAA4ABQAAAAAAAAAIAA4AAAAAAAAAAAAHAA4ABwAAAAAAAAAGAA4ABQAAAAAAAAAFAA4AAAAAAAAAAAAEAA4ABgAAAAAAAAADAA4AAwAAAAAAAAACAA4AAwAAAAAAAAABAA4ABwAAAAAAAAAAAA4ABwAAAAAAAAD//w4ABQAAAAAAAAD//w0ABwAAAAAAAAD//wwABgAAAAAAAAD//wsABwAAAAAAAAD//woAAgAAAAAAAAD//wkABwAAAAAAAAD//wgAAQAAAAAAAAD//wcAAQAAAAAAAAD//wYAAAAAAAAAAAD//wUAAQAAAAAAAAD//wQABgAAAAAAAAD//wMABQAAAAAAAAD//wIABgAAAAAAAAD//wEAAQAAAAAAAAD//wAAAwAAAAAAAAAbABEABQAAAAAAAAAbABAABAAAAAAAAAAbAA8AAQAAAAAAAAAbAA4AAQAAAAAAAAAbAA0ABwAAAAAAAAAbAAwAAQAAAAAAAAAbAAsABgAAAAAAAAAbAAoAAwAAAAAAAAAbAAkABgAAAAAAAAAbAAgAAQAAAAAAAAAbAAcABQAAAAAAAAAbAAYABgAAAAAAAAAbAAUAAQAAAAAAAAAbAAQABAAAAAAAAAAbAAMAAwAAAAAAAAAbAAIABgAAAAAAAAAbAAEAAAAAAAAAAAAbAAAAAwAAAAAAAAAbAP//AAAAAAAAAAAbAP7/BAAAAAAAAAAbAP3/BQAAAAAAAAAbAPz/BwAAAAAAAAAaABEABwAAAAAAAAAaABAAAQAAAAAAAAAaAA8AAgAAAAAAAAAaAA4AAwAAAAAAAAAaAA0ABAAAAAAAAAAaAAwAAQAAAAAAAAAaAAsABQAAAAAAAAAaAAoAAQAAAAAAAAAaAAkABQAAAAAAAAAaAAgABgAAAAAAAAAaAAcAAAAAAAAAAAAaAAYABQAAAAAAAAAaAAUAAwAAAAAAAAAaAAQAAQAAAAAAAAAaAAMAAgAAAAAAAAAaAAIAAQAAAAAAAAAaAAEAAgAAAAAAAAAaAAAAAwAAAAAAAAAaAP//BAAAAAAAAAAaAP7/BgAAAAAAAAAaAP3/AwAAAAAAAAAaAPz/AgAAAAAAAAAZABEAAwAAAAAAAAAZABAAAQAAAAAAAAAZAA8AAQAAAAAAAAAZAA4AAQAAAAAAAAAZAA0AAQAAAAAAAAAZAAwABgAAAAAAAAAZAAsAAwAAAAAAAAAZAAoABAAAAAAAAAAZAAkABAAAAAAAAAAZAAgABwAAAAAAAAAZAAcAAgAAAAAAAAAZAAYAAgAAAAAAAAAZAAUABgAAAAAAAAAZAAQABwAAAAAAAAAZAAMAAwAAAAAAAAAZAAIABwAAAAAAAAAZAAEAAgAAAAAAAAAZAAAABgAAAAAAAAAZAP//AgAAAAAAAAAZAP7/AwAAAAAAAAAZAP3/AAAAAAAAAAAZAPz/AwAAAAAAAAAYABEABgAAAAAAAAAYABAAAAAAAAAAAAAYAA8ABAAAAAAAAAAYAA4ABQAAAAAAAAAYAA0AAAAAAAAAAAAYAAwAAgAAAAAAAAAYAAsABQAAAAAAAAAYAAoABgAAAAAAAAAYAAkAAwAAAAAAAAAYAAgABAAAAAAAAAAYAAcABgAAAAAAAAAYAAYABgAAAAAAAAAYAAUABQAAAAAAAAAYAAQAAAAAAAAAAAAYAAMAAAAAAAAAAAAYAAIAAAAAAAAAAAAYAAEABQAAAAAAAAAYAAAAAwAAAAAAAAAYAP//BgAAAAAAAAAYAP7/AwAAAAAAAAAYAP3/AQAAAAAAAAAYAPz/AAAAAAAAAAAXABEABwAAAAAAAAAXABAAAgAAAAAAAAAXAA8ABgAAAAAAAAAXAP7/BAAAAAAAAAAXAP3/AwAAAAAAAAAXAPz/AQAAAAAAAAAWABEAAgAAAAAAAAAWABAABQAAAAAAAAAWAA8ABwAAAAAAAAAWAP7/AgAAAAAAAAAWAP3/AwAAAAAAAAAWAPz/BAAAAAAAAAAVABEAAwAAAAAAAAAVABAABwAAAAAAAAAVAA8ABAAAAAAAAAAVAP7/AwAAAAAAAAAVAP3/BgAAAAAAAAAVAPz/BwAAAAAAAAAUABEAAwAAAAAAAAAUABAABQAAAAAAAAAUAA8AAQAAAAAAAAAUAP7/BQAAAAAAAAAUAP3/BQAAAAAAAAAUAPz/BwAAAAAAAAATABEABwAAAAAAAAATABAAAQAAAAAAAAATAA8AAAAAAAAAAAATAP7/AgAAAAAAAAATAP3/AgAAAAAAAAATAPz/AQAAAAAAAAASABEABwAAAAAAAAASABAAAgAAAAAAAAASAA8ABwAAAAAAAAASAP7/BgAAAAAAAAASAP3/AAAAAAAAAAASAPz/BwAAAAAAAAARABEAAwAAAAAAAAARABAAAwAAAAAAAAARAA8AAAAAAAAAAAARAP7/AQAAAAAAAAARAP3/AgAAAAAAAAARAPz/BQAAAAAAAAAQABEABwAAAAAAAAAQABAABwAAAAAAAAAQAA8AAgAAAAAAAAAQAP7/AgAAAAAAAAAQAP3/BgAAAAAAAAAQAPz/BQAAAAAAAAAPABEABwAAAAAAAAAPABAABQAAAAAAAAAPAA8AAgAAAAAAAAAPAP7/AAAAAAAAAAAPAP3/BAAAAAAAAAAPAPz/AwAAAAAAAAAOABEAAAAAAAAAAAAOABAAAQAAAAAAAAAOAA8ABAAAAAAAAAAOAP7/BQAAAAAAAAAOAP3/BgAAAAAAAAAOAPz/AQAAAAAAAAANABEAAwAAAAAAAAANABAABwAAAAAAAAANAA8AAQAAAAAAAAANAP7/BQAAAAAAAAANAP3/BwAAAAAAAAANAPz/BQAAAAAAAAAMABEAAQAAAAAAAAAMABAABwAAAAAAAAAMAA8ABgAAAAAAAAAMAP7/BQAAAAAAAAAMAP3/BgAAAAAAAAAMAPz/BwAAAAAAAAALABEABwAAAAAAAAALABAABwAAAAAAAAALAA8AAQAAAAAAAAALAP7/BQAAAAAAAAALAP3/BQAAAAAAAAALAPz/BAAAAAAAAAAKABEAAQAAAAAAAAAKABAABwAAAAAAAAAKAA8AAAAAAAAAAAAKAP7/BwAAAAAAAAAKAP3/BgAAAAAAAAAKAPz/AgAAAAAAAAAJABEABgAAAAAAAAAJABAABAAAAAAAAAAJAA8AAAAAAAAAAAAJAP7/BAAAAAAAAAAJAP3/AgAAAAAAAAAJAPz/AwAAAAAAAAAIABEAAAAAAAAAAAAIABAAAAAAAAAAAAAIAA8ABgAAAAAAAAAIAP7/BAAAAAAAAAAIAP3/AAAAAAAAAAAIAPz/BwAAAAAAAAAHABEABgAAAAAAAAAHABAAAAAAAAAAAAAHAA8ABwAAAAAAAAAHAP7/BAAAAAAAAAAHAP3/BAAAAAAAAAAHAPz/BgAAAAAAAAAGABEAAgAAAAAAAAAGABAABQAAAAAAAAAGAA8ABQAAAAAAAAAGAP7/AgAAAAAAAAAGAP3/AQAAAAAAAAAGAPz/BwAAAAAAAAAFABEAAgAAAAAAAAAFABAABAAAAAAAAAAFAA8AAQAAAAAAAAAFAP7/BAAAAAAAAAAFAP3/BQAAAAAAAAAFAPz/AgAAAAAAAAAEABEAAgAAAAAAAAAEABAABAAAAAAAAAAEAA8AAAAAAAAAAAAEAP7/BAAAAAAAAAAEAP3/AgAAAAAAAAAEAPz/BAAAAAAAAAADABEABAAAAAAAAAADABAAAwAAAAAAAAADAA8ABAAAAAAAAAADAP7/AAAAAAAAAAADAP3/AQAAAAAAAAADAPz/AwAAAAAAAAACABEABQAAAAAAAAACABAABAAAAAAAAAACAA8ABQAAAAAAAAACAP7/BgAAAAAAAAACAP3/AwAAAAAAAAACAPz/BwAAAAAAAAABABEABAAAAAAAAAABABAABQAAAAAAAAABAA8ABwAAAAAAAAABAP7/AAAAAAAAAAABAP3/AgAAAAAAAAABAPz/BQAAAAAAAAAAABEAAgAAAAAAAAAAABAAAwAAAAAAAAAAAA8ABQAAAAAAAAAAAP7/BgAAAAAAAAAAAP3/BwAAAAAAAAAAAPz/BgAAAAAAAAD//xEAAAAAAAAAAAD//xAABAAAAAAAAAD//w8AAwAAAAAAAAD///7/AAAAAAAAAAD///3/AAAAAAAAAAD///z/AwAAAAAAAAD+/xEAAAAAAAAAAAD+/xAABgAAAAAAAAD+/w8AAgAAAAAAAAD+/w4AAQAAAAAAAAD+/w0AAgAAAAAAAAD+/wwAAwAAAAAAAAD+/wsABQAAAAAAAAD+/woAAAAAAAAAAAD+/wkAAQAAAAAAAAD+/wgAAQAAAAAAAAD+/wcABAAAAAAAAAD+/wYABQAAAAAAAAD+/wUABgAAAAAAAAD+/wQABwAAAAAAAAD+/wMABgAAAAAAAAD+/wIABAAAAAAAAAD+/wEAAAAAAAAAAAD+/wAABAAAAAAAAAD+////BgAAAAAAAAD+//7/AQAAAAAAAAD+//3/AQAAAAAAAAD+//z/BgAAAAAAAAD9/xEABQAAAAAAAAD9/xAAAAAAAAAAAAD9/w8AAgAAAAAAAAD9/w4AAgAAAAAAAAD9/w0ABAAAAAAAAAD9/wwABAAAAAAAAAD9/wsAAwAAAAAAAAD9/woABwAAAAAAAAD9/wkAAwAAAAAAAAD9/wgAAwAAAAAAAAD9/wcABAAAAAAAAAD9/wYABgAAAAAAAAD9/wUAAAAAAAAAAAD9/wQAAQAAAAAAAAD9/wMABQAAAAAAAAD9/wIAAgAAAAAAAAD9/wEABgAAAAAAAAD9/wAABQAAAAAAAAD9////BwAAAAAAAAD9//7/BQAAAAAAAAD9//3/AQAAAAAAAAD9//z/BQAAAAAAAAD8/xEAAQAAAAAAAAD8/xAABQAAAAAAAAD8/w8ABAAAAAAAAAD8/w4AAQAAAAAAAAD8/w0ABwAAAAAAAAD8/wwAAQAAAAAAAAD8/wsAAQAAAAAAAAD8/woABQAAAAAAAAD8/wkABgAAAAAAAAD8/wgABgAAAAAAAAD8/wcAAgAAAAAAAAD8/wYABgAAAAAAAAD8/wUABgAAAAAAAAD8/wQABAAAAAAAAAD8/wMABgAAAAAAAAD8/wIABAAAAAAAAAD8/wEAAAAAAAAAAAD8/wAABgAAAAAAAAD8////BgAAAAAAAAD8//7/AgAAAAAAAAD8//3/AgAAAAAAAAD8//z/AgAAAAAAAAD7/xEAAAAAAAAAAAD7/xAAAAAAAAAAAAD7/w8AAQAAAAAAAAD7/w4ABQAAAAAAAAD7/w0ABgAAAAAAAAD7/wwABQAAAAAAAAD7/wsAAAAAAAAAAAD7/woAAgAAAAAAAAD7/wkABQAAAAAAAAD7/wgAAAAAAAAAAAD7/wcABQAAAAAAAAD7/wYABgAAAAAAAAD7/wUAAwAAAAAAAAD7/wQAAgAAAAAAAAD7/wMAAgAAAAAAAAD7/wIABQAAAAAAAAD7/wEAAgAAAAAAAAD7/wAABgAAAAAAAAD7////BQAAAAAAAAD7//7/AwAAAAAAAAD7//3/AQAAAAAAAAD7//z/AgAAAAAAAAA=")
@@ -40,7 +41,7 @@ metadata/_edit_lock_ = true
 
 [node name="Boundary" type="TileMapLayer" parent="."]
 unique_name_in_owner = true
-tile_map_data = PackedByteArray("AAD/////CAAAAAAAAAD//wAACAAAAAAAAAD//wEACAAAAAAAAAD//wIACAAAAAAAAAD//wMACAAAAAAAAAD//wQACAAAAAAAAAD//wUACAAAAAAAAAD//wYACAAAAAAAAAD//wcACAAAAAAAAAD//wgACAAAAAAAAAD//wkACAAAAAAAAAD//woACAAAAAAAAAD//wsACAAAAAAAAAD//wwACAAAAAAAAAD//w0ACAAAAAAAAAAAAP//CAAAAAAAAAABAP//CAAAAAAAAAACAP//CAAAAAAAAAADAP//CAAAAAAAAAAEAP//CAAAAAAAAAAFAP//CAAAAAAAAAAGAP//CAAAAAAAAAAHAP//CAAAAAAAAAAIAP//CAAAAAAAAAAJAP//CAAAAAAAAAAKAP//CAAAAAAAAAALAP//CAAAAAAAAAAMAP//CAAAAAAAAAANAP//CAAAAAAAAAAOAP//CAAAAAAAAAAPAP//CAAAAAAAAAAQAP//CAAAAAAAAAARAP//CAAAAAAAAAASAP//CAAAAAAAAAATAP//CAAAAAAAAAAUAP//CAAAAAAAAAAUAA0ACAAAAAAAAAAUAAwACAAAAAAAAAAUAAsACAAAAAAAAAAUAAoACAAAAAAAAAAUAAkACAAAAAAAAAAUAAgACAAAAAAAAAAUAAcACAAAAAAAAAAUAAYACAAAAAAAAAAUAAUACAAAAAAAAAAUAAQACAAAAAAAAAAUAAMACAAAAAAAAAAUAAIACAAAAAAAAAAUAAEACAAAAAAAAAAUAAAACAAAAAAAAAAAAA0ACAAAAAAAAAABAA0ACAAAAAAAAAACAA0ACAAAAAAAAAADAA0ACAAAAAAAAAAEAA0ACAAAAAAAAAAFAA0ACAAAAAAAAAAGAA0ACAAAAAAAAAAHAA0ACAAAAAAAAAAIAA0ACAAAAAAAAAAJAA0ACAAAAAAAAAAKAA0ACAAAAAAAAAALAA0ACAAAAAAAAAAMAA0ACAAAAAAAAAANAA0ACAAAAAAAAAAOAA0ACAAAAAAAAAAPAA0ACAAAAAAAAAAQAA0ACAAAAAAAAAARAA0ACAAAAAAAAAASAA0ACAAAAAAAAAATAA0ACAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD/////CAAAAAAAAAD//wAACAAAAAAAAAD//wEACAAAAAAAAAD//wIACAAAAAAAAAD//wMACAAAAAAAAAD//wQACAAAAAAAAAD//wUACAAAAAAAAAD//wYACAAAAAAAAAD//wcACAAAAAAAAAD//wgACAAAAAAAAAD//wkACAAAAAAAAAD//woACAAAAAAAAAD//wsACAAAAAAAAAAAAP//CAAAAAAAAAABAP//CAAAAAAAAAACAP//CAAAAAAAAAADAP//CAAAAAAAAAAEAP//CAAAAAAAAAAFAP//CAAAAAAAAAAGAP//CAAAAAAAAAAHAP//CAAAAAAAAAAIAP//CAAAAAAAAAAJAP//CAAAAAAAAAAKAP//CAAAAAAAAAALAP//CAAAAAAAAAAMAP//CAAAAAAAAAANAP//CAAAAAAAAAAOAP//CAAAAAAAAAAPAP//CAAAAAAAAAAQAP//CAAAAAAAAAARAP//CAAAAAAAAAASAP//CAAAAAAAAAATAP//CAAAAAAAAAAUAP//CAAAAAAAAAAUAAsACAAAAAAAAAAUAAoACAAAAAAAAAAUAAkACAAAAAAAAAAUAAgACAAAAAAAAAAUAAcACAAAAAAAAAAUAAYACAAAAAAAAAAUAAUACAAAAAAAAAAUAAQACAAAAAAAAAAUAAMACAAAAAAAAAAUAAIACAAAAAAAAAAUAAEACAAAAAAAAAAUAAAACAAAAAAAAAAAAAsACAAAAAAAAAABAAsACAAAAAAAAAACAAsACAAAAAAAAAADAAsACAAAAAAAAAAEAAsACAAAAAAAAAAFAAsACAAAAAAAAAAGAAsACAAAAAAAAAAHAAsACAAAAAAAAAAIAAsACAAAAAAAAAAJAAsACAAAAAAAAAAKAAsACAAAAAAAAAALAAsACAAAAAAAAAAMAAsACAAAAAAAAAANAAsACAAAAAAAAAAOAAsACAAAAAAAAAAPAAsACAAAAAAAAAAQAAsACAAAAAAAAAARAAsACAAAAAAAAAASAAsACAAAAAAAAAATAAsACAAAAAAAAAA=")
 tile_set = ExtResource("3_fbnj6")
 metadata/_edit_lock_ = true
 
@@ -48,8 +49,10 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="DoorToDisplay" type="Node2D" parent="Lines"]
+metadata/_edit_lock_ = true
 
 [node name="Circles" type="Node2D" parent="Lines/DoorToDisplay"]
+metadata/_edit_lock_ = true
 
 [node name="Left" type="Line2D" parent="Lines/DoorToDisplay/Circles"]
 position = Vector2(-942, -534)
@@ -57,6 +60,7 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Right" type="Line2D" parent="Lines/DoorToDisplay/Circles"]
 position = Vector2(-878, -534)
@@ -64,8 +68,10 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Lines" type="Node2D" parent="Lines/DoorToDisplay"]
+metadata/_edit_lock_ = true
 
 [node name="Left" type="Node2D" parent="Lines/DoorToDisplay/Lines"]
 
@@ -96,9 +102,11 @@ width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="ResourceToMinter" type="Node2D" parent="Lines"]
+metadata/_edit_lock_ = true
 
 [node name="First" type="Node2D" parent="Lines/ResourceToMinter"]
-position = Vector2(0, -160)
+position = Vector2(0, -192)
+metadata/_edit_lock_ = true
 
 [node name="Line2D" type="Line2D" parent="Lines/ResourceToMinter/First"]
 position = Vector2(64, -308)
@@ -129,7 +137,8 @@ default_color = Color(0.827451, 0.772549, 0.392157, 1)
 metadata/_edit_lock_ = true
 
 [node name="Second" type="Node2D" parent="Lines/ResourceToMinter"]
-position = Vector2(-16, -32)
+position = Vector2(-16, -96)
+metadata/_edit_lock_ = true
 
 [node name="Line2D" type="Line2D" parent="Lines/ResourceToMinter/Second"]
 position = Vector2(64, -308)
@@ -160,7 +169,8 @@ default_color = Color(0.827451, 0.772549, 0.392157, 1)
 metadata/_edit_lock_ = true
 
 [node name="Third" type="Node2D" parent="Lines/ResourceToMinter"]
-position = Vector2(-32, 96)
+position = Vector2(-32, 0)
+metadata/_edit_lock_ = true
 
 [node name="Line2D" type="Line2D" parent="Lines/ResourceToMinter/Third"]
 position = Vector2(64, -308)
@@ -191,7 +201,8 @@ default_color = Color(0.827451, 0.772549, 0.392157, 1)
 metadata/_edit_lock_ = true
 
 [node name="Fourth" type="Node2D" parent="Lines/ResourceToMinter"]
-position = Vector2(-48, 224)
+position = Vector2(-48, 96)
+metadata/_edit_lock_ = true
 
 [node name="Line2D" type="Line2D" parent="Lines/ResourceToMinter/Fourth"]
 position = Vector2(64, -308)
@@ -222,9 +233,11 @@ default_color = Color(0.827451, 0.772549, 0.392157, 1)
 metadata/_edit_lock_ = true
 
 [node name="MinterToEthernet" type="Node2D" parent="Lines"]
+metadata/_edit_lock_ = true
 
 [node name="Circles" type="Node2D" parent="Lines/MinterToEthernet"]
-position = Vector2(18, 0)
+position = Vector2(16, -46)
+metadata/_edit_lock_ = true
 
 [node name="First" type="Line2D" parent="Lines/MinterToEthernet/Circles"]
 position = Vector2(32, -24)
@@ -232,6 +245,7 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Second" type="Line2D" parent="Lines/MinterToEthernet/Circles"]
 position = Vector2(32, 8)
@@ -239,6 +253,7 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Third" type="Line2D" parent="Lines/MinterToEthernet/Circles"]
 position = Vector2(32, 40)
@@ -246,6 +261,7 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Fourth" type="Line2D" parent="Lines/MinterToEthernet/Circles"]
 position = Vector2(32, 72)
@@ -253,36 +269,40 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Lines" type="Node2D" parent="Lines/MinterToEthernet"]
+metadata/_edit_lock_ = true
 
 [node name="First" type="Line2D" parent="Lines/MinterToEthernet/Lines"]
 position = Vector2(0, -2)
-points = PackedVector2Array(726, 356, 746, 356, 746, 450, 826, 542, 960, 592, 1178, 592)
+points = PackedVector2Array(724, 326, 748, 326, 828, 450, 964, 546, 1176, 546)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="Second" type="Line2D" parent="Lines/MinterToEthernet/Lines"]
 position = Vector2(6, 128)
-points = PackedVector2Array(720, 356, 740, 356, 810, 436, 954, 494, 1172, 494)
+points = PackedVector2Array(718, 292, 754, 292, 802, 348, 954, 448, 1170, 448)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="Third" type="Line2D" parent="Lines/MinterToEthernet/Lines"]
 position = Vector2(4, 254)
-points = PackedVector2Array(722, 354, 812, 354, 956, 400, 1174, 400)
+points = PackedVector2Array(720, 262, 740, 262, 956, 354, 1172, 354)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="Fourth" type="Line2D" parent="Lines/MinterToEthernet/Lines"]
 position = Vector2(4, 254)
-points = PackedVector2Array(722, 486, 740, 486, 812, 432, 956, 432, 1174, 432)
+points = PackedVector2Array(720, 358, 792, 358, 956, 386, 1172, 386)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
 [node name="EthernetToCmos" type="Node2D" parent="Lines"]
+metadata/_edit_lock_ = true
 
 [node name="Circles" type="Node2D" parent="Lines/EthernetToCmos"]
+metadata/_edit_lock_ = true
 
 [node name="Left" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
 position = Vector2(-254, -506)
@@ -290,6 +310,7 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Middle" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
 position = Vector2(-238, -506)
@@ -297,6 +318,7 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Right" type="Line2D" parent="Lines/EthernetToCmos/Circles"]
 position = Vector2(-222, -506)
@@ -304,25 +326,30 @@ points = PackedVector2Array(1128, 612, 1132, 608, 1136, 608, 1140, 612, 1140, 61
 closed = true
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Lines" type="Node2D" parent="Lines/EthernetToCmos"]
+metadata/_edit_lock_ = true
 
 [node name="Left" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
-points = PackedVector2Array(1224, 568, 1224, 544, 880, 352, 880, 114)
+points = PackedVector2Array(1224, 524, 1224, 492, 880, 352, 880, 114)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Middle" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
 position = Vector2(16, 0)
-points = PackedVector2Array(1224, 568, 1224, 536, 880, 344, 880, 114)
+points = PackedVector2Array(1224, 532, 1224, 484, 880, 344, 880, 114)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="Right" type="Line2D" parent="Lines/EthernetToCmos/Lines"]
 position = Vector2(32, 0)
-points = PackedVector2Array(1224, 568, 1224, 528, 880, 336, 880, 114)
+points = PackedVector2Array(1224, 528, 1224, 476, 880, 336, 880, 114)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
+metadata/_edit_lock_ = true
 
 [node name="CmosToMarket" type="Node2D" parent="Lines"]
 
@@ -419,6 +446,40 @@ points = PackedVector2Array(790, 92, 766, 92, 750, 78, 750, 20)
 width = 2.0
 default_color = Color(0.827451, 0.772549, 0.392157, 1)
 
+[node name="FloorLabels" type="Node2D" parent="."]
+
+[node name="ResourceInput" type="Label" parent="FloorLabels"]
+offset_left = 20.0
+offset_top = 583.0
+offset_right = 174.0
+offset_bottom = 600.0
+rotation = -1.5708
+text = "Chip Dropoff"
+
+[node name="CoinPickup" type="Label" parent="FloorLabels"]
+offset_left = 743.0
+offset_top = 582.0
+offset_right = 795.0
+offset_bottom = 599.0
+rotation = -1.5708
+text = "Coin"
+
+[node name="CoinPickup2" type="Label" parent="FloorLabels"]
+offset_left = 743.0
+offset_top = 507.0
+offset_right = 820.0
+offset_bottom = 524.0
+rotation = -1.5708
+text = "Pickup"
+
+[node name="CoinDropoff" type="Label" parent="FloorLabels"]
+offset_left = 1112.0
+offset_top = 684.0
+offset_right = 1266.0
+offset_bottom = 721.0
+text = "Coin Dropoff
+"
+
 [node name="Upgrades" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
@@ -450,41 +511,41 @@ position = Vector2(384, 32)
 
 [node name="AcoinMinter" parent="." instance=ExtResource("13_0g1cd")]
 offset_left = 128.0
-offset_top = 320.0
+offset_top = 288.0
 offset_right = 728.0
-offset_bottom = 392.0
+offset_bottom = 360.0
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="BeecoinMinter" parent="." instance=ExtResource("13_0g1cd")]
 offset_left = 128.0
-offset_top = 448.0
+offset_top = 384.0
 offset_right = 728.0
-offset_bottom = 520.0
+offset_bottom = 456.0
 coin_type = 1
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="SeacoinMinter" parent="." instance=ExtResource("13_0g1cd")]
 offset_left = 128.0
-offset_top = 576.0
+offset_top = 480.0
 offset_right = 728.0
-offset_bottom = 648.0
+offset_bottom = 552.0
 coin_type = 2
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="DeezcoinMinter" parent="." instance=ExtResource("13_0g1cd")]
 offset_left = 128.0
-offset_top = 704.0
+offset_top = 576.0
 offset_right = 728.0
-offset_bottom = 776.0
+offset_bottom = 648.0
 coin_type = 3
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="Seller" parent="." instance=ExtResource("13_orf3j")]
-position = Vector2(1240, 640)
+[node name="Ethernet" parent="." instance=ExtResource("13_orf3j")]
+position = Vector2(1241, 592)
 metadata/_edit_lock_ = true
 
 [node name="MarketPrices" parent="." instance=ExtResource("7_2f1hc")]
@@ -519,22 +580,22 @@ position = Vector2(58, 98)
 shape = SubResource("RectangleShape2D_eb3fi")
 metadata/_edit_lock_ = true
 
-[node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
-position = Vector2(224, 144)
-speed = 400.0
-metadata/_edit_lock_ = true
-
-[node name="Camera2D" type="Camera2D" parent="HomeBasePlayer"]
+[node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(224, 144)
 limit_left = 0
 limit_top = 0
 limit_right = 1472
 limit_bottom = 896
 metadata/_edit_lock_ = true
 
+[node name="HomeBasePlayer" parent="." instance=ExtResource("13_ui117")]
+position = Vector2(224, 144)
+speed = 400.0
+metadata/_edit_lock_ = true
+
 [node name="Tutorial" type="Node2D" parent="."]
 process_mode = 3
-visible = false
 
 [node name="Step1" type="Node2D" parent="Tutorial"]
 visible = false
@@ -568,6 +629,7 @@ offset_bottom = 232.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step1/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step1/PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -621,11 +683,12 @@ offset_bottom = 198.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step2/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step2/PanelContainer/VBoxContainer"]
 layout_mode = 2
 text = "Enter here to mine your
-computer  for resources"
+computer for chips."
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tutorial/Step2/PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -656,6 +719,7 @@ visible = false
 
 [node name="Overlay" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
 offset_right = 120.0
+offset_bottom = 58.0
 
 [node name="Overlay5" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
 offset_top = 0.0
@@ -663,48 +727,55 @@ offset_bottom = 192.0
 
 [node name="Overlay6" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
 offset_left = 560.0
-offset_top = 304.0
+offset_top = 284.0
 offset_right = 1344.0
 offset_bottom = 896.0
 
 [node name="Overlay2" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
-offset_top = 192.0
-offset_right = 120.0
+offset_top = 284.0
+offset_right = 70.0
 offset_bottom = 896.0
 
 [node name="Overlay3" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
-offset_left = 120.0
-offset_top = 72.0
-offset_right = 1344.0
-offset_bottom = 304.0
+offset_left = 0.0
+offset_top = 58.0
+offset_right = 1335.0
+offset_bottom = 284.0
 
 [node name="Overlay7" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
-offset_left = 120.0
-offset_top = 792.0
+offset_left = 70.0
+offset_top = 659.0
 offset_right = 560.0
-offset_bottom = 896.0
+offset_bottom = 838.0
 
 [node name="Overlay4" parent="Tutorial/Step3" instance=ExtResource("14_ui117")]
 offset_left = 120.0
 offset_right = 1344.0
-offset_bottom = 72.0
+offset_bottom = 58.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step3"]
 offset_left = 312.0
-offset_top = 104.0
-offset_right = 720.0
-offset_bottom = 294.0
+offset_top = 60.0
+offset_right = 732.0
+offset_bottom = 376.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step3/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step3/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Use the resources you collect
-to mint coins
+text = "Use the chips you collect
+to mint coins.
+
 Each coin requires a
 different combination of
-resources"
+chips.
+
+Unused chips will be converted
+into a small amount of energy
+when you return to the mine,
+so be sure to mint some coins!"
 
 [node name="Step3Button" type="Button" parent="Tutorial/Step3/PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -714,72 +785,55 @@ text = "COntinue"
 [node name="Step4" type="Node2D" parent="Tutorial"]
 visible = false
 
-[node name="Overlay" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_right = 120.0
-
-[node name="Overlay5" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_left = 736.0
-offset_top = 304.0
-offset_right = 1192.0
-offset_bottom = 792.0
-
-[node name="Overlay8" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_left = 1192.0
-offset_top = 304.0
-offset_right = 1272.0
-offset_bottom = 560.0
-
-[node name="Overlay9" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_left = 1192.0
-offset_top = 720.0
-offset_right = 1272.0
-offset_bottom = 792.0
-
-[node name="Overlay6" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_left = 1272.0
-offset_top = 304.0
-offset_right = 1344.0
-offset_bottom = 896.0
-
-[node name="Overlay2" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_top = 0.0
-offset_right = 120.0
-offset_bottom = 896.0
-
 [node name="Overlay3" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_left = 120.0
-offset_top = 304.0
+offset_top = 291.0
 offset_right = 632.0
 offset_bottom = 792.0
 
-[node name="Overlay7" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_left = 120.0
-offset_top = 792.0
-offset_right = 1272.0
-offset_bottom = 896.0
+[node name="Overlay5" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 787.0
+offset_top = 291.0
+offset_right = 1374.0
+offset_bottom = 516.0
 
-[node name="Overlay4" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_left = 120.0
-offset_right = 480.0
-offset_bottom = 304.0
+[node name="Overlay8" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 787.0
+offset_top = 516.0
+offset_right = 1182.0
+offset_bottom = 667.0
+
+[node name="Overlay7" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 787.0
+offset_top = 667.0
+offset_right = 1374.0
+offset_bottom = 792.0
+
+[node name="Overlay6" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
+offset_left = 632.0
+offset_top = 667.0
+offset_right = 787.0
+offset_bottom = 792.0
 
 [node name="Overlay10" parent="Tutorial/Step4" instance=ExtResource("14_ui117")]
-offset_left = 480.0
+offset_left = -65.0
 offset_right = 1344.0
-offset_bottom = 304.0
+offset_bottom = 291.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step4"]
-offset_left = 384.0
-offset_top = 180.0
-offset_right = 792.0
-offset_bottom = 290.0
+offset_left = 402.0
+offset_top = 137.0
+offset_right = 763.0
+offset_bottom = 293.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step4/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step4/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Sell the coins for energy"
+text = "Sell your coins now or
+hang on to them until the
+price is right."
 
 [node name="Step4Button" type="Button" parent="Tutorial/Step4/PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -832,14 +886,20 @@ offset_bottom = 290.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step5/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step5/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "The value of each coin
-Flucuates each time you mine.
+text = "Coin prices will flucuate
+while you are in the mine.
 
-Be careful selling always
-makes the price drop"
+Selling coins will cause the
+price of that type of coin
+to drop.
+
+Be warned: the more you sell
+at once the more the price
+will drop!"
 
 [node name="Step5Button" type="Button" parent="Tutorial/Step5/PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -870,7 +930,7 @@ offset_bottom = 376.0
 
 [node name="Overlay13" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
 offset_left = 952.0
-offset_top = 176.0
+offset_top = 186.0
 offset_right = 1040.0
 offset_bottom = 376.0
 
@@ -898,22 +958,24 @@ offset_bottom = 160.0
 
 [node name="Overlay10" parent="Tutorial/Step6" instance=ExtResource("14_ui117")]
 offset_left = 480.0
-offset_right = 864.0
+offset_right = 850.0
 offset_bottom = 160.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step6"]
 offset_left = 640.0
-offset_top = 168.0
-offset_right = 968.0
-offset_bottom = 298.0
+offset_top = 160.0
+offset_right = 974.0
+offset_bottom = 290.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step6/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step6/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Use your engery to buy
-upgrades"
+text = "Use your engery to
+buy upgrades to your 
+mining gear."
 
 [node name="Step6Button" type="Button" parent="Tutorial/Step6/PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -967,28 +1029,31 @@ offset_bottom = 896.0
 
 [node name="Overlay4" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
 offset_left = 120.0
-offset_right = 320.0
+offset_right = 303.0
 offset_bottom = 160.0
 
 [node name="Overlay10" parent="Tutorial/Step7" instance=ExtResource("14_ui117")]
-offset_left = 480.0
-offset_right = 864.0
+offset_left = 467.0
+offset_right = 850.0
 offset_bottom = 160.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step7"]
-offset_left = 320.0
+offset_left = 303.0
 offset_top = 88.0
-offset_right = 651.0
+offset_right = 634.0
 offset_bottom = 238.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step7/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step7/PanelContainer/VBoxContainer"]
 layout_mode = 2
 text = "Gain enough energy
 and the exit doors will
-open. Exit to WIN!"
+open.
+
+Exit to WIN!"
 
 [node name="Step7Button" type="Button" parent="Tutorial/Step7/PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -1022,11 +1087,12 @@ offset_bottom = 184.0
 [node name="PanelContainer" type="PanelContainer" parent="Tutorial/Step8"]
 offset_left = 272.0
 offset_top = 112.0
-offset_right = 800.0
-offset_bottom = 232.0
+offset_right = 654.0
+offset_bottom = 302.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/Step8/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step8/PanelContainer/VBoxContainer"]
 layout_mode = 2

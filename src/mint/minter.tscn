@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bb20ib4m7dplu"]
+[gd_scene load_steps=17 format=3 uid="uid://bb20ib4m7dplu"]
 
 [ext_resource type="Script" uid="uid://ch8emwm5xqggc" path="res://mint/minter.gd" id="1_a0j28"]
 [ext_resource type="Texture2D" uid="uid://k3kwyn07my8t" path="res://assets/resources/minter/minter.png" id="2_jo253"]
@@ -12,7 +12,10 @@
 size = Vector2(600, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bslgi"]
-size = Vector2(49, 72)
+size = Vector2(49, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvw72"]
+size = Vector2(40, 28)
 
 [sub_resource type="Gradient" id="Gradient_bslgi"]
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0.764706, 0.47451)
@@ -202,7 +205,6 @@ shape = SubResource("RectangleShape2D_jo253")
 
 [node name="InputInteractable" parent="." instance=ExtResource("6_bslgi")]
 unique_name_in_owner = true
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InputInteractable"]
 position = Vector2(-13.5, 36)
@@ -211,12 +213,10 @@ debug_color = Color(0.685977, 0.488062, 0.311733, 0.42)
 
 [node name="OutputInteractable" parent="." instance=ExtResource("6_bslgi")]
 unique_name_in_owner = true
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OutputInteractable"]
-position = Vector2(615, 36)
-shape = SubResource("RectangleShape2D_bslgi")
-debug_color = Color(0.685977, 0.488062, 0.311733, 0.42)
+position = Vector2(618, 36)
+shape = SubResource("RectangleShape2D_uvw72")
 
 [node name="HeldHighlight" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
