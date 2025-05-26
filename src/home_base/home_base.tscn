@@ -889,7 +889,7 @@ theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Tutorial/Step5/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Coin prices will flucuate
+text = "Coin prices will fluctuate
 while you are in the mine.
 
 Selling coins will cause the
